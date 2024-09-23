@@ -26,7 +26,7 @@ Nos vemos como una comunidad líder en el ámbito del fitness para mujeres. Aspi
 
 ## Colaboradoras
 
-El equipo que está construyendo este proyecto está conformado por un grupo de mujeres comprometidas y talentosas. Aquí puedes encontrar sus perfiles de GitHub:
+El equipo a cargo del proyecto está conformado por un grupo de mujeres comprometidas y talentosas. Aquí puedes encontrar sus perfiles de GitHub:
 
 - [América Sánchez](https://github.com/americasd28)
 - [Belén Calderón](https://github.com/BelenCVldr)
@@ -35,7 +35,7 @@ El equipo que está construyendo este proyecto está conformado por un grupo de 
 - [Lisette Neri](https://github.com/LisetteNeri)
 - [María Fernanda Grana](https://github.com/mariafgrana2)
 - [Olga Mora](https://github.com/OlgaMora97)
-- [Sara Vejarano](https://github.com/saravepi)
+- [Sara Silvia Vergara Pizano](https://github.com/saravepi)
 
 ---
 
@@ -43,7 +43,7 @@ El equipo que está construyendo este proyecto está conformado por un grupo de 
 
 Si tienes preguntas o comentarios sobre **empoWerfit**, no dudes en ponerte en contacto con nosotras.
 
-¡Te invitamos a unirte a nuestra comunidad y estar al tanto de todas las novedades!
+¡Te invitamos a unirte a nuestra comunidad y estar al tanto de todas las actualizaciones y novedades!
 
 ---
 
