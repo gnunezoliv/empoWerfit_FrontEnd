@@ -22,11 +22,11 @@ Este proyecto está desarrollado utilizando las siguientes tecnologías:
 
 ## Visión del Proyecto
 
-Nos vemos como una comunidad líder en el ámbito del fitness para mujeres. Aspiramos a convertirnos en la plataforma de referencia donde las mujeres puedan sentirse apoyadas en cada paso del camino, fomentando el amor propio y el bienestar integral a través del fitness.
+Nos vemos como una comunidad líder en el ámbito del fitness para mujeres. Aspiramos a convertirnos en la plataforma de referencia donde las mujeres puedan sentirse apoyadas, fomentando el amor propio y el bienestar integral a través del fitness.
 
 ## Colaboradoras
 
-El equipo que está construyendo este proyecto está conformado por un grupo de mujeres comprometidas y talentosas. Aquí puedes encontrar sus perfiles en GitHub:
+El equipo que está construyendo este proyecto está conformado por un grupo de mujeres comprometidas y talentosas. Aquí puedes encontrar sus perfiles de GitHub:
 
 - [América Sánchez](https://github.com/americasd28)
 - [Belén Calderón](https://github.com/BelenCVldr)
@@ -41,7 +41,7 @@ El equipo que está construyendo este proyecto está conformado por un grupo de 
 
 ## Contacto
 
-Si tienes preguntas o comentarios sobre **empoWerfit**, no dudes en ponerte en contacto con nosotras a través de nuestros perfiles en GitHub.
+Si tienes preguntas o comentarios sobre **empoWerfit**, no dudes en ponerte en contacto con nosotras.
 
 ¡Te invitamos a unirte a nuestra comunidad y estar al tanto de todas las novedades!
 
