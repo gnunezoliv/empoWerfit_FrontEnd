@@ -34,7 +34,7 @@ El equipo a cargo del proyecto está conformado por un grupo de mujeres comprome
 
 - [América Sánchez](https://github.com/americasd28)
 - [Belén Calderón](https://github.com/BelenCVldr)
-- [Giselle Núñez](https://github.com/gnunezoliv)
+- [Gabriela Nuñez Olivares](https://github.com/gnunezoliv)
 - [Karina Ibarra Díaz](https://github.com/karinaibarrait)
 - [Lisette Neri](https://github.com/LisetteNeri)
 - [María Fernanda Granados](https://github.com/mariafgrana2)
