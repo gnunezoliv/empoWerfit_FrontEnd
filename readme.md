@@ -1,10 +1,14 @@
 # empoWerfit - Frontend
 
-Bienvenid@ a **empoWerfit**, una plataforma de eCommerce dirigida a mujeres que desean transformar sus vidas a través del fitness. Nuestro objetivo es crear una comunidad fuerte y empoderada donde las mujeres puedan encontrar productos esenciales y un espacio de apoyo para iniciar o continuar su camino hacia un estilo de vida activo y saludable.
+Bienvenid@ a **empoWerfit**, una plataforma de eCommerce dirigida a mujeres que desean transformar sus vidas a través del fitness. Nuestro objetivo es crear una comunidad donde las mujeres puedan encontrar productos esenciales y un espacio de apoyo para iniciar o continuar su camino hacia un estilo de vida activo y saludable.
 
 ## Descripción del Proyecto
 
-Este repositorio contiene el código frontend de la plataforma **empoWerfit**. El objetivo es proporcionar una interfaz atractiva y fácil de usar, diseñada específicamente para nuestro público objetivo: mujeres que desean llevar una vida más activa. La plataforma incluye funcionalidades como:
+Este repositorio contiene el código frontend de la plataforma **empoWerfit**. 
+
+La finalidad del proyecto es proporcionar una interfaz atractiva y fácil de usar, diseñada específicamente para nuestro público objetivo: mujeres que desean llevar una vida más activa. 
+
+La plataforma incluye funcionalidades como:
 
 - Exploración y compra de productos fitness a través de un sistema de eCommerce intuitivo.
 - Creación y visualización de publicaciones para usuarias registradas.
@@ -33,9 +37,9 @@ El equipo a cargo del proyecto está conformado por un grupo de mujeres comprome
 - [Giselle Núñez](https://github.com/gnunezoliv)
 - [Karina Ibarra Díaz](https://github.com/karinaibarrait)
 - [Lisette Neri](https://github.com/LisetteNeri)
-- [María Fernanda Grana](https://github.com/mariafgrana2)
+- [María Fernanda Granados](https://github.com/mariafgrana2)
 - [Olga Mora](https://github.com/OlgaMora97)
-- [Sara Silvia Vergara Pizano](https://github.com/saravepi)
+- [Sara Vergara](https://github.com/saravepi)
 
 ---
 
@@ -43,7 +47,7 @@ El equipo a cargo del proyecto está conformado por un grupo de mujeres comprome
 
 Si tienes preguntas o comentarios sobre **empoWerfit**, no dudes en ponerte en contacto con nosotras.
 
-¡Te invitamos a unirte a nuestra comunidad y estar al tanto de todas las actualizaciones y novedades!
+¡Te invitamos a unirte a nuestra comunidad y estar al tanto de todas las actualizaciones y novedades que tenemos para ti!
 
 ---
 
