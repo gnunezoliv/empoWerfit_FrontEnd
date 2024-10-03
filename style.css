@@ -29,12 +29,14 @@
     background-color: var(--contrast);
 }
 
-.navbar-brand {
+ /* logo */
+.navbar-brand, .offcanvas-title {
     color: var(--secondary);
     font-weight: 800;
     font-size: 30px;
 }
 
-.navbar-brand span {
+.navbar-brand span,
+.offcanvas-title span {
     color: var(--main);
 }
