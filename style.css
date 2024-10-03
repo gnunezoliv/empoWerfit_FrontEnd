@@ -10,8 +10,10 @@
  h1, h2, h3, h4, h5, h6 {
      font-family: "Teachers", sans-serif;
      color: var(--secondary);
+     font-weight: 800;
  }
  
+
  a, p {
      font-family: "Poppins", sans-serif;
  }
@@ -23,6 +25,7 @@
  .bg-dark-purple {
      background-color: var(--secondary);
  }
+
 
  /********** NAV-BAR **********/
 .navbar {
@@ -40,7 +43,6 @@
 .offcanvas-title span {
     color: var(--main);
 }
-
 
 /* pages */
 .nav-link {
@@ -103,4 +105,23 @@
 .card-icon {
     font-size: 2rem; 
     color: #FFC2CF;
+}
+
+
+/********** BRAND - VALUES  **********/
+.rectangle {
+    background-color: var(--secondary);
+    height: 120px;
+    width: 100%;
+    margin-top: -6rem;
+}
+
+@media (min-width:768px) {
+    .rectangle {
+        height: 200px;
+        margin-top: -10rem;
+    }
+    .value {
+        font-size: 21px;
+    }
 }
