@@ -1,0 +1,59 @@
+/* variables de estilo */
+:root {
+    --empwf-magenta: #AA3378;
+    --empwf-purple: #2A003A;
+    --empwf-background-web: #EFE9F1;
+    --empwf--pale-pink: #EBB8DB;
+    --empwf-pastel-pink: #FFC2CF;
+    --teachers-title-font-family: "Teachers", system-ui;
+    --boddy-poppins-font-family: "Poppins", sans-serif;
+}
+
+* {
+    background-color: var(--empwf-background-web);
+    font-family: var(--boddy-poppins-font-family);
+    color: var(--empwf-purple);
+
+}
+
+#contact-section h2 {
+    font-family: var(--teachers-title-font-family);
+    font-weight:700;
+    color: var(--empwf-magenta);
+}
+
+#contact-section p {
+    font-size: 18px;
+}
+
+.span-label-form {
+    color: var(--empwf-magenta);
+}
+
+.contact-btn {
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.contact-btn:hover {
+    color: var(--empwf-background-web);
+    background-color: rgba(137, 0, 234, 0.826);
+    transform: scale(1.1); /* Hace que el botón se expanda */
+}
+/* Estilo para la línea vertical */
+.separator {
+    border-left: 1px solid var(--empwf-purple);
+    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
+}
+
+
+
+
+
+
+
+
