@@ -57,4 +57,3 @@ function sendEmail(form) {
         alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
     });
 }
-    

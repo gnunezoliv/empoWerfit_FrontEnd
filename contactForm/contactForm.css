@@ -1,89 +1,3 @@
-/************* CONTACT FORM **************/
-
-/* Variables de estilo */
-:root {
-    --empwf-magenta: #AA3378;
-    --empwf-purple: #2A003A;
-    --empwf-background-web: #EFE9F1;
-    --empwf--pale-pink: #EBB8DB;
-    --empwf-pastel-pink: #FFC2CF;
-    --teachers-title-font-family: "Teachers", system-ui;
-    --boddy-poppins-font-family: "Poppins", sans-serif;
-}
-
-/* Fondo del HTML */
-html {
-    background-color: var(--empwf-background-web);
-}
-
-/* Contact section */
-#contact-section {
-    background-color: var(--empwf-background-web);
-    font-family: var(--boddy-poppins-font-family);
-    color: var(--empwf-purple);
-}
-
-/* Contact section h2 */
-#contact-section h2 {
-    font-family: var(--teachers-title-font-family);
-    font-weight:700;
-    color: var(--empwf-magenta);
-}
-
-/* Contact section p */
-#contact-section p {
-    font-size: 18px;
-}
-
-/* Span Label Contact Form */
-.span-label-contact-form {
-    color: var(--empwf-magenta);
-    font-size: 16px;
-}
-
-/* Style contact btn */
-.contact-btn {
-    color: var(--empwf-background-web);
-    background-color: var(--empwf-magenta);
-    border-radius: 15px;
-    width: 200px;
-    cursor: pointer;
-    transition: all .4s ease;
-}
-
-/* Style contact btn hover */
-.contact-btn:hover {
-    color: var(--empwf-background-web);
-    background-color: rgba(137, 0, 234, 0.826);
-    transform: scale(1.1); /* Hace que el botón se expanda */
-}
-
-/* Estilo para la línea vertical */
-.separator {
-    border-left: 1px solid var(--empwf-purple);
-    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
-}
-
-/* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
-@media (max-width: 768px) {
-    #contact-section .text-contact h2 {
-        font-size: 24px; /* Ajusta el tamaño según tus necesidades */
-    }
-}
-
-/* Ajustes para que no se empalmen el header con contact section */
-#contact-section {
-    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
-}
-
-@media (max-width: 768px) {
-    #contact-section {
-        padding-top: 60px; /* Padding reducido para pantallas pequeñas */
-    }
-}
-
-
-
 /******************+ NAVBAR *************************/
 
 :root {
@@ -213,10 +127,104 @@ html {
 }
 
 /* Solo afecta a los enlaces y párrafos dentro de la barra de navegación */
-#navbar-section a, 
-#navbar-section p {
-    font-family: "Poppins", sans-serif;
+
+@media (min-width: 768px) {
+
+    #navbar-section a,
+    #navbar-section p {
+        font-family: "Poppins", sans-serif;
+    }
 }
+
+
+/************* CONTACT FORM **************/
+
+/* Variables de estilo */
+:root {
+    --empwf-magenta: #AA3378;
+    --empwf-purple: #2A003A;
+    --empwf-background-web: #EFE9F1;
+    --empwf--pale-pink: #EBB8DB;
+    --empwf-pastel-pink: #FFC2CF;
+    --teachers-title-font-family: "Teachers", system-ui;
+    --boddy-poppins-font-family: "Poppins", sans-serif;
+}
+
+/* Fondo del HTML */
+html {
+    background-color: var(--empwf-background-web);
+}
+
+/* Contact section */
+#contact-section {
+    background-color: var(--empwf-background-web);
+    font-family: var(--boddy-poppins-font-family);
+    color: var(--empwf-purple);
+}
+
+/* Contact section h2 */
+#contact-section h2 {
+    font-family: var(--teachers-title-font-family);
+    font-weight:700;
+    color: var(--empwf-magenta);
+}
+
+/* Contact section p */
+#contact-section p {
+    font-size: 18px;
+}
+
+/* Span Label Contact Form */
+.span-label-contact-form {
+    color: var(--empwf-magenta);
+    font-size: 16px;
+}
+
+/* Style contact btn */
+.contact-btn {
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+/* Style contact btn hover */
+.contact-btn:hover {
+    color: var(--empwf-background-web);
+    background-color: rgba(137, 0, 234, 0.826);
+    transform: scale(1.1); /* Hace que el botón se expanda */
+}
+
+/* Estilo para la línea vertical */
+.separator {
+    border-left: 1px solid var(--empwf-purple);
+    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
+}
+
+/* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
+@media (max-width: 768px) {
+    #contact-section .text-contact {
+        text-align: center;
+    }
+
+    #contact-section .text-contact h2 {
+        font-size: 24px; /* Ajusta el tamaño según tus necesidades */
+    }
+}
+
+/* Ajustes para que no se empalmen el header con contact section */
+#contact-section {
+    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
+}
+
+@media (max-width: 768px) {
+    #contact-section {
+        padding-top: 60px; /* Padding reducido para pantallas pequeñas */
+    }
+}
+
 
 
 
