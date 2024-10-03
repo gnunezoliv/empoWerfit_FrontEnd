@@ -124,3 +124,36 @@
         font-size: 21px;
     }
 }
+
+
+/********** TEAM  **********/
+#team .col {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    background-color:var(--main);
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: var(--secondary);
+}
+
+.card-link {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+.btn-outline-light {
+    color: var(--highlight);
+}
+
+.btn-outline-light:hover {
+    color: var(--secondary);
+    font-weight: 600;
+}
