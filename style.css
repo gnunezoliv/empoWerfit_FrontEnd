@@ -52,7 +52,6 @@
 }
 
 /* icon -buttons */
-
 .nav-item-icon {
     font-size: 2rem; 
     color: #AA3378;
@@ -78,4 +77,30 @@
 .dropdown-item:focus {
     color: var(--main);
     font-weight: 500;
+}
+
+
+/********** BRAND - GOALS  **********/
+.brand-message {
+    font-size: 30px;
+    color: var(--secondary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .brand-message {
+        text-align: start
+    }
+}
+
+.card-mission, .card-vision {
+    background-color:var(--main);
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 2rem; 
+    color: #FFC2CF;
 }
