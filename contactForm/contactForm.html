@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img-aboutUs/icon-empowerfit.png" width="70px">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Preconect Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,38 +23,112 @@
     <link rel="stylesheet" href="./contactForm.css">
 </head>
 <body>
-    <!-- Sección Formulario de contacto -->
+
+<!-- NAVBAR -->
+<header id="navbar-section" class="navbar-section-header">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container container-navbar">
+            <!-- mobile menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- logo -->
+            <a class="navbar-brand me-auto" href="#">empo<span>w</span>erfit</a>
+            <!-- pages-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <p class="offcanvas-title" id="offcanvasNavbarLabel">empo<span>w</span>erfit</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="#">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Comunidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2" aria-current="page" href="#contact-section">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- user button-->
+            <div class="dropdown">
+                <button class="btn" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="nav-item-icon bi bi-person-circle"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                    <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                    <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+                </ul>
+            </div>
+            <!-- shop bag button-->
+            <button type="button" class="btn position-relative">
+                <i class="nav-item-icon bi bi-bag"></i>
+                <span class="position-absolute top-50 start-60 translate-middle-x badge rounded-pill bg-dark-purple">
+                    0
+                    <span class="visually-hidden"></span>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+
+</header>
+
+
+
+
+
+
+<!-- CONTACT FORM -->
    <section id="contact-section" class="container-fluid container-contact mt-3">
     <div class="row">
+
         <!-- Columna para el formulario -->
         <div class="col-md-6 mt-3">
+
             <!-- Título solo visible en pantallas pequeñas -->
             <h2 class="text-center d-block d-md-none mb-3">¡Contáctanos!</h3>
             <form id="contactForm" class="needs-validation w-100" novalidate>
+            
                 <!-- Contenido del formulario -->
                 <div class="form-group">
-                    <label for="name">Nombre<span class="span-label-form">*</span></label>
+                    <label for="name">Nombre<span class="span-label-contact-form">*</span></label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
                     <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo electrónico<span class="span-label-form">*</span></label>
+                    <label for="email">Correo electrónico<span class="span-label-contact-form">*</span></label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
                     <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Teléfono<span class="span-label-form">*</span></label>
+                    <label for="phone">Teléfono<span class="span-label-contact-form">*</span></label>
                     <input type="tel" class="form-control" id="phone" name="phone" placeholder="555-555-5555" pattern="[0-9]{10}" required>
                     <div class="invalid-feedback">Por favor, introduce un número de teléfono válido (formato 555-555-5555).</div>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensaje<span class="span-label-form">*</span></label>
+                    <label for="message">Mensaje<span class="span-label-contact-form">*</span></label>
                     <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     <div class="invalid-feedback">Por favor, introduce tu mensaje.</div>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn contact-btn">Enviar</button>
                 </div>
+
             </form>
         </div>
 
@@ -60,20 +139,22 @@
 
         <!-- Columna para el texto e imagen -->
         <div class="col-md-5">
+            <!-- Contenedor para el texto-->
             <div class="text-contact">
-                <h2 class="mt-md-0 mt-2 text-center text-md-left h2-responsive">Levantando pesas, <br class="d-none d-md-inline">levantando dudas.</h2>
+                <h2 class="mt-md-0 mt-2 text-center text-md-left">Levantando pesas, <br class="d-none d-md-inline">levantando dudas.</h2>
                 <p>¿Necesitas ayuda? ¿Dudas con tu pedido? ¿Todo quieres y no sabes qué comprar?</p>
-                <h5>Contáctanos</h5>
+                <h5 class="d-none d-md-block">Contáctanos</h5>
             </div> 
-            <!-- Contenedor para ajustar la imagen a la altura del formulario -->
+            <!-- Contenedor para la imagen-->
             <div class="mt-3">
                 <img src="./assets/img/contact.png" alt="Imagen estilo caricatura de una mujer sosteniendo una mancuerna" class="img-fluid img-contact">
             </div>
         </div>
-    </div>
+        
 </section>
 
     <!-- Bootstrap JS y dependencias -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,4 +1,6 @@
-/* variables de estilo */
+/************* CONTACT FORM **************/
+
+/* Variables de estilo */
 :root {
     --empwf-magenta: #AA3378;
     --empwf-purple: #2A003A;
@@ -9,27 +11,37 @@
     --boddy-poppins-font-family: "Poppins", sans-serif;
 }
 
-* {
+/* Fondo del HTML */
+html {
+    background-color: var(--empwf-background-web);
+}
+
+/* Contact section */
+#contact-section {
     background-color: var(--empwf-background-web);
     font-family: var(--boddy-poppins-font-family);
     color: var(--empwf-purple);
-
 }
 
+/* Contact section h2 */
 #contact-section h2 {
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
 }
 
+/* Contact section p */
 #contact-section p {
     font-size: 18px;
 }
 
-.span-label-form {
+/* Span Label Contact Form */
+.span-label-contact-form {
     color: var(--empwf-magenta);
+    font-size: 16px;
 }
 
+/* Style contact btn */
 .contact-btn {
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
@@ -39,24 +51,177 @@
     transition: all .4s ease;
 }
 
+/* Style contact btn hover */
 .contact-btn:hover {
     color: var(--empwf-background-web);
     background-color: rgba(137, 0, 234, 0.826);
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
+
 /* Estilo para la línea vertical */
 .separator {
     border-left: 1px solid var(--empwf-purple);
     height: 100%; /* Ocupa el 100% de la altura de su contenedor */
 }
 
-
-/* Ajustar el tamaño de la fuente del h2 solo en pantallas pequeñas */
+/* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
 @media (max-width: 768px) {
-    .h2-responsive {
-        font-size: 1.5rem; /* Ajusta el tamaño según tus necesidades */
+    #contact-section .text-contact h2 {
+        font-size: 24px; /* Ajusta el tamaño según tus necesidades */
     }
 }
+
+/* Ajustes para que no se empalmen el header con contact section */
+#contact-section {
+    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
+}
+
+@media (max-width: 768px) {
+    #contact-section {
+        padding-top: 60px; /* Padding reducido para pantallas pequeñas */
+    }
+}
+
+
+
+/******************+ NAVBAR *************************/
+
+:root {
+    --main:#AA3378;
+    --secondary: #2A003A;
+    --highlight: #FFC2CF;
+    --background: #EFE9F1;
+    --contrast: #fefefe;
+ }
+
+ .bg-light-purple {
+    background-color: var(--background);
+}
+
+.bg-dark-purple {
+    background-color: var(--secondary);
+}
+
+.navbar {
+    background-color: var(--contrast);
+}
+
+ /* logo */
+.navbar-brand, .offcanvas-title {
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.navbar-brand span,
+.offcanvas-title span {
+    color: var(--main);
+}
+
+/* pages */
+.nav-link {
+    color: var(--secondary);
+}
+
+.active, .nav-link:hover{
+    color: var(--main) !important;
+}
+
+/* icon -buttons */
+.nav-item-icon {
+    font-size: 2rem; 
+    color: #AA3378;
+}
+
+.navbar-toggler, .btn {
+    border: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.dropdown-item {
+    color: var(--secondary);
+}
+
+.dropdown-item:hover{
+    background-color: var(--highlight);
+}
+
+.dropdown-item:focus {
+    color: var(--main);
+    font-weight: 500;
+}
+
+
+/********** BRAND - GOALS  **********/
+.brand-message {
+    font-size: 30px;
+    color: var(--secondary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .brand-message {
+        text-align: start;
+    }
+}
+
+.card-mission, .card-vision {
+    background-color:var(--main);
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 2rem; 
+    color: #FFC2CF;
+}
+
+
+/********** BRAND - VALUES  **********/
+.rectangle {
+    background-color: var(--secondary);
+    height: 120px;
+    width: 100%;
+    margin-top: -6rem;
+}
+
+@media (min-width:768px) {
+    .rectangle {
+        height: 200px;
+        margin-top: -10rem;
+    }
+    .value {
+        font-size: 21px;
+    }
+}
+
+/* Solo afecta a los encabezados dentro de la barra de navegación */
+#navbar-section h1, 
+#navbar-section h2, 
+#navbar-section h3, 
+#navbar-section h4, 
+#navbar-section h5, 
+#navbar-section h6 {
+    font-family: "Teachers", sans-serif;
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+/* Solo afecta a los enlaces y párrafos dentro de la barra de navegación */
+#navbar-section a, 
+#navbar-section p {
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
 
 
 
