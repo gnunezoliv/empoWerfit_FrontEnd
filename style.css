@@ -1,0 +1,25 @@
+:root {
+    --main:#AA3378;
+    --secondary: #2A003A;
+    --highlight: #FFC2CF;
+    --background: #EFE9F1;
+    --contrast: #fefefe;
+ }
+ 
+ /********** Globales **********/
+ h1, h2, h3, h4, h5, h6 {
+     font-family: "Teachers", sans-serif;
+     color: var(--secondary);
+ }
+ 
+ a, p {
+     font-family: "Poppins", sans-serif;
+ }
+ 
+ .bg-light-purple {
+     background-color: var(--background);
+ }
+ 
+ .bg-dark-purple {
+     background-color: var(--secondary);
+ }
