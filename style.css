@@ -40,3 +40,42 @@
 .offcanvas-title span {
     color: var(--main);
 }
+
+
+/* pages */
+.nav-link {
+    color: var(--secondary);
+}
+
+.active, .nav-link:hover{
+    color: var(--main) !important;
+}
+
+/* icon -buttons */
+
+.nav-item-icon {
+    font-size: 2rem; 
+    color: #AA3378;
+}
+
+.navbar-toggler, .btn {
+    border: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.dropdown-item {
+    color: var(--secondary);
+}
+
+.dropdown-item:hover{
+    background-color: var(--highlight);
+}
+
+.dropdown-item:focus {
+    color: var(--main);
+    font-weight: 500;
+}
