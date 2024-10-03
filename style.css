@@ -23,3 +23,18 @@
  .bg-dark-purple {
      background-color: var(--secondary);
  }
+
+ /********** NAV-BAR **********/
+.navbar {
+    background-color: var(--contrast);
+}
+
+.navbar-brand {
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.navbar-brand span {
+    color: var(--main);
+}
