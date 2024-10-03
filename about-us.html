@@ -18,12 +18,12 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Empowerfit</a>
+            <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand" href="#">empo<span>w</span>erfit</a>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -33,40 +33,40 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Incio</a>
+                                <a class="nav-link mx-lg-2" href="#">Incio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Productos</a>
+                                <a class="nav-link mx-lg-2" href="#">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
+                                <a class="nav-link active mx-lg-2" aria-current="page" href="#">Acerca de</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Comunidad</a>
+                                <a class="nav-link mx-lg-2" href="#">Comunidad</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
+                                <a class="nav-link mx-lg-2" href="#">Contacto</a>
                             </li>
                         </ul>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Ingresar</a></li>
-                                <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
-                            </ul>
-                        </div>
-                        <button type="button" class="btn btn-primary position-relative">
-                            <i class="nav-item-icon bi bi-bag"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                                <span class="visually-hidden"></span>
-                            </span>
-                        </button>
                     </div>
                 </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-person-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                        <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn position-relative">
+                    <i class="nav-item-icon bi bi-bag"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden"></span>
+                    </span>
+                </button>
             </div>
         </nav>
     </header>
