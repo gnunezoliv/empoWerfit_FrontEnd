@@ -1,0 +1,159 @@
+:root {
+    --main:#AA3378;
+    --secondary: #2A003A;
+    --highlight: #FFC2CF;
+    --background: #EFE9F1;
+    --contrast: #fefefe;
+ }
+ 
+ /********** Globales **********/
+ h1, h2, h3, h4, h5, h6 {
+     font-family: "Teachers", sans-serif;
+     color: var(--secondary);
+     font-weight: 800;
+ }
+ 
+ a, p {
+     font-family: "Poppins", sans-serif;
+ }
+ 
+ .bg-light-purple {
+     background-color: var(--background);
+ }
+ 
+ .bg-dark-purple {
+     background-color: var(--secondary);
+ }
+
+
+ /********** NAV-BAR **********/
+.navbar {
+    background-color: var(--contrast);
+}
+
+ /* logo */
+.navbar-brand, .offcanvas-title {
+    color: var(--secondary);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.navbar-brand span,
+.offcanvas-title span {
+    color: var(--main);
+}
+
+/* pages */
+.nav-link {
+    color: var(--secondary);
+}
+
+.active, .nav-link:hover{
+    color: var(--main) !important;
+}
+
+/* icon -buttons */
+.nav-item-icon {
+    font-size: 2rem; 
+    color: #AA3378;
+}
+
+.navbar-toggler, .btn {
+    border: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.dropdown-item {
+    color: var(--secondary);
+}
+
+.dropdown-item:hover{
+    background-color: var(--highlight);
+}
+
+.dropdown-item:focus {
+    color: var(--main);
+    font-weight: 500;
+}
+
+
+/********** BRAND - GOALS  **********/
+.brand-message {
+    font-size: 30px;
+    color: var(--secondary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .brand-message {
+        text-align: start;
+    }
+}
+
+.card-mission, .card-vision {
+    background-color:var(--main);
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 2rem; 
+    color: #FFC2CF;
+}
+
+
+/********** BRAND - VALUES  **********/
+.rectangle {
+    background-color: var(--secondary);
+    height: 120px;
+    width: 100%;
+    margin-top: -6rem;
+}
+
+@media (min-width:768px) {
+    .rectangle {
+        height: 200px;
+        margin-top: -10rem;
+    }
+    .value {
+        font-size: 21px;
+    }
+}
+
+
+/********** TEAM  **********/
+#team .col {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    background-color:var(--main);
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-subtitle {
+    color: var(--secondary);
+}
+
+.card-link {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+.btn-outline-light {
+    color: var(--highlight);
+}
+
+.btn-outline-light:hover {
+    color: var(--secondary);
+    font-weight: 600;
+}

@@ -56,5 +56,9 @@ function sendEmail(form) {
         console.error('Error al enviar el correo', error);
         alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
     });
+<<<<<<< HEAD
 }
     
+=======
+}
+>>>>>>> dev
