@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/* variables de estilo */
-=======
 /******************+ NAVBAR *************************/
-
 :root {
     --main:#AA3378;
     --secondary: #2A003A;
@@ -143,7 +139,6 @@
 /************* CONTACT FORM **************/
 
 /* Variables de estilo */
->>>>>>> dev
 :root {
     --empwf-magenta: #AA3378;
     --empwf-purple: #2A003A;
@@ -154,15 +149,6 @@
     --boddy-poppins-font-family: "Poppins", sans-serif;
 }
 
-<<<<<<< HEAD
-* {
-    background-color: var(--empwf-background-web);
-    font-family: var(--boddy-poppins-font-family);
-    color: var(--empwf-purple);
-
-}
-
-=======
 /* Fondo del HTML */
 html {
     background-color: var(--empwf-background-web);
@@ -176,27 +162,17 @@ html {
 }
 
 /* Contact section h2 */
->>>>>>> dev
 #contact-section h2 {
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
 }
 
-<<<<<<< HEAD
-=======
 /* Contact section p */
->>>>>>> dev
 #contact-section p {
     font-size: 18px;
 }
 
-<<<<<<< HEAD
-.span-label-form {
-    color: var(--empwf-magenta);
-}
-
-=======
 /* Span Label Contact Form */
 .span-label-contact-form {
     color: var(--empwf-magenta);
@@ -204,7 +180,6 @@ html {
 }
 
 /* Style contact btn */
->>>>>>> dev
 .contact-btn {
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
@@ -214,27 +189,19 @@ html {
     transition: all .4s ease;
 }
 
-<<<<<<< HEAD
-=======
 /* Style contact btn hover */
->>>>>>> dev
 .contact-btn:hover {
     color: var(--empwf-background-web);
     background-color: rgba(137, 0, 234, 0.826);
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> dev
 /* Estilo para la línea vertical */
 .separator {
     border-left: 1px solid var(--empwf-purple);
     height: 100%; /* Ocupa el 100% de la altura de su contenedor */
 }
 
-<<<<<<< HEAD
-=======
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
 @media (max-width: 768px) {
     #contact-section .text-contact {
@@ -256,16 +223,3 @@ html {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
 }
-
-
-
-
-
->>>>>>> dev
-
-
-
-
-
-
-
