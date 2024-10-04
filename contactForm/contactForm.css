@@ -223,3 +223,11 @@ html {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
 }
+
+/* Ajustar la imagen en pantallas pequeñas */
+@media (max-width: 768px) { /* Cambia 768px según tus necesidades */
+    .img-contact {
+        width: 80%; 
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
