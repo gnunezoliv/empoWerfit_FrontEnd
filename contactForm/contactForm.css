@@ -231,3 +231,7 @@ html {
         height: auto; /* Mantiene la proporción de la imagen */
     }
 }
+
+body {
+    background-color: var(--empwf-background-web);
+}
