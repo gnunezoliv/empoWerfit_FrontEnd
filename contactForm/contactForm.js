@@ -18,20 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Inicializa EmailJS con tu API Key
-(function(){
-    emailjs.init("SHpyAFdFm51RaFDn1"); 
-})();
+emailjs.init("SHpyAFdFm51RaFDn1"); 
+console.log("EmailJS initialized");
 
-
-// Función para verificar que la API Key funciona correctamente
-(function(){
-    emailjs.init("SHpyAFdFm51RaFDn1"); 
-    console.log("EmailJS initialized");
-})();
-
- 
 // Función para enviar el correo
-function sendEmail(form) {
+async function sendEmail(form) {
     // Obtener valores de los campos del formulario
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -47,18 +38,13 @@ function sendEmail(form) {
     };
 
     // Enviar correo usando el Service ID y Template ID
-    emailjs.send('contact_form', 'template_contact_form', templateParams)
-    .then((response) => {
+    try {
+        const response = await emailjs.send('contact_form', 'template_contact_form', templateParams);
         console.log('Correo enviado con éxito', response.status, response.text);
-       alert('Mensaje enviado con éxito.');
+        alert('Mensaje enviado con éxito.');
         form.reset(); // Reinicia el formulario después de enviarlo
-    }, (error) => {
+    } catch (error) {
         console.error('Error al enviar el correo', error);
         alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
-    });
-<<<<<<< HEAD
+    }
 }
-    
-=======
-}
->>>>>>> dev
