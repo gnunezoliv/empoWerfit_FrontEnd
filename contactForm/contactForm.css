@@ -142,6 +142,7 @@
 :root {
     --empwf-magenta: #AA3378;
     --empwf-purple: #2A003A;
+    --empwf-purple-btn: #763682;
     --empwf-background-web: #EFE9F1;
     --empwf--pale-pink: #EBB8DB;
     --empwf-pastel-pink: #FFC2CF;
@@ -192,7 +193,7 @@ html {
 /* Style contact btn hover */
 .contact-btn:hover {
     color: var(--empwf-background-web);
-    background-color: rgba(137, 0, 234, 0.826);
+    background-color: var(--empwf-purple-btn);
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
 
