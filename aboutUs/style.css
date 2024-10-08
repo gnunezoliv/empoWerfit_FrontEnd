@@ -1,37 +1,36 @@
 :root {
-    --main:#AA3378;
+    --main: #AA3378;
     --secondary: #2A003A;
     --highlight: #FFC2CF;
     --background: #EFE9F1;
     --contrast: #fefefe;
- }
- 
- /********** Globales **********/
- h1, h2, h3, h4, h5, h6 {
-     font-family: "Teachers", sans-serif;
-     color: var(--secondary);
-     font-weight: 800;
- }
- 
- a, p {
-     font-family: "Poppins", sans-serif;
- }
- 
- .bg-light-purple {
-     background-color: var(--background);
- }
- 
- .bg-dark-purple {
-     background-color: var(--secondary);
- }
+}
 
+/********** Globales **********/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Teachers", sans-serif;
+    color: var(--secondary);
+    font-weight: 800;
+}
 
- /********** NAV-BAR **********/
+a, p {
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-light-purple {
+    background-color: var(--background);
+}
+
+.bg-dark-purple {
+    background-color: var(--secondary);
+}
+
+/********** NAV-BAR **********/
 .navbar {
     background-color: var(--contrast);
 }
 
- /* logo */
+/* logo */
 .navbar-brand, .offcanvas-title {
     color: var(--secondary);
     font-weight: 800;
@@ -48,14 +47,14 @@
     color: var(--secondary);
 }
 
-.active, .nav-link:hover{
+.active, .nav-link:hover {
     color: var(--main) !important;
 }
 
 /* icon -buttons */
 .nav-item-icon {
     font-size: 2rem; 
-    color: #AA3378;
+    color: var(--main);
 }
 
 .navbar-toggler, .btn {
@@ -71,7 +70,7 @@
     color: var(--secondary);
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     background-color: var(--highlight);
 }
 
@@ -80,8 +79,7 @@
     font-weight: 500;
 }
 
-
-/********** BRAND - GOALS  **********/
+/********** BRAND - GOALS **********/
 .brand-message {
     font-size: 30px;
     color: var(--secondary);
@@ -97,17 +95,16 @@
 }
 
 .card-mission, .card-vision {
-    background-color:var(--main);
+    background-color: var(--main);
     border-radius: 20px;
 }
 
 .card-icon {
     font-size: 2rem; 
-    color: #FFC2CF;
+    color: var(--highlight);
 }
 
-
-/********** BRAND - VALUES  **********/
+/********** BRAND - VALUES **********/
 .rectangle {
     background-color: var(--secondary);
     height: 120px;
@@ -115,7 +112,7 @@
     margin-top: -6rem;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .rectangle {
         height: 200px;
         margin-top: -10rem;
@@ -125,15 +122,14 @@
     }
 }
 
-
-/********** TEAM  **********/
+/********** TEAM **********/
 #team .col {
     display: flex;
     justify-content: center;
 }
 
 .card-body {
-    background-color:var(--main);
+    background-color: var(--main);
 }
 
 .card-title {
@@ -157,3 +153,98 @@
     color: var(--secondary);
     font-weight: 600;
 }
+
+/********** FOOTER **********/
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: var(--secondary);
+    color: var(--contrast);
+    padding: 30px 0px 15px;
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 100%; /* Cambiado a 100% para móvil */
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .col {
+        flex-basis: 48%; /* En pantallas medianas, ajusta a 48% */
+    }
+}
+
+@media (min-width: 992px) {
+    .col {
+        flex-basis: 25%; /* En pantallas grandes, ajusta a 25% */
+    }
+}
+
+/* logo */
+.navbar-brand, .offcanvas-title {
+    color: var(--contrast);
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.navbar-brand span,
+.offcanvas-title span {
+    color: var(--main);
+}
+
+.navbar-brand {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Avisos y Términos */
+.col h6 {
+    width: fit-content;
+    padding: 15px 0px 15px;
+    position: relative;
+    font-weight: 600;
+    color: var(--highlight);
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .bi {
+    width: 40px;
+    height: 40px;
+    padding: 15px 0px 15px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: var(--contrast);
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
