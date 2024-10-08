@@ -39,7 +39,7 @@ El equipo a cargo del proyecto está conformado por un grupo de mujeres comprome
 - [Lisette Neri](https://github.com/LisetteNeri)
 - [María Fernanda Granados](https://github.com/mariafgrana2)
 - [Olga Mora](https://github.com/OlgaMora97)
-- [Sara Vergara](https://github.com/saravepi)
+- [Sara Silvia Vergara Pizano](https://github.com/saravepi)
 
 ---
 
