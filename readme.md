@@ -33,7 +33,6 @@ Nos vemos como una comunidad líder en el ámbito del fitness para mujeres. Aspi
 El equipo a cargo del proyecto está conformado por un grupo de mujeres comprometidas y talentosas. Aquí puedes encontrar sus perfiles de GitHub:
 
 - [América Sánchez](https://github.com/americasd28)
-- [Belén Calderón](https://github.com/BelenCVldr)
 - [Gabriela Nuñez Olivares](https://github.com/gnunezoliv)
 - [Karina Ibarra Díaz](https://github.com/karinaibarrait)
 - [Lisette Neri](https://github.com/LisetteNeri)
