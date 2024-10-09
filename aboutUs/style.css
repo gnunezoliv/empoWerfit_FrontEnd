@@ -1,82 +1,73 @@
 :root {
-    --main: #AA3378;
-    --secondary: #2A003A;
-    --highlight: #FFC2CF;
-    --background: #EFE9F1;
-    --contrast: #fefefe;
-<<<<<<< HEAD
+    --magenta:#AA3378;
+    --pastel-pink: #FFC2CF;
+    --pastel-purple: #EBB8DB;
+    --dark-purple: #2A003A;
+    --light-purple: #EFE9F1;
+    --white: #fefefe;
  }
  
- /********** Globales **********/
- h1, h2, h3, h4, h5, h6 {
-     font-family: "Teachers", sans-serif;
-     font-weight: 800;
- }
- 
- a, p {
-     font-family: "Poppins", sans-serif;
- }
- 
- .bg-light-purple {
-     background-color: var(--background);
- }
- 
- .bg-dark-purple {
-     background-color: var(--secondary);
- }
-=======
-}
->>>>>>> 510f93297788dea91726337502cd93c8cc0637b6
-
 /********** Globales **********/
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Teachers", sans-serif;
-    color: var(--secondary);
-    font-weight: 800;
+h1,h2,h3,h4,h5,h6{
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
-a, p {
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 32px; }
+
+.text-body {
     font-family: "Poppins", sans-serif;
+    font-size: 16px;
 }
 
-.bg-light-purple {
-    background-color: var(--background);
-}
-
-.bg-dark-purple {
-    background-color: var(--secondary);
-}
-
-/********** NAV-BAR **********/
-.navbar {
-    background-color: var(--contrast);
-}
-
-/* logo */
-.navbar-brand, .offcanvas-title {
-    color: var(--secondary);
-    font-weight: 800;
+.brand-messaging {
     font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
-.navbar-brand span,
-.offcanvas-title span {
-    color: var(--main);
+.text-style-light { color: #fefefe; }
+.text-style-dark { color: #2A003A; }
+.text-style-magenta { color: #AA3378; }
+
+.bg-light-purple { background-color: var(--light-purple); }
+.bg-dark-purple { background-color: var(--dark-purple); }
+.bg-magenta { background-color: var(--magenta); }
+
+.logo {
+    color: var(--dark-purple);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 28px;
 }
 
-/* pages */
-.nav-link {
-    color: var(--secondary);
+.white-logo {
+    color: var(--white);
 }
 
-.active, .nav-link:hover {
-    color: var(--main) !important;
+.logo span {
+    color: var(--magenta);
 }
 
-/* icon -buttons */
+
+ /********** NAV-BAR **********/
+ .navbar {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+ }
+
+.active, .nav-link:hover{
+    color: var(--magenta) !important;
+}
+
 .nav-item-icon {
     font-size: 2rem; 
-    color: var(--main);
+    color: var(--magenta);
 }
 
 .navbar-toggler, .btn {
@@ -88,93 +79,69 @@ a, p {
     outline: none;
 }
 
-.dropdown-item {
-    color: var(--secondary);
-}
-
-.dropdown-item:hover {
-    background-color: var(--highlight);
+.dropdown-item:hover{
+    background-color: var(--pastel-pink);
 }
 
 .dropdown-item:focus {
-    color: var(--main);
+    color: var(--magenta);
     font-weight: 500;
 }
 
-/********** BRAND - GOALS **********/
-.brand-message {
-    font-size: 30px;
-    color: var(--secondary);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
 
+/********** GOALS - VALUES **********/
 @media (min-width: 768px) {
-    .brand-message {
+    .brand-messaging {
         text-align: start;
     }
 }
 
 .card-mission, .card-vision {
-    background-color: var(--main);
     border-radius: 20px;
 }
 
 .card-icon {
     font-size: 2rem; 
-    color: var(--highlight);
+    color: var(--pastel-pink);
 }
 
-/********** BRAND - VALUES **********/
-.rectangle {
-    background-color: var(--secondary);
-    height: 120px;
-    width: 100%;
-    margin-top: -6rem;
+.group-values {
+    font-size: 21px;
 }
 
-@media (min-width: 768px) {
-    .rectangle {
-        height: 200px;
-        margin-top: -10rem;
-    }
-    .value {
-        font-size: 21px;
-    }
+.underline {
+    width: 180px;
+    height: 4px;
+    background: var(--magenta);
+    margin: 0 auto 64px auto;
 }
 
-/********** TEAM **********/
+
+/********** TEAM  **********/
 #team .col {
     display: flex;
     justify-content: center;
 }
 
 .card-body {
-    background-color: var(--main);
-}
-
-.card-title {
-    font-weight: 700;
+    background-color:var(--magenta);
+    color: var(--white);
 }
 
 .card-subtitle {
-    color: var(--secondary);
+    color: var(--pastel-purple);
 }
 
-.card-link {
-    color: var(--highlight);
-    text-decoration: none;
-}
-
-.btn-outline-light {
-    color: var(--highlight);
-}
+.card-text, .btn-outline-light {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+ }
 
 .btn-outline-light:hover {
-    color: var(--secondary);
+    color: var(--magenta) !important;
     font-weight: 600;
 }
+
 
 /********** FOOTER **********/
 footer {
@@ -196,49 +163,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.row {
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.col {
-    flex-basis: 100%; /* Cambiado a 100% para móvil */
-    padding: 10px;
-}
-
-@media (min-width: 768px) {
-    .col {
-        flex-basis: 48%; /* En pantallas medianas, ajusta a 48% */
-    }
-}
-
-@media (min-width: 992px) {
-    .col {
-        flex-basis: 25%; /* En pantallas grandes, ajusta a 25% */
-    }
-}
-
-/* logo */
-.navbar-brand, .offcanvas-title {
-    color: var(--contrast);
-    font-weight: 800;
-    font-size: 30px;
-}
-
-.navbar-brand span,
-.offcanvas-title span {
-    color: var(--main);
-}
-
-.navbar-brand {
-    width: 80px;
-    margin-bottom: 10px;
 }
 
 /* Avisos y Términos */
