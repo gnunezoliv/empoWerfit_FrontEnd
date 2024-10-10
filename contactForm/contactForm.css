@@ -1,4 +1,5 @@
 /******************+ NAVBAR *************************/
+
 :root {
     --main:#AA3378;
     --secondary: #2A003A;
@@ -78,7 +79,7 @@
     text-align: center;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     .brand-message {
         text-align: start;
     }
@@ -103,7 +104,7 @@
     margin-top: -6rem;
 }
 
-@media (min-width:769px) {
+@media (min-width:768px) {
     .rectangle {
         height: 200px;
         margin-top: -10rem;
@@ -127,7 +128,7 @@
 
 /* Solo afecta a los enlaces y párrafos dentro de la barra de navegación */
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 
     #navbar-section a,
     #navbar-section p {
@@ -142,7 +143,6 @@
 :root {
     --empwf-magenta: #AA3378;
     --empwf-purple: #2A003A;
-    --empwf-purple-btn: #763682;
     --empwf-background-web: #EFE9F1;
     --empwf--pale-pink: #EBB8DB;
     --empwf-pastel-pink: #FFC2CF;
@@ -151,7 +151,7 @@
 }
 
 /* Fondo del HTML */
-html {
+html body {
     background-color: var(--empwf-background-web);
 }
 
@@ -193,7 +193,7 @@ html {
 /* Style contact btn hover */
 .contact-btn:hover {
     color: var(--empwf-background-web);
-    background-color: var(--empwf-purple-btn);
+    background-color: rgba(137, 0, 234, 0.826);
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
 
@@ -204,7 +204,7 @@ html {
 }
 
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #contact-section .text-contact {
         text-align: center;
     }
@@ -219,20 +219,8 @@ html {
     padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #contact-section {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
-}
-
-/* Ajustar la imagen en pantallas pequeñas */
-@media (max-width: 767px) { /* Cambia 768px según tus necesidades */
-    .img-contact {
-        width: 80%; 
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
-}
-
-body {
-    background-color: var(--empwf-background-web);
 }
