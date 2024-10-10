@@ -1,50 +1,73 @@
-/******************+ NAVBAR *************************/
-
 :root {
-    --main:#AA3378;
-    --secondary: #2A003A;
-    --highlight: #FFC2CF;
-    --background: #EFE9F1;
-    --contrast: #fefefe;
+    --magenta:#AA3378;
+    --pastel-pink: #FFC2CF;
+    --pastel-purple: #EBB8DB;
+    --dark-purple: #2A003A;
+    --light-purple: #EFE9F1;
+    --white: #fefefe;
+ }
+ 
+/********** Globales **********/
+h1,h2,h3,h4,h5,h6{
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 32px; }
+
+.text-body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.brand-messaging {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.text-style-light { color: #fefefe; }
+.text-style-dark { color: #2A003A; }
+.text-style-magenta { color: #AA3378; }
+
+.bg-light-purple { background-color: var(--light-purple); }
+.bg-dark-purple { background-color: var(--dark-purple); }
+.bg-magenta { background-color: var(--magenta); }
+
+.logo {
+    color: var(--dark-purple);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.white-logo {
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--magenta);
+}
+
+
+ /********** NAV-BAR **********/
+ .navbar {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
  }
 
- .bg-light-purple {
-    background-color: var(--background);
-}
-
-.bg-dark-purple {
-    background-color: var(--secondary);
-}
-
-.navbar {
-    background-color: var(--contrast);
-}
-
- /* logo */
-.navbar-brand, .offcanvas-title {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 30px;
-}
-
-.navbar-brand span,
-.offcanvas-title span {
-    color: var(--main);
-}
-
-/* pages */
-.nav-link {
-    color: var(--secondary);
-}
-
 .active, .nav-link:hover{
-    color: var(--main) !important;
+    color: var(--magenta) !important;
 }
 
-/* icon -buttons */
 .nav-item-icon {
     font-size: 2rem; 
-    color: #AA3378;
+    color: var(--magenta);
 }
 
 .navbar-toggler, .btn {
@@ -56,86 +79,14 @@
     outline: none;
 }
 
-.dropdown-item {
-    color: var(--secondary);
-}
-
 .dropdown-item:hover{
-    background-color: var(--highlight);
+    background-color: var(--pastel-pink);
 }
 
 .dropdown-item:focus {
-    color: var(--main);
+    color: var(--magenta);
     font-weight: 500;
 }
-
-
-/********** BRAND - GOALS  **********/
-.brand-message {
-    font-size: 30px;
-    color: var(--secondary);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .brand-message {
-        text-align: start;
-    }
-}
-
-.card-mission, .card-vision {
-    background-color:var(--main);
-    border-radius: 20px;
-}
-
-.card-icon {
-    font-size: 2rem; 
-    color: #FFC2CF;
-}
-
-
-/********** BRAND - VALUES  **********/
-.rectangle {
-    background-color: var(--secondary);
-    height: 120px;
-    width: 100%;
-    margin-top: -6rem;
-}
-
-@media (min-width:768px) {
-    .rectangle {
-        height: 200px;
-        margin-top: -10rem;
-    }
-    .value {
-        font-size: 21px;
-    }
-}
-
-/* Solo afecta a los encabezados dentro de la barra de navegación */
-#navbar-section h1, 
-#navbar-section h2, 
-#navbar-section h3, 
-#navbar-section h4, 
-#navbar-section h5, 
-#navbar-section h6 {
-    font-family: "Teachers", sans-serif;
-    color: var(--secondary);
-    font-weight: 800;
-}
-
-/* Solo afecta a los enlaces y párrafos dentro de la barra de navegación */
-
-@media (min-width: 768px) {
-
-    #navbar-section a,
-    #navbar-section p {
-        font-family: "Poppins", sans-serif;
-    }
-}
-
 
 /************* CONTACT FORM **************/
 
