@@ -1,83 +1,49 @@
+/******************+ NAVBAR *************************/
 :root {
-    --magenta:#AA3378;
-    --pastel-pink: #FFC2CF;
-    --pastel-purple: #EBB8DB;
-    --dark-purple: #2A003A;
-    --light-purple: #EFE9F1;
-    --white: #fefefe;
+    --main:#AA3378;
+    --secondary: #2A003A;
+    --highlight: #FFC2CF;
+    --background: #EFE9F1;
+    --contrast: #fefefe;
  }
- 
-/********** Globales **********/
-h1,h2,h3,h4,h5,h6{
-    font-family: "Lora", serif;
-    font-weight: 600;
-    font-style: italic;
+
+ .bg-light-purple {
+    background-color: var(--background);
 }
 
-h1 { font-size: 48px; }
-h2 { font-size: 40px; }
-h3 { font-size: 32px; }
-
-.text-body {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
+.bg-dark-purple {
+    background-color: var(--secondary);
 }
 
-.brand-messaging {
-    font-size: 30px;
-    font-weight: 400;
-    font-style: normal;
+.navbar {
+    background-color: var(--contrast);
 }
 
-.text-style-light { color: #fefefe; }
-.text-style-dark { color: #2A003A; }
-.text-style-magenta { color: #AA3378; }
-
-.bg-light-purple { background-color: var(--light-purple); }
-.bg-dark-purple { background-color: var(--dark-purple); }
-.bg-magenta { background-color: var(--magenta); }
-
-.logo {
-    color: var(--dark-purple);
-    text-decoration: none;
+ /* logo */
+.navbar-brand, .offcanvas-title {
+    color: var(--secondary);
     font-weight: 800;
-    font-size: 28px;
+    font-size: 30px;
 }
 
-.white-logo {
-    color: var(--white);
+.navbar-brand span,
+.offcanvas-title span {
+    color: var(--main);
 }
 
-.logo span {
-    color: var(--magenta);
+/* pages */
+.nav-link {
+    color: var(--secondary);
 }
-
-.underline {
-    width: 180px;
-    height: 4px;
-    background: var(--magenta);
-    margin: 15px auto 20px auto;
-}
-
-@media (min-width: 992px) {
-    .underline {
-        margin: 15px 0px 20px 0px;
-    }
-}
-
- /********** NAV-BAR **********/
- .navbar {
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
- }
 
 .active, .nav-link:hover{
-    color: var(--magenta) !important;
+    color: var(--main) !important;
 }
 
+/* icon -buttons */
 .nav-item-icon {
     font-size: 2rem; 
-    color: var(--magenta);
+    color: #AA3378;
 }
 
 .navbar-toggler, .btn {
@@ -89,120 +55,184 @@ h3 { font-size: 32px; }
     outline: none;
 }
 
+.dropdown-item {
+    color: var(--secondary);
+}
+
 .dropdown-item:hover{
-    background-color: var(--pastel-pink);
+    background-color: var(--highlight);
 }
 
 .dropdown-item:focus {
-    color: var(--magenta);
+    color: var(--main);
     font-weight: 500;
 }
 
 
-/********** FOOTER **********/
-.footer-container {
-    margin-top: 50px;
+/********** BRAND - GOALS  **********/
+.brand-message {
+    font-size: 30px;
+    color: var(--secondary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-align: center;
 }
 
-.footer-item-icon {
+@media (min-width: 767px) {
+    .brand-message {
+        text-align: start;
+    }
+}
+
+.card-mission, .card-vision {
+    background-color:var(--main);
+    border-radius: 20px;
+}
+
+.card-icon {
     font-size: 2rem; 
-    color: var(--white);
+    color: #FFC2CF;
 }
 
-.link-item{
-    color: var(--white);
+
+/********** BRAND - VALUES  **********/
+.rectangle {
+    background-color: var(--secondary);
+    height: 120px;
+    width: 100%;
+    margin-top: -6rem;
 }
 
-@media (min-width: 768px) {
-    .footer-brand {
-        text-align: start;
+@media (min-width:769px) {
+    .rectangle {
+        height: 200px;
+        margin-top: -10rem;
     }
-    .footer-links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: start;
-        gap: 2.5rem;
-    }
-    .link-item {
-        margin-bottom: 0px;
-    }
-    .footer-redes {
-        display: flex;
-        justify-content: end;
-        align-items: center;
+    .value {
+        font-size: 21px;
     }
 }
 
-/********** TEXT AND IMAGE CONTACT **********/
-.img-container {
-    display: none;
+/* Solo afecta a los encabezados dentro de la barra de navegación */
+#navbar-section h1, 
+#navbar-section h2, 
+#navbar-section h3, 
+#navbar-section h4, 
+#navbar-section h5, 
+#navbar-section h6 {
+    font-family: "Teachers", sans-serif;
+    color: var(--secondary);
+    font-weight: 800;
 }
 
-@media (max-width: 576px) {
-    .brand-messaging{
-        display: none;
-    }
-}
+/* Solo afecta a los enlaces y párrafos dentro de la barra de navegación */
 
-@media (max-width: 768px) {
-    .text-contact {
-        text-align: center;
-    }
-}
+@media (min-width: 767px) {
 
-@media (min-width: 1200px) { 
-    .contact-description{
-        font-size: 18px;
-    }
-    .img-contact {
-        width: auto; 
-        max-height: 300px;
-    }
-    .img-container {
-        display: flex;
-        justify-content: end;
-        align-items: end;
-    }
-    .footer-container {
-        margin-top: 0px;
+    #navbar-section a,
+    #navbar-section p {
+        font-family: "Poppins", sans-serif;
     }
 }
 
 
-/********** FORM **********/
-input:focus, textarea:focus, select:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    border:none;
-    border-bottom: 4px solid var(--pastel-purple) !important;
-  }
+/************* CONTACT FORM **************/
 
-.required-tag-form {
-    color: var(--magenta);
+/* Variables de estilo */
+:root {
+    --empwf-magenta: #AA3378;
+    --empwf-purple: #2A003A;
+    --empwf-purple-btn: #763682;
+    --empwf-background-web: #EFE9F1;
+    --empwf--pale-pink: #EBB8DB;
+    --empwf-pastel-pink: #FFC2CF;
+    --teachers-title-font-family: "Teachers", system-ui;
+    --boddy-poppins-font-family: "Poppins", sans-serif;
+}
+
+/* Fondo del HTML */
+html {
+    background-color: var(--empwf-background-web);
+}
+
+/* Contact section */
+#contact-section {
+    background-color: var(--empwf-background-web);
+    font-family: var(--boddy-poppins-font-family);
+    color: var(--empwf-purple);
+}
+
+/* Contact section h2 */
+#contact-section h2 {
+    font-family: var(--teachers-title-font-family);
+    font-weight:700;
+    color: var(--empwf-magenta);
+}
+
+/* Contact section p */
+#contact-section p {
+    font-size: 18px;
+}
+
+/* Span Label Contact Form */
+.span-label-contact-form {
+    color: var(--empwf-magenta);
     font-size: 16px;
 }
 
-.input-label, .form-control {
-    margin-bottom: 8px;
-}
-
-/* Style btn */
+/* Style contact btn */
 .contact-btn {
-    background-color: var(--magenta);
-    border-radius: 8px;
-    color: var(--light-purple);
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
     cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    padding: 10px 0px;
     transition: all .4s ease;
-    width: 220px;
 }
 
-/* Style btn hover */
-.contact-btn:hover, .contact-btn:active {
-    background-color: var(--pastel-purple) !important;
-    color: var(--dark-purple);
-    transform: scale(1.1);
+/* Style contact btn hover */
+.contact-btn:hover {
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-purple-btn);
+    transform: scale(1.1); /* Hace que el botón se expanda */
+}
+
+/* Estilo para la línea vertical */
+.separator {
+    border-left: 1px solid var(--empwf-purple);
+    height: 100%; /* Ocupa el 100% de la altura de su contenedor */
+}
+
+/* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
+@media (max-width: 767px) {
+    #contact-section .text-contact {
+        text-align: center;
+    }
+
+    #contact-section .text-contact h2 {
+        font-size: 24px; /* Ajusta el tamaño según tus necesidades */
+    }
+}
+
+/* Ajustes para que no se empalmen el header con contact section */
+#contact-section {
+    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
+}
+
+@media (max-width: 767px) {
+    #contact-section {
+        padding-top: 60px; /* Padding reducido para pantallas pequeñas */
+    }
+}
+
+/* Ajustar la imagen en pantallas pequeñas */
+@media (max-width: 767px) { /* Cambia 768px según tus necesidades */
+    .img-contact {
+        width: 80%; 
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+
+body {
+    background-color: var(--empwf-background-web);
 }
