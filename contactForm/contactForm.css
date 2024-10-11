@@ -140,7 +140,7 @@ html body {
 /* Style contact btn hover */
 .contact-btn:hover {
     color: var(--empwf-background-web);
-    background-color: rgba(137, 0, 234, 0.826);
+    background-color: #763682;
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
 
