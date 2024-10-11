@@ -36,12 +36,22 @@ document.addEventListener("DOMContentLoaded", function(){
                         </ul>
                     </div>
                 </div>
+
+
+
+
+
                 <!-- user button-->
                 <div class="dropdown">
                     <button class="btn" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="nav-item-icon bi bi-person-circle"></i>
                     </button>
+
+
+
+
+                    
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                         <li><a class="dropdown-item text-style-dark" href="/sources/signIn/signIn.html">Ingresar</a></li>
                         <li><a class="dropdown-item text-style-dark" href="/sources/createAccount/createAccount.html">Crear cuenta</a></li>
