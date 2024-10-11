@@ -122,7 +122,7 @@ html body {
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
-    padding-top: 5px;
+    padding-top: 12px;
 }
 
 /* Contact section p */
@@ -168,6 +168,13 @@ html body {
     font-size: 22px;
 }
 
+#contact-section .col-md-6 .h2-purple {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
 @media (max-width: 768px) {
     #contact-section .text-contact {
@@ -181,7 +188,7 @@ html body {
 
 /* Ajustes para que no se empalmen el header con contact section */
 #contact-section {
-    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
+    padding-top: 95px; /* Padding superior para pantallas medianas y grandes */
 }
 
 @media (max-width: 768px) {
@@ -189,7 +196,3 @@ html body {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
 }
-
-
-
-
