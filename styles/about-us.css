@@ -1,0 +1,52 @@
+/********** GOALS - VALUES **********/
+@media (min-width: 768px) {
+    .brand-messaging {
+        text-align: start;
+    }
+}
+
+.card-mission, .card-vision {
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 2rem; 
+    color: var(--pastel-pink);
+}
+
+.group-values {
+    font-size: 21px;
+}
+
+.underline {
+    width: 180px;
+    height: 4px;
+    background: var(--magenta);
+    margin: 0 auto 64px auto;
+}
+
+
+/********** TEAM  **********/
+#team .col {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    background-color:var(--magenta);
+    color: var(--white);
+}
+
+.card-subtitle {
+    color: var(--pastel-purple);
+}
+
+.card-text, .btn-outline-light {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+ }
+
+.btn-outline-light:hover {
+    color: var(--magenta) !important;
+    font-weight: 600;
+}

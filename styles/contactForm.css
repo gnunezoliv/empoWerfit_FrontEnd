@@ -171,6 +171,10 @@ h3 { font-size: 32px; }
 
 
 /********** FORM **********/
+body {
+    padding-top: 70px; /* Asegúrate de que el contenido quede visible bajo la barra de navegación */
+}
+
 input:focus, textarea:focus, select:focus {
     outline: none !important;
     box-shadow: none !important;

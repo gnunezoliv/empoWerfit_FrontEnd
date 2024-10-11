@@ -1,0 +1,35 @@
+
+
+ /********** NAV-BAR **********/
+ .navbar {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+ }
+
+.active, .nav-link:hover{
+    color: var(--magenta) !important;
+}
+
+.nav-item-icon {
+    font-size: 2rem; 
+    color: var(--magenta);
+}
+
+.navbar-toggler, .btn {
+    border: none;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.dropdown-item:hover{
+    background-color: var(--pastel-pink);
+}
+
+.dropdown-item:focus {
+    color: var(--magenta);
+    font-weight: 500;
+}
+

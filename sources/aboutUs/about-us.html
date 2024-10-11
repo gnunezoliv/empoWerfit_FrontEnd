@@ -15,69 +15,15 @@
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="about-us.css">
+    <link rel="stylesheet" href="/styles/about-us.css">
+    <link rel="stylesheet" href="/styles/globalstyle.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 <body class="bg-light-purple">
+    
     <!-- NAVBAR -->
-    <header id="navbar-section">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <!-- mobile menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- logo -->
-                <a class="logo me-auto" href="#">empo<span>w</span>erfit</a>
-                <!-- pages-->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <p class="logo" id="offcanvasNavbarLabel">empo<span>w</span>erfit</p>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-underline">
-                            <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="#">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-style-dark active mx-lg-2" aria-current="page" href="#">Acerca de</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="#">Comunidad</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="#">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- user button-->
-                <div class="dropdown">
-                    <button class="btn" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="nav-item-icon bi bi-person-circle"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-                        <li><a class="dropdown-item text-style-dark" href="#">Ingresar</a></li>
-                        <li><a class="dropdown-item text-style-dark" href="#">Crear cuenta</a></li>
-                    </ul>
-                </div>
-                <!-- shop bag button-->
-                <button type="button" class="btn position-relative">
-                    <i class="nav-item-icon bi bi-bag"></i>
-                    <span class="position-absolute top-50 start-60 translate-middle-x badge rounded-pill bg-dark-purple">
-                        0
-                        <span class="visually-hidden"></span>
-                    </span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <nav id="navbar-container"></nav>
 
     <!-- HERO -->
     <section class="hero mt-4">
@@ -223,8 +169,13 @@
         </div>
     </section>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <!-- FOOTER -->
+    <footer id="footer-container"></footer>
+    <script src="/sources/navbar/navbar.js"></script>
+    <script src="/sources/footer/footer.js"></script>
 <!-- Bootstrap Bundle JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
