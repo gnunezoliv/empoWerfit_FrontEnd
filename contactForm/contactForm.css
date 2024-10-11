@@ -84,6 +84,13 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
 
+/* Se quito el hover al logo */
+a:hover {
+    text-decoration: none;  /* Quita el subrayado */
+    cursor: default;        /* Cambia el cursor para que no parezca clickeable */
+    color: inherit;         /* Opcional: mantiene el color actual del texto */
+}
+
 /************* CONTACT FORM **************/
 
 /* Variables de estilo */
@@ -111,14 +118,20 @@ html body {
 
 /* Contact section h2 */
 #contact-section h2 {
+    font-size: 30px;
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
+    padding-top: 5px;
 }
 
 /* Contact section p */
 #contact-section p {
     font-size: 18px;
+}
+
+.label-contact-form {
+    font-size: 16px;
 }
 
 /* Span Label Contact Form */
@@ -129,6 +142,7 @@ html body {
 
 /* Style contact btn */
 .contact-btn {
+    font-size: 16px;
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
     border-radius: 15px;
@@ -148,6 +162,10 @@ html body {
 .separator {
     border-left: 1px solid var(--empwf-purple);
     height: 100%; /* Ocupa el 100% de la altura de su contenedor */
+}
+
+.contact-purple {
+    font-size: 22px;
 }
 
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
@@ -171,4 +189,7 @@ html body {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
 }
+
+
+
 
