@@ -27,6 +27,7 @@ html body {
 /* Contact section h2 */
 #contact-section h2 {
     font-size: 30px;
+    font-size: 30px;
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
@@ -71,6 +72,17 @@ html body {
     border-left: 1px solid var(--empwf-purple);
     height: 100%; /* Ocupa el 100% de la altura de su contenedor */
 }
+
+.contact-purple {
+    font-size: 22px;
+}
+
+#contact-section .col-md-6 .h2-purple {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
 
 .contact-purple {
     font-size: 22px;
