@@ -52,4 +52,9 @@
     color: var(--magenta) !important;
     font-weight: 600;
 }
-
+/* Se quito el hover al logo */
+a:hover {
+    text-decoration: none;  /* Quita el subrayado */
+    cursor: default;        /* Cambia el cursor para que no parezca clickeable */
+    color: inherit;         /* Opcional: mantiene el color actual del texto */
+}
