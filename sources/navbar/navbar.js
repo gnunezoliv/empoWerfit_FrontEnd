@@ -37,10 +37,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     </div>
                 </div>
 
-
-
-
-
                 <!-- user button-->
                 <div class="dropdown">
                     <button class="btn" type="button" data-bs-toggle="dropdown"
@@ -48,18 +44,14 @@ document.addEventListener("DOMContentLoaded", function(){
                         <i class="nav-item-icon bi bi-person-circle"></i>
                     </button>
 
-
-
-
-                    
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                         <li><a class="dropdown-item text-style-dark" href="/sources/signIn/signIn.html">Ingresar</a></li>
                         <li><a class="dropdown-item text-style-dark" href="/sources/createAccount/createAccount.html">Crear cuenta</a></li>
                     </ul>
                 </div>
                 <!-- shop bag button-->
-                <button type="button" class="btn position-relative">
-                    <i class="nav-item-icon bi bi-bag"></i>
+                <button type="button" class="btn position-relative" onclick="window.location.href='/sources/payPage/payPage.html';">
+                    <i class="nav-item-icon bi bi-bag" ></i>
                     <span class="position-absolute top-50 start-60 translate-middle-x badge rounded-pill bg-dark-purple">
                         0
                         <span class="visually-hidden"></span>
@@ -67,5 +59,5 @@ document.addEventListener("DOMContentLoaded", function(){
                 </button>
             </div>
         </nav>`;
-document.getElementById("navbar-container").innerHTML = navbar;
-})
+    document.getElementById("navbar-container").innerHTML = navbar;
+});

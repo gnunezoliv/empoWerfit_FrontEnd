@@ -1,89 +1,4 @@
 
-:root {
-    --magenta:#AA3378;
-    --pastel-pink: #FFC2CF;
-    --pastel-purple: #EBB8DB;
-    --dark-purple: #2A003A;
-    --light-purple: #EFE9F1;
-    --white: #fefefe;
- }
- 
-.text-body {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-family: "Lora", serif;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.brand-messaging {
-    font-size: 30px;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.text-style-light { color: #fefefe; }
-.text-style-dark { color: #2A003A; }
-.text-style-magenta { color: #AA3378; }
-
-.bg-light-purple { background-color: var(--light-purple); }
-.bg-dark-purple { background-color: var(--dark-purple); }
-.bg-magenta { background-color: var(--magenta); }
-
-.logo {
-    color: var(--dark-purple);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 28px;
-}
-
-.white-logo {
-    color: var(--white);
-}
-
-.logo span {
-    color: var(--magenta);
-}
-
-
- /********** NAV-BAR **********/
- .navbar {
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
- }
-
-.active, .nav-link:hover{
-    color: var(--magenta) !important;
-}
-
-.nav-item-icon {
-    font-size: 2rem; 
-    color: var(--magenta);
-}
-
-.navbar-toggler, .btn {
-    border: none;
-}
-
-.navbar-toggler:focus, .btn-close:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-.dropdown-item:hover{
-    background-color: var(--pastel-pink);
-}
-
-.dropdown-item:focus {
-    color: var(--magenta);
-    font-weight: 500;
-}
-
 /************* CONTACT FORM **************/
 
 /* Variables de estilo */
@@ -111,14 +26,20 @@ html body {
 
 /* Contact section h2 */
 #contact-section h2 {
+    font-size: 30px;
     font-family: var(--teachers-title-font-family);
     font-weight:700;
     color: var(--empwf-magenta);
+    padding-top: 12px;
 }
 
 /* Contact section p */
 #contact-section p {
     font-size: 18px;
+}
+
+.label-contact-form {
+    font-size: 16px;
 }
 
 /* Span Label Contact Form */
@@ -129,6 +50,7 @@ html body {
 
 /* Style contact btn */
 .contact-btn {
+    font-size: 16px;
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
     border-radius: 15px;
@@ -140,7 +62,7 @@ html body {
 /* Style contact btn hover */
 .contact-btn:hover {
     color: var(--empwf-background-web);
-    background-color: rgba(137, 0, 234, 0.826);
+    background-color: #763682;
     transform: scale(1.1); /* Hace que el botón se expanda */
 }
 
@@ -149,6 +71,17 @@ html body {
     border-left: 1px solid var(--empwf-purple);
     height: 100%; /* Ocupa el 100% de la altura de su contenedor */
 }
+
+.contact-purple {
+    font-size: 22px;
+}
+
+#contact-section .col-md-6 .h2-purple {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
 
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
 @media (max-width: 768px) {
@@ -163,7 +96,7 @@ html body {
 
 /* Ajustes para que no se empalmen el header con contact section */
 #contact-section {
-    padding-top: 100px; /* Padding superior para pantallas medianas y grandes */
+    padding-top: 95px; /* Padding superior para pantallas medianas y grandes */
 }
 
 @media (max-width: 768px) {
@@ -171,4 +104,3 @@ html body {
         padding-top: 60px; /* Padding reducido para pantallas pequeñas */
     }
 }
-
