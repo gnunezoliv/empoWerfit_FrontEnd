@@ -26,4 +26,4 @@ document.addEventListener("DOMContentLoaded", function(){
           </div>
     </footer>`;
 document.getElementById("footer-container").innerHTML = footer;
-})
+}); //se agregó un ;
