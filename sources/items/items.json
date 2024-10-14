@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "category": "ropa",
+        "name": "Conjunto Aqua",
+        "price": "$450.00 MXN",
+        "size": ["XS", "S", "M", "L", "XL", "XXL"],
+        "stock": 70,
+        "image": ""
+    },
+    {
+        "id":2,
+        "category": "ropa",
+        "name": "Conjunto Running Black Panter",
+        "price": "$550.00 MXN",
+        "size": ["XS", "S", "M", "L", "XL", "XXL"],
+        "stock": 70,
+        "image": ""
+    },
+    {
+        "id":3,
+        "category": "ropa",
+        "name": "Conjunto Rosa Pastel ",
+        "price": "$450.00 MXN",
+        "size": ["XS", "S", "M", "L", "XL", "XXL"],
+        "stock": 70,
+        "image": ""
+       },
+       {
+        "id": 4,
+        "category": "equipamiento básico",
+        "name": "Par de Mancuernas Dynamic",
+        "price": "$250.00 MXN",
+        "color": ["rosa", "morado"],
+        "weight": ["3kg", "5kg", "10kg"],
+        "stock": 48,
+        "image": ""
+    },
+    {
+        "id": 5,
+        "category": "equipamiento básico",
+        "name": "Kit Básico Entreno en Casa",
+        "description": "Incluye una liga y banda de baja resistencia, un par de mancuernas de 5 kg y 2 balines de 1 kg",
+        "price": "$400.00 MXN",
+        "stock": 12,
+        "image": ""
+    },
+    
+       {
+        "id":6,
+        "category": "equipamiento básico",
+        "name": "Bolsa Deportiva Impermeable",
+        "description": "Bolsa deportiva impermeable (48 x 26 x 26.5 cm) con compartimientos para clazado y ropa mojada",
+        "size": "unitalla",
+        "price": "$500.00MXN",
+        "stock": 48,
+        "image": ""
+    },
+    {
+        "id":7,
+        "category": "equipamiento básico",
+        "name": "Kit de Ligas 4 Resistencias",
+        "description": "Kit de ligas con 4 niveles de resistencias con bolsa transportadora",
+        "price": "$240.00 MXN",
+        "stock": 40,
+        "image": ""
+    },
+    {
+        "id": 8,
+        "category": "accesorios",
+        "name": "Shaker Metálico",
+        "description": "Shaker metálico diseñado para mantener la temperatura del líquido, ya sea fría o caliente por 12hrs",
+        "price": "$450.00 MXN",
+        "color": "silver",
+        "stock": 5,
+        "image": ""
+       },
+    {
+        "id":9,
+        "category": "recuperación",
+        "name": "Bolsa para Hielo Terapia (1 pieza)",
+        "description": "Bolsa de hielo para recuperación muscular y desinflamación",
+        "price": "$300.00 MXN",
+        "stock": 50,
+        "image": ""
+       },
+       {
+        "id":10,
+        "category": "recuperación",
+        "name": "Unguento Muscular Relajante",
+        "description": "Unguento relajante muscular (30 gr) para recuperaación a base de extractos naturales",
+        "price": "$250.00 MXN",
+        "stock": 30,
+        "image": ""
+    },
+    {
+        "id":11,
+        "category": "recuperación",
+        "name": "Tape Neuromusuclar",
+        "description": "Tape neuromuscular de 5m de largo",
+        "price": "$120.00 MXN",
+        "stock": 5,
+        "image": ""
+       }
+
+
+]
