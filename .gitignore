@@ -1,0 +1,7 @@
+# Ignorar archivos y carpetas específicas
+
+# Configuración de VSCode
+.vscode/
+
+# Archivos del sistema en macOS
+.DS_Store
