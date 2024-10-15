@@ -3,47 +3,47 @@
         "id": 1,
         "category": "Ropa deportiva",
         "name": "Conjunto Aqua",
-        "price": "$450.00 MXN",
+        "price": "450.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": ""
+        "image": "/public/imgs/conjunto azul.png"
     },
     {
         "id":2,
         "category": "Ropa deportiva",
         "name": "Conjunto Running Black Panter",
-        "price": "$550.00 MXN",
+        "price": "550.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": ""
+        "image": "/public/imgs/conjunto negro 2.png"
     },
     {
         "id":3,
         "category": "Ropa deportiva",
         "name": "Conjunto Rosa Pastel ",
-        "price": "$450.00 MXN",
+        "price": "450.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": ""
+        "image": "/public/imgs/conjunto rosa.png"
        },
        {
         "id": 4,
         "category": "Equipamiento básico",
         "name": "Par de Mancuernas Dynamic",
-        "price": "$250.00 MXN",
+        "price": "250.00",
         "color": ["rosa", "morado"],
         "weight": ["3kg", "5kg", "10kg"],
         "stock": 48,
-        "image": ""
+        "image": "/public/imgs/mancuernas.png"
     },
     {
         "id": 5,
         "category": "Equipamiento básico",
         "name": "Kit básico de entrenamiento en casa",
         "description": "Incluye una liga y banda de baja resistencia, un par de mancuernas de 5 kg y 2 balines de 1 kg",
-        "price": "$400.00 MXN",
+        "price": "400.00",
         "stock": 37,
-        "image": ""
+        "image": "/public/imgs/kit-basico.png"
     },
     
        {
@@ -52,55 +52,65 @@
         "name": "Bolsa Deportiva Impermeable",
         "description": "Bolsa deportiva impermeable (48 x 26 x 26.5 cm) con compartimientos para calzado y ropa mojada",
         "size": "unitalla",
-        "price": "$500.00MXN",
+        "price": "500.00",
         "stock": 48,
-        "image": ""
+        "image": "/public/imgs/maleta.png"
     },
     {
         "id":7,
         "category": "Equipamiento básico",
         "name": "Kit de Ligas 4 Resistencias",
         "description": "Kit de ligas con 4 niveles de resistencias con bolsa transportadora",
-        "price": "$240.00 MXN",
+        "price": "240.00",
         "stock": 40,
-        "image": ""
+        "image": "/public/imgs/ligas.png"
     },
     {
         "id": 8,
         "category": "Accesorios",
         "name": "Shaker Metálico",
         "description": "Shaker metálico de 750 ml (25 oz.), diseñado para mantener la temperatura del líquido, ya sea fría o caliente por 12hrs",
-        "price": "$450.00 MXN",
+        "price": "450.00",
         "color": "silver",
         "stock": 5,
-        "image": ""
+        "image": "/public/imgs/shaker.png"
        },
     {
         "id":9,
         "category": "Productos de recuperación",
         "name": "Bolsa para Hielo Terapia (1 pieza)",
         "description": "Bolsa de hielo para recuperación muscular y desinflamación",
-        "price": "$300.00 MXN",
+        "price": "300.00",
         "stock": 50,
-        "image": ""
+        "image": "/public/imgs/bolsa-hielo-frio.png"
        },
        {
         "id":10,
         "category": "Productos de recuperación",
         "name": "Unguento Muscular Relajante",
         "description": "Unguento relajante muscular de 30 gr para la recuperación muscular a base de extractos naturales",
-        "price": "$250.00 MXN",
+        "price": "250.00",
         "stock": 30,
-        "image": ""
+        "image": "/public/imgs/pomada.png"
     },
     {
         "id":11,
         "category": "Productos de recuperación",
         "name": "Tape Neuromusuclar",
         "description": "Tape neuromuscular de 5cm x 5m",
-        "price": "$120.00 MXN",
+        "price": "120.00",
         "stock": 17,
-        "image": ""
+        "image": "/public/imgs/neuromuscular.png"
+       },
+
+    {
+        "id":12,
+        "category": "Ropa deportiva",
+        "name": "Conjunto Dark",
+        "description": "Conjunto deportivo negro matte",
+        "price": "450.00",
+        "stock": 17,
+        "image": "/public/imgs/conjunto negro.png"
        }
 
 
