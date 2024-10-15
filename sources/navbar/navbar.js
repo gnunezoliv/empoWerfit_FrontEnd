@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded", function(){
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-underline">
                             <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="/index.html">Inicio</a>
+                                <a class="nav-link text-style-dark mx-lg-2" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="/sources/items/items.html">Productos</a>
+                                <a class="nav-link text-style-dark mx-lg-2" href="sources/items/items.html">Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="/sources/aboutUs/about-us.html">Acerca de</a>
+                                <a class="nav-link text-style-dark mx-lg-2" href="sources/aboutUs/about-us.html">Acerca de</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" href="/sources/community/community.html">Comunidad</a>
+                                <a class="nav-link text-style-dark mx-lg-2" href="sources/community/community.html">Comunidad</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-style-dark mx-lg-2" aria-current="page" href="/sources/contactForm/contactForm.html">Contacto</a>
+                                <a class="nav-link text-style-dark mx-lg-2" aria-current="page" href="sources/contactForm/contactForm.html">Contacto</a>
                             </li>
                         </ul>
                     </div>
