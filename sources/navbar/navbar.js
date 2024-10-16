@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-underline">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-underline" id="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link text-style-dark mx-lg-2" href="/index.html">Inicio</a>
                             </li>
@@ -60,4 +60,14 @@ document.addEventListener("DOMContentLoaded", function(){
             </div>
         </nav>`;
     document.getElementById("navbar-container").innerHTML = navbar;
+
+    // Agregar clase 'active' al enlace correspondiente
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+            link.style.fontWeight = "bold"; // Aplicar estilo de negritas
+        }
+    });
 });
