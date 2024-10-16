@@ -58,9 +58,19 @@
         "stock": 37,
         "image": "/public/imgs/kit-basico.png"
     },
+
+    {
+        "id":7,
+        "category": "Equipamiento básico",
+        "name": "Kit Bandas de Resistencia",
+        "description": "Kit de bandas 5 piezas con bolsa transportadora, cada banda tiene un nivel de resistencia",
+        "price": "240.00",
+        "stock": 40,
+        "image": "/public/imgs/ligas.png"
+    },
     
        {
-        "id":7,
+        "id":8,
         "category": "Accesorios",
         "name": "Maleta Impermeable",
         "description": "Maleta de Entrenamiento impermeable (48 x 26 x 26.5 cm). Guarda tu equipo en el espacio principal y la ropa post-entrenamiento en el bolsillo interno.",
@@ -69,15 +79,7 @@
         "stock": 48,
         "image": "/public/imgs/maleta.png"
     },
-    {
-        "id":8,
-        "category": "Equipamiento básico",
-        "name": "Kit Bandas de Resistencia",
-        "description": "Kit de bandas 5 piezas con bolsa transportadora, cada banda tiene un nivel de resistencia",
-        "price": "240.00",
-        "stock": 40,
-        "image": "/public/imgs/ligas.png"
-    },
+    
     {
         "id": 9,
         "category": "Accesorios",
