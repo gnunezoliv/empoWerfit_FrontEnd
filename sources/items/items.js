@@ -5,28 +5,22 @@ fetch('/sources/items/items.json')
 
         products.forEach(product => {
             const productCard = document.createElement('div');
-            productCard.classList.add('col-md-4', 'mb-4');
+            productCard.classList.add('col-md-6', 'col-lg-4' ,'mb-4');
             productCard.innerHTML = `
-                <div class="card h-100">
+                <div class="card">
                     <img src="${product.image || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${product.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.name}</h5>
-                        <p class="card-text">Categoría: ${product.category}</p>
-                        <p class="card-text">Precio: $${product.price} MXN</p>
-                        ${product.size ? `<p class="card-text">Tallas disponibles: ${Array.isArray(product.size) ? product.size.join(', ') : product.size}</p>` : ''}
-                        ${product.color ? `<p class="card-text">Colores disponibles: ${Array.isArray(product.color) ? product.color.join(', ') : product.color}</p>` : ''}
-                        ${product.weight ? `<p class="card-text">Pesos disponibles: ${product.weight.join(', ')}</p>` : ''}
-                        ${product.description ? `<p class="card-text">Descripción: ${product.description}</p>` : ''}
-                        <p class="card-text">Stock: ${product.stock}</p>
+                    <div class="card-body product-info text-center pb-2">
+                        <p class="card-text product-category">${product.category}</p>
+                        <h4 class="card-title product-name mt-3 mb-1"><span class="d-inline-block text-truncate" style="max-width: 250px;">${product.name}</span></h4>
+                        ${product.description ? `<p class="card-text mb-2"><small class="d-inline-block text-truncate" style="max-width: 270px;">${product.description}</small></p>` : ''}
+                        <p class="card-text product-price">$${product.price} MXN</p>
                     </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <button class="btn btn-outline-primary">
-                            <i class="bi bi-cart"></i> Añadir al carrito
-                        </button>
-                        <button class="btn btn-outline-danger">
-                            <i class="bi bi-heart"></i> Me gusta
-                        </button>
-                    </div>
+                    <div class="card-footer d-flex justify-content-evenly mb-3">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
+                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
+                      </div>
+                </div>
                 </div>
             `;
             productsContainer.appendChild(productCard);
