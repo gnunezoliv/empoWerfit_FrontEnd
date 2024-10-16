@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 <!-- user button-->
                 <div class="dropdown">
-                    <button class="btn" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-icon" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="nav-item-icon bi bi-person-circle"></i>
                     </button>
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     </ul>
                 </div>
                 <!-- shop bag button-->
-                <button type="button" class="btn position-relative" onclick="window.location.href='/sources/payPage/payPage.html';">
+                <button type="button" class="btn btn-icon position-relative" onclick="window.location.href='/sources/payPage/payPage.html';">
                     <i class="nav-item-icon bi bi-bag" ></i>
                     <span class="position-absolute top-50 start-60 translate-middle-x badge rounded-pill bg-dark-purple">
                         0
