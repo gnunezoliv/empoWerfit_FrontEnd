@@ -19,12 +19,21 @@ fetch('/sources/items/items.json')
                         ${product.description ? `<p class="card-text">Descripción: ${product.description}</p>` : ''}
                         <p class="card-text">Stock: ${product.stock}</p>
                     </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <button class="btn btn-outline-primary">
+                            <i class="bi bi-cart"></i> Añadir al carrito
+                        </button>
+                        <button class="btn btn-outline-danger">
+                            <i class="bi bi-heart"></i> Me gusta
+                        </button>
+                    </div>
                 </div>
             `;
             productsContainer.appendChild(productCard);
         });
     })
     .catch(error => console.error('Error cargando los productos:', error));
+
 
 
 
