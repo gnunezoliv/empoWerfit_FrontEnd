@@ -42,10 +42,9 @@
        {
         "id": 5,
         "category": "Equipamiento básico",
-        "name": "Mancuernas Dynamic",
-        "description": "Set Mancuernas Dynamic de peso fijo",
+        "name": "Kit entrenamiento Dynamic",
+        "description": "Incluye un set Mancuernas Dynamic color rosa de peso fijo y Tapete Deportivo (61 x 173 x 0.5 cm) color aqua elaborado en material sintético",
         "price": "249.00",
-        "color": ["rosa", "morado"],
         "weight": ["1kg", "3kg", "5kg", "10kg"],
         "stock": 48,
         "image": "/public/imgs/mancuernas-tapete.png"
@@ -54,7 +53,7 @@
         "id": 6,
         "category": "Equipamiento básico",
         "name": "Kit entrenamiento en casa",
-        "description": "Incluye liga y banda de baja resistencia, par de mancuernas de 3 kg y 2 balines de 1 kg",
+        "description": "Incluye liga y banda de baja resistencia, par de mancuernas de 3 kg y pesa rusa de 8 kg",
         "price": "399.00",
         "stock": 37,
         "image": "/public/imgs/kit-basico.png"
