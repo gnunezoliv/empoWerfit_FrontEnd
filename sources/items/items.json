@@ -4,58 +4,58 @@
         "category": "Ropa deportiva",
         "name": "Conjunto Aqua",
         "description": "Conjunto deportivo Aqua de dos piezas para entrenamiento",
-        "price": "450.00",
+        "price": "449.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": "/public/imgs/conjunto azul.png"
+        "image": "/public/imgs/set-aqua.png"
     },
     {
         "id":2,
         "category": "Ropa deportiva",
         "name": "Conjunto Running Black Panter",
         "description": "Conjunto deportivo Black Panter de dos piezas para correr",
-        "price": "450.00",
+        "price": "449.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": "/public/imgs/conjunto negro 2.png"
+        "image": "/public/imgs/set-negro.png"
     },
     {
         "id":3,
         "category": "Ropa deportiva",
         "name": "Conjunto Rosa Pastel ",
         "description": "Conjunto deportivo Rosa Pastel de cuatro piezas para entrenamiento",
-        "price": "550.00",
+        "price": "549.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,
-        "image": "/public/imgs/conjunto rosa.png"
+        "image": "/public/imgs/set-rosa.png"
        },
        {
         "id":4,
         "category": "Ropa deportiva",
         "name": "Conjunto Dark",
         "description": "Conjunto deportivo Dark de dos piezas para entrenamiento",
-        "price": "450.00",
+        "price": "449.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 17,
-        "image": "/public/imgs/conjunto negro.png"
+        "image": "/public/imgs/set-gris.png"
        },
        {
         "id": 5,
         "category": "Equipamiento básico",
         "name": "Mancuernas Dynamic",
         "description": "Set Mancuernas Dynamic de peso fijo",
-        "price": "250.00",
+        "price": "249.00",
         "color": ["rosa", "morado"],
         "weight": ["1kg", "3kg", "5kg", "10kg"],
         "stock": 48,
-        "image": "/public/imgs/mancuernas.png"
+        "image": "/public/imgs/mancuernas-tapete.png"
     },
     {
         "id": 6,
         "category": "Equipamiento básico",
-        "name": "Kit básico de entrenamiento en casa",
+        "name": "Kit entrenamiento en casa",
         "description": "Incluye liga y banda de baja resistencia, par de mancuernas de 3 kg y 2 balines de 1 kg",
-        "price": "400.00",
+        "price": "399.00",
         "stock": 37,
         "image": "/public/imgs/kit-basico.png"
     },
@@ -66,7 +66,7 @@
         "name": "Maleta Impermeable",
         "description": "Maleta de Entrenamiento impermeable (48 x 26 x 26.5 cm). Guarda tu equipo en el espacio principal y la ropa post-entrenamiento en el bolsillo interno.",
         "size": "unitalla",
-        "price": "500.00",
+        "price": "499.00",
         "stock": 48,
         "image": "/public/imgs/maleta.png"
     },
@@ -74,7 +74,7 @@
         "id":8,
         "category": "Equipamiento básico",
         "name": "Kit Bandas de Resistencia",
-        "description": "Kit de bandas 4 piezas con bolsa transportadora, cada banda tiene un nivel de resistencia",
+        "description": "Kit de bandas 5 piezas con bolsa transportadora, cada banda tiene un nivel de resistencia",
         "price": "240.00",
         "stock": 40,
         "image": "/public/imgs/ligas.png"
@@ -84,7 +84,7 @@
         "category": "Accesorios",
         "name": "Shaker Metálico",
         "description": "Shaker metálico 750 ml (25 oz.), diseñado para mantener la temperatura del líquido, ya sea fría o caliente por 12hrs. No absorbe olores ni sabores.",
-        "price": "450.00",
+        "price": "449.00",
         "color": "silver",
         "stock": 7,
         "image": "/public/imgs/shaker.png"
@@ -92,9 +92,9 @@
     {
         "id":10,
         "category": "Productos de recuperación",
-        "name": "Bolsa para Hielo Terapia (1 pieza)",
+        "name": "Bolsa de Hielo (1pz)",
         "description": "La bolsa para hielo permite reducir la inflamación, aliviar el dolor y acelerar la recuperación muscular post entrenamiento",
-        "price": "300.00",
+        "price": "299.00",
         "stock": 50,
         "image": "/public/imgs/bolsa-hielo-frio.png"
        },
@@ -103,14 +103,14 @@
         "category": "Productos de recuperación",
         "name": "Unguento Muscular",
         "description": "Unguento Muscular 30 gr. Su fórmula a base de extractos naturales ofrece un efecto analgésico para aliviar golpes, espasmos y contusiones musculares.",
-        "price": "250.00",
+        "price": "249.00",
         "stock": 30,
         "image": "/public/imgs/pomada.png"
     },
     {
         "id":12,
         "category": "Productos de recuperación",
-        "name": "Tape Neuromusuclar (1 pieza)",
+        "name": "Tape Neuromuscular",
         "description": "Tape Neuromuscular de 5cm x 5m. Elaborada 100% de algodón, es ideal para brindarte un soporte extra al realizar movimientos musculares",
         "price": "120.00",
         "stock": 17,
