@@ -12,8 +12,8 @@ fetch('/sources/items/items.json')
                     <div class="card-body">
                         <h5 class="card-title">${product.name}</h5>
                         <p class="card-text">Categoría: ${product.category}</p>
-                        <p class="card-text">Precio: $ ${product.price} MXN</p>
-                        ${product.size ? `<p class="card-text">Tamaños disponibles: ${Array.isArray(product.size) ? product.size.join(', ') : product.size}</p>` : ''}
+                        <p class="card-text">Precio: $${product.price} MXN</p>
+                        ${product.size ? `<p class="card-text">Tallas disponibles: ${Array.isArray(product.size) ? product.size.join(', ') : product.size}</p>` : ''}
                         ${product.color ? `<p class="card-text">Colores disponibles: ${Array.isArray(product.color) ? product.color.join(', ') : product.color}</p>` : ''}
                         ${product.weight ? `<p class="card-text">Pesos disponibles: ${product.weight.join(', ')}</p>` : ''}
                         ${product.description ? `<p class="card-text">Descripción: ${product.description}</p>` : ''}
