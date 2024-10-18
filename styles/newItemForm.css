@@ -1,0 +1,10 @@
+/*Boton */
+.contact-btn {
+    font-size: 16px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
