@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                         <li><a class="dropdown-item text-style-dark" href="/sources/signIn/signIn.html">Ingresar</a></li>
                         <li><a class="dropdown-item text-style-dark" href="/sources/createAccount/createAccount.html">Crear cuenta</a></li>
-                        <li><a class="dropdown-item text-style-dark" href="/sources/createAccount/createAccount.html">Administración</a></li>
                         <li><a class="dropdown-item text-style-dark" href="/sources/footer/items-form/newItemForm.html">Administración</a></li>
                     </ul>
                 </div>
