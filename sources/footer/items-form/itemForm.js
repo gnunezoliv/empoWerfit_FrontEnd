@@ -30,25 +30,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     if (clearStorageButton) {
-        clearStorageButton.addEventListener("click", () => {
+      clearStorageButton.addEventListener("click", () => {
           // Mostrar el modal para la contraseña
           const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+          document.getElementById('passwordInput').value = ''; // Limpiar el campo de contraseña
           passwordModal.show();
-      
+  
           // Agregar evento de confirmación
           document.getElementById('confirmPasswordButton').onclick = () => {
-            const password = document.getElementById('passwordInput').value;
-            
-            if (password === '123456') {
-              localStorage.removeItem("productos");
-              showAlert("El almacenamiento ha sido limpiado correctamente.", "info");
-              passwordModal.hide(); // Cerrar el modal
-            } else {
-              showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
-            }
+              const password = document.getElementById('passwordInput').value;
+  
+              if (password === '123456') {
+                  localStorage.removeItem("productos");
+                  showAlert("El almacenamiento ha sido limpiado correctamente.", "info");
+                  passwordModal.hide(); // Cerrar el modal
+  
+                  // Agregar un pequeño retraso antes de recargar la página
+                  setTimeout(() => {
+                      window.location.reload(); // Recargar la página automáticamente
+                  }, 1500); // Retraso de 1.5 segundos para que la alerta sea visible
+              } else {
+                  showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
+              }
           };
-        });
-      }
+      });
+  }
+  
        
   
     if (modifyItemButton) {
