@@ -1,3 +1,18 @@
+body {
+    padding-top: 50px;
+}
+
+h2 {
+    color: #AA3378;
+}
+
+span {
+    color: #AA3378;
+}
+
+.form-label {
+    color: #2A003A;
+}
 /*Boton */
 .contact-btn {
     font-size: 16px;
@@ -8,3 +23,5 @@
     cursor: pointer;
     transition: all .4s ease;
 }
+
+

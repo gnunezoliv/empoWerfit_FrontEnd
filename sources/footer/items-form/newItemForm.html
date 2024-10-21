@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/styles/globalstyle.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="../../../styles/items.css">
+    <link rel="stylesheet" href="../../../styles/newItemForm.css">
     
 </head>
 <body class="bg-light-purple">
@@ -29,78 +31,97 @@
 <!---Formulario NewItem-->
 
 
-<div class="alert alert-success" role="alert">
-    Producto Agregado con éxito!
-    </div>
-    
-    <div class="alert alert-danger" role="alert">
-    Producto NO creado, intenta denuevo
-    </div>
-
-<div class="container my-5 py-3">
-    <h1 class="my-5">New Item</h1>
-    <div class="row">
-        <div class="col">
-            <form id="newItemForm">
-
-                <div class="form-group">
-                    <label for="newItemCategory">Categoria: *</label>
-            <select class="form-select" id="validationCustom04" required>
-              <option selected disabled value="">...</option>
-              <option>Ropa</option>
-              <option>Equipamiento basico</option>
-              <option>Accesorios</option>
-              <option>Productos de recuperación</option>
+<div class="container mt-5">
+    <h2>Crear Nuevo Item</h2>
+    <form id="itemForm" class="needs-validation" novalidate>
+        <div class="mb-2">
+            <label for="categoria" class="form-label">Categoría<span class="span-label-contact-form">*</span></label>
+            <select class="form-select" id="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="ropa-deportiva">Ropa Deportiva</option>
+                <option value="equipamento-basico">Equipamento Básico</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="productos-recuperacion">Productos de recuperación</option>
             </select>
-
-                      
-          
-                </div>
-                <div class="form-group">
-                    <label for="newItemName" >Nombre: *</label>
-                    <textarea type="text" class="form-control" id="newItemName" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="newItemDescription" >Descripcion: *</label>
-                    <input type="text" class="form-control" id="newItemDescription" required>
-                </div>       
-
-                <div class="form-group">
-                    <label for="newItemPrice" required>Precio MXN: *</label>
-                    <input type="text" class="form-control" id="newItemPrice" required>
-                </div>
-                <div class="form-group">
-                    <label for="newItemSize">Talla:</label>
-                    <input type="text" class="form-control" id="newItemSize">
-                </div>
-                
-                <div class="form-group">
-                    <label for="newItemColor">Color:</label>
-                    <input type="text" class="form-control" id="newItemColor">
-                </div>
-                <div class="form-group">
-                    <label for="newItemWeight">Peso:</label>
-                    <input type="text" class="form-control" id="newItemWeight">
-                </div>
-                <div class="form-group">
-                    <label for="newItemStock">Stock: *</label>
-                    <input type="text" class="form-control" id="newItemStock" required>
-                </div>   
-                <div class="form-group">
-                    <label for="newItemURLImage">Imagen: *</label>
-                    <input type="file" class="form-control" id="newItemURLImage" accept="image/*" required>
-                </div>
-                <div class="form-group">
-                    <label for="newItemID">ID: *</label>
-                    <input type="text" class="form-control" id="newItemID" required>
-                </div>
-                
-                <button type="submit" class="btn contact-btn">Guardar</button>
-            </form>
+            <div class="invalid-feedback">Debe seleccionar una categoría.</div>
         </div>
-    </div>
+        <div class="mb-2">
+            <label for="nombre" class="form-label" >Nombre<span class="span-label-contact-form">*</span></label>
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombre" required>
+            <div class="invalid-feedback">El nombre es obligatorio.</div>
+        </div>
+        <div class="mb-2">
+            <label for="descripcion" class="form-label">Descripción<span class="span-label-contact-form">*</span></label>
+            <textarea class="form-control" id="descripcion" rows="3" placeholder="Ingrese la descripción del producto" required></textarea>
+            <div class="invalid-feedback">La descripción es obligatoria.</div>
+        </div>
+        <div class="mb-2">
+            <label for="precio" class="form-label">Precio<span class="span-label-contact-form">*</span></label>
+            <input type="number" class="form-control" id="precio" placeholder="Ingrese el precio del producto" min="1" step="any" required onwheel="return false" passive onkeydown="return event.key !== 'ArrowUp' && event.key !== 'ArrowDown'">
+            <div class="invalid-feedback">El precio debe ser mayor a 1.</div>
+        </div>
+        <div class="mb-2">
+            <label for="talla" class="form-label">Talla</label>
+            <input type="text" class="form-control" id="talla" placeholder="Ingrese la talla del producto">
+        </div>
+        <div class="mb-2">
+            <label for="peso" class="form-label">Peso</label>
+            <input type="number" class="form-control" id="peso" onwheel="return false" placeholder="Ingrese el peso del producto" passive>
+        </div>
+        <div class="mb-2">
+            <label for="color" class="form-label">Color</label>
+            <input type="text" class="form-control" id="color" placeholder="Ingrese los colores disponibles del producto">
+        </div>
+        <div class="mb-2">
+            <label for="stock" class="form-label">Stock<span class="span-label-contact-form">*</span></label>
+            <input type="number" class="form-control" id="stock" min="1" placeholder="Ingrese la cantidad de artículos disponibles" required onwheel="return false" passive onkeydown="return event.key !== 'ArrowUp' && event.key !== 'ArrowDown'">
+            <div class="invalid-feedback">El stock debe ser mayor a 1.</div>
+        </div>        
+        <div class="mb-2">
+            <label for="imagen" class="form-label">Imagen<span class="span-label-contact-form">*</span></label>
+            <input type="file" class="form-control" id="imagen" >
+            <div class="invalid-feedback">La imagen es obligatoria.</div>
+        </div>
+        <!-- Imagen de vista previa -->
+        <div class="mb-2">
+            <img id="preview" src="#" alt="Vista previa de la imagen" style="display:none; max-width: 200px; margin-top: 10px;">
+        </div>
+        
+        <div class="mb-3">
+            <label for="id" class="form-label">Contraseña Administrador<span class="span-label-contact-form">*</span></label>
+            <input type="password" class="form-control" id="id" required pattern="123456" placeholder="Ingrese su contrasñea de administrador">
+            <div class="invalid-feedback">La contraseña es incorrecta.</div>
+            <div class="invalid-feedback">El ID es obligatorio.</div>
+        </div>
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
+            <button type="submit" class="btn btn-primary btn-lg">Crear Item</button>
+            <button type="button" id="modifyItemBtn" class="btn btn-primary btn-lg">Modificar Item</button>
+            <button id="clearStorage" class="btn btn-primary btn-lg">Limpiar Almacenamiento</button>
+        </div>
+
+    </form>
+    <div id="alertContainer" class="mt-3"></div>
 </div>
+
+<!-- Modal para la solicitud de contraseña -->
+<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="passwordModalLabel">Ingrese su contraseña</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="password" id="passwordInput" class="form-control" placeholder="Contraseña">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="confirmPasswordButton">Confirmar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 <!---Footer-->
 <footer id="footer-container"></footer>
@@ -110,8 +131,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="/sources/navbar/navbar.js"></script>
 <script src="/sources/footer/footer.js"></script>
+<script src="./itemForm.js"></script>
 
 
-  
 </body>
 </html>
