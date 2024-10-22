@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentEditIndex = null;
   let currentImageData = null;
 
+  function getNextItemId() {
+    let productos = JSON.parse(localStorage.getItem("productos")) || [];
+    return productos.length + 13; // Comienza desde el número 13
+}
+
   if (imagenInput) {
       // Mostrar vista previa de la imagen al seleccionarla
       imagenInput.addEventListener("change", function (event) {
@@ -152,24 +157,41 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             
-                const item = {
-                    categoria: document.getElementById("categoria").value,
-                    nombre: document.getElementById("nombre").value,
-                    descripcion: document.getElementById("descripcion").value,
-                    precio: document.getElementById("precio").value,
-                    variantes: variantes,
-                    imagen: imageData || currentImageData || "https://via.placeholder.com/150"
-                };
+                let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
+                let item;
+            
+                if (currentEditIndex !== null) {
+                    // Editar producto existente, conservar el ID original
+                    item = {
+                        ...storedItems[currentEditIndex], // Mantener el ID y otros campos previos
+                        categoria: document.getElementById("categoria").value,
+                        nombre: document.getElementById("nombre").value,
+                        descripcion: document.getElementById("descripcion").value,
+                        precio: document.getElementById("precio").value,
+                        variantes: variantes,
+                        imagen: imageData || currentImageData || "https://via.placeholder.com/150"
+                    };
+                    storedItems[currentEditIndex] = item;
+                    currentEditIndex = null;
+                    currentImageData = null;
+            
+                    // Cambiar el texto del botón de nuevo a "Crear Item"
+                    document.getElementById("submitButton").textContent = "Crear Item";
+                } else {
+                    // Crear un producto nuevo, asignar un nuevo ID
+                    item = {
+                        id: getNextItemId(),
+                        categoria: document.getElementById("categoria").value,
+                        nombre: document.getElementById("nombre").value,
+                        descripcion: document.getElementById("descripcion").value,
+                        precio: document.getElementById("precio").value,
+                        variantes: variantes,
+                        imagen: imageData || currentImageData || "https://via.placeholder.com/150"
+                    };
+                    storedItems.push(item);
+                }
             
                 try {
-                    let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
-                    if (currentEditIndex !== null) {
-                        storedItems[currentEditIndex] = item;
-                        currentEditIndex = null;
-                        currentImageData = null;
-                    } else {
-                        storedItems.push(item);
-                    }
                     localStorage.setItem("productos", JSON.stringify(storedItems));
             
                     // Mostrar mensaje de éxito
@@ -213,40 +235,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función para editar un producto existente
   window.editProduct = function (index) {
-      let productos = JSON.parse(localStorage.getItem("productos")) || [];
-      const producto = productos[index];
-      if (producto) {
-          document.getElementById("categoria").value = producto.categoria;
-          document.getElementById("nombre").value = producto.nombre;
-          document.getElementById("descripcion").value = producto.descripcion;
-          document.getElementById("precio").value = producto.precio;
+    let productos = JSON.parse(localStorage.getItem("productos")) || [];
+    const producto = productos[index];
+    if (producto) {
+        document.getElementById("categoria").value = producto.categoria;
+        document.getElementById("nombre").value = producto.nombre;
+        document.getElementById("descripcion").value = producto.descripcion;
+        document.getElementById("precio").value = producto.precio;
 
-          // Limpiar las filas existentes
-          variantesTabla.innerHTML = '';
+        // Limpiar las filas existentes
+        variantesTabla.innerHTML = '';
 
-          // Agregar filas para cada variante del producto
-          producto.variantes.forEach(variant => {
-              const fila = document.createElement("tr");
-              fila.innerHTML = `
-                  <td><input type="text" class="form-control" value="${variant.talla}" placeholder="Talla"></td>
-                  <td><input type="text" class="form-control" value="${variant.peso}" placeholder="Peso"></td>
-                  <td><input type="text" class="form-control" value="${variant.color}" placeholder="Color"></td>
-                  <td><input type="number" class="form-control" value="${variant.stock}" min="0" placeholder="Stock"></td>
-                  <td><button type="button" class="btn btn-danger btn-sm eliminarFilaBtn">Eliminar</button></td>
-              `;
-              variantesTabla.appendChild(fila);
+        // Agregar filas para cada variante del producto
+        producto.variantes.forEach(variant => {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td><input type="text" class="form-control" value="${variant.talla}" placeholder="Talla"></td>
+                <td><input type="text" class="form-control" value="${variant.peso}" placeholder="Peso"></td>
+                <td><input type="text" class="form-control" value="${variant.color}" placeholder="Color"></td>
+                <td><input type="number" class="form-control" value="${variant.stock}" min="0" placeholder="Stock"></td>
+                <td><button type="button" class="btn btn-danger btn-sm eliminarFilaBtn">Eliminar</button></td>
+            `;
+            variantesTabla.appendChild(fila);
 
-              fila.querySelector(".eliminarFilaBtn").addEventListener("click", () => {
-                  fila.remove();
-              });
-          });
+            fila.querySelector(".eliminarFilaBtn").addEventListener("click", () => {
+                fila.remove();
+            });
+        });
 
-          previewImage.src = producto.imagen;
-          previewImage.style.display = "block";
-          currentEditIndex = index;
-          currentImageData = producto.imagen;
-      }
-  };
+        previewImage.src = producto.imagen;
+        previewImage.style.display = "block";
+        currentEditIndex = index;
+        currentImageData = producto.imagen;
+
+        // Cambiar el texto del botón a "Guardar Item"
+        document.getElementById("submitButton").textContent = "Guardar Item";
+    }
+};
+
 
   // Función para eliminar un producto existente
   window.deleteProduct = function (index) {
@@ -274,8 +300,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function printStoredProducts() {
   const productos = JSON.parse(localStorage.getItem("productos")) || [];
-  console.log("Productos almacenados:", JSON.stringify(productos, null, 2));
+  console.group("Productos almacenados (resumido):");
+  productos.forEach(producto => {
+      console.groupCollapsed(`ID: ${producto.id} - Nombre: ${producto.nombre}`);
+      console.log(JSON.stringify(producto, null, 2));
+      console.groupEnd();
+  });
+  console.groupEnd();
 }
+
 
 // Llama a la función al cargar la página para imprimir los productos iniciales.
 printStoredProducts();
