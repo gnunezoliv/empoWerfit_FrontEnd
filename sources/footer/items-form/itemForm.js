@@ -140,48 +140,52 @@ document.addEventListener("DOMContentLoaded", () => {
               const imageFile = imagenInput.files[0];
 
               const saveItem = (imageData) => {
-                  const variantes = [];
-                  variantesTabla.querySelectorAll("tr").forEach(row => {
-                      const talla = row.children[0].children[0].value;
-                      const peso = row.children[1].children[0].value;
-                      const color = row.children[2].children[0].value;
-                      const stock = row.children[3].children[0].value;
-
-                      if (talla || peso || color || stock) {
-                          variantes.push({ talla, peso, color, stock });
-                      }
-                  });
-
-                  const item = {
-                      categoria: document.getElementById("categoria").value,
-                      nombre: document.getElementById("nombre").value,
-                      descripcion: document.getElementById("descripcion").value,
-                      precio: document.getElementById("precio").value,
-                      variantes: variantes,
-                      imagen: imageData || currentImageData || "https://via.placeholder.com/150"
-                  };
-
-                  try {
-                      let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
-                      if (currentEditIndex !== null) {
-                          storedItems[currentEditIndex] = item;
-                          currentEditIndex = null;
-                          currentImageData = null;
-                      } else {
-                          storedItems.push(item);
-                      }
-                      localStorage.setItem("productos", JSON.stringify(storedItems));
-
-                      // Mostrar mensaje de éxito
-                      showAlert("El item ha sido creado/modificado exitosamente.", "success");
-
-                      // Redirigir a la página de productos después de un pequeño retraso
-                      setTimeout(() => window.location.href = "/sources/items/items.html", 1500);
-                  } catch (e) {
-                      console.error("Error al guardar en localStorage: ", e);
-                      showAlert("No se pudo crear/modificar el producto debido a un problema de almacenamiento.", "danger");
-                  }
-              };
+                const variantes = [];
+                variantesTabla.querySelectorAll("tr").forEach(row => {
+                    const talla = row.children[0].children[0].value;
+                    const peso = row.children[1].children[0].value;
+                    const color = row.children[2].children[0].value;
+                    const stock = row.children[3].children[0].value;
+            
+                    if (talla || peso || color || stock) {
+                        variantes.push({ talla, peso, color, stock });
+                    }
+                });
+            
+                const item = {
+                    categoria: document.getElementById("categoria").value,
+                    nombre: document.getElementById("nombre").value,
+                    descripcion: document.getElementById("descripcion").value,
+                    precio: document.getElementById("precio").value,
+                    variantes: variantes,
+                    imagen: imageData || currentImageData || "https://via.placeholder.com/150"
+                };
+            
+                try {
+                    let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
+                    if (currentEditIndex !== null) {
+                        storedItems[currentEditIndex] = item;
+                        currentEditIndex = null;
+                        currentImageData = null;
+                    } else {
+                        storedItems.push(item);
+                    }
+                    localStorage.setItem("productos", JSON.stringify(storedItems));
+            
+                    // Mostrar mensaje de éxito
+                    showAlert("El item ha sido creado/modificado exitosamente.", "success");
+            
+                    // Imprimir productos actualizados en la consola
+                    printStoredProducts();
+            
+                    // Redirigir a la página de productos después de un pequeño retraso
+                    setTimeout(() => window.location.href = "/sources/items/items.html", 1500);
+                } catch (e) {
+                    console.error("Error al guardar en localStorage: ", e);
+                    showAlert("No se pudo crear/modificar el producto debido a un problema de almacenamiento.", "danger");
+                }
+            };
+            
 
               if (imageFile) {
                   const reader = new FileReader();
@@ -267,3 +271,11 @@ document.addEventListener("DOMContentLoaded", () => {
       };
   };
 });
+
+function printStoredProducts() {
+  const productos = JSON.parse(localStorage.getItem("productos")) || [];
+  console.log("Productos almacenados:", JSON.stringify(productos, null, 2));
+}
+
+// Llama a la función al cargar la página para imprimir los productos iniciales.
+printStoredProducts();

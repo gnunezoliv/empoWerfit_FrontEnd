@@ -92,8 +92,8 @@
         </div>
         
         <div class="mb-3">
-            <label for="id" class="form-label">Contraseña Administrador<span class="span-label-contact-form">*</span></label>
-            <input type="password" class="form-control" id="id" required pattern="123456" placeholder="Ingrese su contraseña de administrador" autocomplete="new-password">
+            <label for="passwordAdm" class="form-label">Contraseña Administrador<span class="span-label-contact-form">*</span></label>
+            <input type="password" class="form-control" id="passwordAdm" required pattern="123456" placeholder="Ingrese su contraseña de administrador" autocomplete="new-password">
             <div class="invalid-feedback">La contraseña es obligatoria.</div>
         </div>
         <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
@@ -117,7 +117,9 @@
         <div class="modal-body">
           <form id="passwordForm">
             <!-- Campo de nombre de usuario oculto -->
+            <label for="usernameInput" class="form-label visually-hidden">Nombre de usuario</label>
             <input type="text" id="usernameInput" name="username" class="form-control" placeholder="Nombre de usuario" autocomplete="username" style="display:none;">
+
 
             <!-- Campo de contraseña -->
             <input type="password" id="passwordInput" class="form-control" placeholder="Contraseña" autocomplete="new-password">
