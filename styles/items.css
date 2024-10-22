@@ -1,3 +1,6 @@
+body {
+    padding-top: 100px;
+}
 .product-info {
     color: var(--dark-purple);
     font-family: "Poppins", sans-serif ;

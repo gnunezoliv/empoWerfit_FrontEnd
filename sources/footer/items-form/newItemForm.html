@@ -47,7 +47,7 @@
         </div>
         <div class="mb-2">
             <label for="nombre" class="form-label" >Nombre<span class="span-label-contact-form">*</span></label>
-            <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombre" required>
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del producto" id="nombre" required autocomplete="name">
             <div class="invalid-feedback">El nombre es obligatorio.</div>
         </div>
         <div class="mb-2">
@@ -57,26 +57,30 @@
         </div>
         <div class="mb-2">
             <label for="precio" class="form-label">Precio<span class="span-label-contact-form">*</span></label>
-            <input type="number" class="form-control" id="precio" placeholder="Ingrese el precio del producto" min="1" step="any" required onwheel="return false" passive onkeydown="return event.key !== 'ArrowUp' && event.key !== 'ArrowDown'">
+            <input type="number" class="form-control" id="precio" placeholder="Ingrese el precio del producto" min="0" step="any" required>
             <div class="invalid-feedback">El precio debe ser mayor a 1.</div>
         </div>
-        <div class="mb-2">
-            <label for="talla" class="form-label">Talla</label>
-            <input type="text" class="form-control" id="talla" placeholder="Ingrese la talla del producto">
+
+        <div class="mb-3">
+            <label for="variantes" class="form-label">Variantes del Producto</label>
+            <table class="table table-bordered" id="variantesTabla">
+                <thead>
+                    <tr>
+                        <th>Talla</th>
+                        <th>Peso</th>
+                        <th>Color</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas se agregarán dinámicamente -->
+                </tbody>
+            </table>
+            <button type="button" id="agregarFilaBtn" class="btn btn-secondary">Agregar Variante</button>
         </div>
-        <div class="mb-2">
-            <label for="peso" class="form-label">Peso</label>
-            <input type="number" class="form-control" id="peso" onwheel="return false" placeholder="Ingrese el peso del producto" passive>
-        </div>
-        <div class="mb-2">
-            <label for="color" class="form-label">Color</label>
-            <input type="text" class="form-control" id="color" placeholder="Ingrese los colores disponibles del producto">
-        </div>
-        <div class="mb-2">
-            <label for="stock" class="form-label">Stock<span class="span-label-contact-form">*</span></label>
-            <input type="number" class="form-control" id="stock" min="1" placeholder="Ingrese la cantidad de artículos disponibles" required onwheel="return false" passive onkeydown="return event.key !== 'ArrowUp' && event.key !== 'ArrowDown'">
-            <div class="invalid-feedback">El stock debe ser mayor a 1.</div>
-        </div>        
+    
+
         <div class="mb-2">
             <label for="imagen" class="form-label">Imagen<span class="span-label-contact-form">*</span></label>
             <input type="file" class="form-control" id="imagen" >
@@ -89,9 +93,8 @@
         
         <div class="mb-3">
             <label for="id" class="form-label">Contraseña Administrador<span class="span-label-contact-form">*</span></label>
-            <input type="password" class="form-control" id="id" required pattern="123456" placeholder="Ingrese su contraseña de administrador">
-            <div class="invalid-feedback">La contraseña es incorrecta.</div>
-            <div class="invalid-feedback">El ID es obligatorio.</div>
+            <input type="password" class="form-control" id="id" required pattern="123456" placeholder="Ingrese su contraseña de administrador" autocomplete="new-password">
+            <div class="invalid-feedback">La contraseña es obligatoria.</div>
         </div>
         <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
             <button type="submit" class="btn btn-primary btn-lg">Crear Item</button>
@@ -112,7 +115,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="password" id="passwordInput" class="form-control" placeholder="Contraseña">
+          <form id="passwordForm">
+            <!-- Campo de nombre de usuario oculto -->
+            <input type="text" id="usernameInput" name="username" class="form-control" placeholder="Nombre de usuario" autocomplete="username" style="display:none;">
+
+            <!-- Campo de contraseña -->
+            <input type="password" id="passwordInput" class="form-control" placeholder="Contraseña" autocomplete="new-password">
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="confirmPasswordButton">Confirmar</button>
@@ -120,7 +129,9 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
+
+
   
 
 <!---Footer-->
