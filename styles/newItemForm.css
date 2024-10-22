@@ -24,4 +24,7 @@ label {
     transition: all .4s ease;
 }
 
+.modal-title {
+    color: #AA3378;
+}
 
