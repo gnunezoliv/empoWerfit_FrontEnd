@@ -17,12 +17,69 @@
     <link rel="stylesheet" href="/styles/globalstyle.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/signIn.css">
 </head>
 <body class="bg-light-purple">
 
 <!-- Navbar -->
 
 <nav id="navbar-container"></nav>
+
+<!-- CONTACT FORM -->
+<section id="contact-section" class="container container-contact mt-3">
+    <div class="row">
+
+        <!-- Columna para el formulario -->
+        <div class="col-md-6">
+
+            <!-- Título con el span modificado -->
+            <h1 class="text-center mb-4 h1-magenta">
+                Cada paso cuenta,
+                <span id="span-h1" class="font-weight-normal"> <!-- Clase para cambiar el grosor -->
+                    <br>¡Sigamos juntas!
+                </span>
+            </h1>
+            <form id="contactForm" class="needs-validation w-100" novalidate>
+                
+                <!-- Contenido del formulario -->
+               
+                <div class="form-group mb-2">
+                    <label for="email" class="label-contact-form mb-1">Correo electrónico<span class="span-label-contact-form">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
+                </div>
+                
+                <div class="form-group mb-2">
+                    <label for="password" class="label-contact-form mb-1">Contraseña<span class="span-label-contact-form">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                    <div class="invalid-feedback">Por favor, introduce una contraseña.</div>
+                </div>
+                
+                <div class="form-group form-check d-flex justify-content-between align-items-center">
+                    <div>
+                        <input type="checkbox" class="form-check-input" id="remember-me" required>
+                        <label class="form-check-label" for="remember-me">Recuérdame</label>
+                    </div>
+                    <a href="../forgotPassword/forgotPassword.html" class="text-right miss-password">Olvidé mi contraseña</a>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn contact-btn">Enviar</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p>¿No tienes una cuenta? <a href="../createAccount/createAccount.html" onclick="location.href='createAccount.html'">Regístrate aquí</a></p>
+                </div>
+
+            </form>
+        </div>
+        <!-- Columna para la imagen -->
+        <div class="col-md-6 mt-4 d-flex align-items-center justify-content-center d-none d-md-flex">
+            <img src="../createAccount/img/chicas.png" alt="Imagen de contacto" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+
 
 
 <!-- Bootstrap Bundle JS -->

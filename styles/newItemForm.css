@@ -28,3 +28,8 @@ label {
     color: #AA3378;
 }
 
+@media (max-width: 768px) {
+    h2 {
+        text-align: center;
+    }
+}
