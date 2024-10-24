@@ -64,7 +64,7 @@ html body {
 .contact-btn:hover {
     color: var(--empwf-background-web);
     background-color: #763682;
-    transform: scale(1.1); /* Hace que el botón se expanda */
+    transform: scale(.9); /* Hace que el botón se expanda */
 }
 
 /* Estilo para la línea vertical */
