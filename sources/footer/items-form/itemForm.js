@@ -45,9 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Agregar evento de confirmación
             document.getElementById('confirmPasswordButton').onclick = () => {
-                const password = document.getElementById('passwordInput').value;
+                const password = document.getElementById('passwordAdm').value;  // Cambiar aquí para leer el input 'passwordAdm'
+                const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-                if (password === '123456') {
+                if (currentUser && password === currentUser.password) {
                     localStorage.removeItem("productos");
                     showAlert("El almacenamiento ha sido limpiado correctamente.", "info");
                     passwordModal.hide(); // Cerrar el modal
@@ -62,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         });
     }
+
+
 
     if (modifyItemButton) {
         // Mostrar productos almacenados al presionar el botón "Modificar Item"
@@ -140,87 +143,91 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
             event.stopPropagation();
 
-            let form = event.target;
-            if (form.checkValidity()) {
-                const imageFile = imagenInput.files[0];
+            // Obtener la contraseña ingresada por el administrador
+            const password = document.getElementById('passwordAdm').value;
+            // Obtener la información del usuario actual desde localStorage
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-                const saveItem = (imageData) => {
-                    const variantes = [];
-                    variantesTabla.querySelectorAll("tr").forEach(row => {
-                        const talla = row.children[0].children[0].value;
-                        const peso = row.children[1].children[0].value;
-                        const color = row.children[2].children[0].value;
-                        const stock = row.children[3].children[0].value;
+            // Validar si la contraseña ingresada coincide con la del usuario actual
+            if (currentUser && password === currentUser.password) {
+                let form = event.target;
+                if (form.checkValidity()) {
+                    const imageFile = imagenInput.files[0];
 
-                        if (talla || peso || color || stock) {
-                            variantes.push({ talla, peso, color, stock });
+                    const saveItem = (imageData) => {
+                        const variantes = [];
+                        variantesTabla.querySelectorAll("tr").forEach(row => {
+                            const talla = row.children[0].children[0].value;
+                            const peso = row.children[1].children[0].value;
+                            const color = row.children[2].children[0].value;
+                            const stock = row.children[3].children[0].value;
+
+                            if (talla || peso || color || stock) {
+                                variantes.push({ talla, peso, color, stock });
+                            }
+                        });
+
+                        let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
+                        let item;
+
+                        if (currentEditIndex !== null) {
+                            // Editar producto existente, conservar el ID original
+                            item = {
+                                ...storedItems[currentEditIndex], // Mantener el ID y otros campos previos
+                                categoria: document.getElementById("categoria").value,
+                                nombre: document.getElementById("nombre").value,
+                                descripcion: document.getElementById("descripcion").value,
+                                precio: document.getElementById("precio").value,
+                                variantes: variantes,
+                                imagen: imageData || currentImageData || "https://via.placeholder.com/150"
+                            };
+                            storedItems[currentEditIndex] = item;
+                            currentEditIndex = null;
+                            currentImageData = null;
+
+                            // Cambiar el texto del botón de nuevo a "Crear Item"
+                            document.getElementById("submitButton").textContent = "Crear Item";
+                        } else {
+                            // Crear un producto nuevo, asignar un nuevo ID
+                            item = {
+                                id: getNextItemId(),
+                                categoria: document.getElementById("categoria").value,
+                                nombre: document.getElementById("nombre").value,
+                                descripcion: document.getElementById("descripcion").value,
+                                precio: document.getElementById("precio").value,
+                                variantes: variantes,
+                                imagen: imageData || currentImageData || "https://via.placeholder.com/150"
+                            };
+                            storedItems.push(item);
                         }
-                    });
 
-                    let storedItems = JSON.parse(localStorage.getItem("productos")) || [];
-                    let item;
-
-                    if (currentEditIndex !== null) {
-                        // Editar producto existente, conservar el ID original
-                        item = {
-                            ...storedItems[currentEditIndex], // Mantener el ID y otros campos previos
-                            categoria: document.getElementById("categoria").value,
-                            nombre: document.getElementById("nombre").value,
-                            descripcion: document.getElementById("descripcion").value,
-                            precio: document.getElementById("precio").value,
-                            variantes: variantes,
-                            imagen: imageData || currentImageData || "https://via.placeholder.com/150"
-                        };
-                        storedItems[currentEditIndex] = item;
-                        currentEditIndex = null;
-                        currentImageData = null;
-
-                        // Cambiar el texto del botón de nuevo a "Crear Item"
-                        document.getElementById("submitButton").textContent = "Crear Item";
-                    } else {
-                        // Crear un producto nuevo, asignar un nuevo ID
-                        item = {
-                            id: getNextItemId(),
-                            categoria: document.getElementById("categoria").value,
-                            nombre: document.getElementById("nombre").value,
-                            descripcion: document.getElementById("descripcion").value,
-                            precio: document.getElementById("precio").value,
-                            variantes: variantes,
-                            imagen: imageData || currentImageData || "https://via.placeholder.com/150"
-                        };
-                        storedItems.push(item);
-                    }
-
-                    try {
-                        localStorage.setItem("productos", JSON.stringify(storedItems));
-
-                        // Mostrar mensaje de éxito
-                        showAlert("El item ha sido creado/modificado exitosamente.", "success");
-
-                        // Imprimir productos actualizados en la consola
-                        printStoredProducts();
-
-                        // Redirigir a la página de productos después de un pequeño retraso
-                        setTimeout(() => window.location.href = "/sources/footer/items-form/newItemForm.html", 1500);
-                    } catch (e) {
-                        console.error("Error al guardar en localStorage: ", e);
-                        showAlert("No se pudo crear/modificar el producto debido a un problema de almacenamiento.", "danger");
-                    }
-                };
-
-
-                if (imageFile) {
-                    const reader = new FileReader();
-                    reader.onloadend = function () {
-                        saveItem(reader.result);
+                        try {
+                            localStorage.setItem("productos", JSON.stringify(storedItems));
+                            showAlert("El item ha sido creado/modificado exitosamente.", "success");
+                            printStoredProducts();
+                            setTimeout(() => window.location.href = "/sources/footer/items-form/newItemForm.html", 1500);
+                        } catch (e) {
+                            console.error("Error al guardar en localStorage: ", e);
+                            showAlert("No se pudo crear/modificar el producto debido a un problema de almacenamiento.", "danger");
+                        }
                     };
-                    reader.readAsDataURL(imageFile);
+
+                    if (imageFile) {
+                        const reader = new FileReader();
+                        reader.onloadend = function () {
+                            saveItem(reader.result);
+                        };
+                        reader.readAsDataURL(imageFile);
+                    } else {
+                        saveItem();
+                    }
                 } else {
-                    saveItem();
+                    form.classList.add("was-validated");
+                    showAlert("Por favor, complete todos los campos obligatorios.", "danger");
                 }
             } else {
-                form.classList.add("was-validated");
-                showAlert("Por favor, complete todos los campos obligatorios.", "danger");
+                // Mostrar un mensaje de error si la contraseña no es correcta
+                showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
             }
         });
     }
@@ -272,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("submitButton").textContent = "Guardar Item";
 
             // Desplazar la página hacia arriba
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
@@ -281,26 +288,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // Mostrar el modal para la contraseña
         const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
         passwordModal.show();
-    
+
         // Agregar evento de confirmación
         document.getElementById('confirmPasswordButton').onclick = () => {
             const password = document.getElementById('passwordInput').value;
-    
-            if (password === '123456') {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+            if (currentUser && password === currentUser.password) {
                 let productos = JSON.parse(localStorage.getItem("productos")) || [];
                 productos.splice(index, 1);
                 localStorage.setItem("productos", JSON.stringify(productos));
                 showAlert("El producto ha sido eliminado exitosamente.", "success");
                 modifyItemButton.click(); // Actualizar la lista de productos
                 passwordModal.hide(); // Cerrar el modal
-                
+
                 // Agregar redirección después de eliminar el producto
                 setTimeout(() => window.location.href = "/sources/footer/items-form/newItemForm.html", 1500);
             } else {
                 showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
             }
         };
-    };    
+    };
+
 });
 
 function printStoredProducts() {
@@ -317,12 +326,12 @@ function printStoredProducts() {
             precio: producto.precio,
             variantes: producto.variantes
         }, null, 2));
-        
+
         // Crear un subgrupo para la data de la imagen
         console.groupCollapsed("Datos de la imagen");
         console.log(producto.imagen || "No hay datos de la imagen disponibles.");
         console.groupEnd();
-        
+
         console.groupEnd();
     });
     console.groupEnd();
