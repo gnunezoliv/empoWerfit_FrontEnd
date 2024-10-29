@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentEditIndex = null;
     let currentImageData = null;
 
+
     function getNextItemId() {
         let productos = JSON.parse(localStorage.getItem("productos")) || [];
         return productos.length + 13; // Comienza desde el número 13
@@ -37,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (clearStorageButton) {
+        // En el botón clearStorageButton dentro de DOMContentLoaded:
         clearStorageButton.addEventListener("click", () => {
-            // Mostrar el modal para la contraseña
             const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
             document.getElementById('passwordInput').value = ''; // Limpiar el campo de contraseña
             passwordModal.show();
 
             // Agregar evento de confirmación
             document.getElementById('confirmPasswordButton').onclick = () => {
-                const password = document.getElementById('passwordAdm').value;  // Cambiar aquí para leer el input 'passwordAdm'
+                const password = document.getElementById('passwordInput').value; // Cambiar aquí para leer el input 'passwordInput' (dentro del modal)
                 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
                 if (currentUser && password === currentUser.password) {
@@ -58,10 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         window.location.reload(); // Recargar la página automáticamente
                     }, 1500); // Retraso de 1.5 segundos para que la alerta sea visible
                 } else {
-                    showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
+                    showPasswordError("Contraseña incorrecta.");
                 }
             };
         });
+
     }
 
 
@@ -283,13 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Función para eliminar un producto existente
+    // Agregar evento de confirmación para deleteProduct
     window.deleteProduct = function (index) {
-        // Mostrar el modal para la contraseña
         const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
         passwordModal.show();
 
-        // Agregar evento de confirmación
         document.getElementById('confirmPasswordButton').onclick = () => {
             const password = document.getElementById('passwordInput').value;
             const currentUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -299,15 +299,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 productos.splice(index, 1);
                 localStorage.setItem("productos", JSON.stringify(productos));
                 showAlert("El producto ha sido eliminado exitosamente.", "success");
-                modifyItemButton.click(); // Actualizar la lista de productos
-                passwordModal.hide(); // Cerrar el modal
+                modifyItemButton.click();
+                passwordModal.hide();
 
-                // Agregar redirección después de eliminar el producto
+                // Redirigir después de eliminar el producto
                 setTimeout(() => window.location.href = "/sources/footer/items-form/newItemForm.html", 1500);
             } else {
-                showAlert("Contraseña incorrecta. No se realizó ninguna acción.", "danger");
+                // Mostrar el mensaje de contraseña incorrecta
+                showPasswordError("Contraseña incorrecta.");
             }
         };
+    };
+
+    // Función para mostrar el mensaje de error debajo del área de contraseña
+    function showPasswordError(message) {
+        const passwordInput = document.getElementById('passwordInput');
+        const errorElement = document.createElement('div');
+        errorElement.id = 'passwordError';
+        errorElement.classList.add('text-danger', 'mt-2');
+        errorElement.textContent = message;
+
+        // Limpiar el campo de contraseña
+        passwordInput.value = '';
+
+        // Eliminar mensaje de error anterior si existe
+        const existingError = document.getElementById('passwordError');
+        if (existingError) existingError.remove();
+
+        // Agregar el nuevo mensaje de error
+        passwordInput.parentElement.appendChild(errorElement);
+
     };
 
 });
