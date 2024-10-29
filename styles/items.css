@@ -72,3 +72,14 @@ body {
     padding: 0px 5px;
 }
 
+h1 {
+    color:#AA3378;
+    padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+        padding-top: 20px;
+    }
+}

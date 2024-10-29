@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
+    let currentUser = localStorage.getItem("currentUser");
+    currentUser = currentUser && currentUser !== "undefined" ? JSON.parse(currentUser) : null;
     const navbar = `
         <nav class="navbar fixed-top navbar-expand-lg ">
             <div class="container">
@@ -45,9 +47,14 @@ document.addEventListener("DOMContentLoaded", function(){
                     </button>
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                        ${currentUser ? `
+                        <li><a class="dropdown-item text-style-dark" href="/sources/footer/items-form/newItemForm.html">Mi perfil</a></li>
+                        <li><a class="dropdown-item text-style-dark" id="logout" href="#">Cerrar sesión</a></li>
+                        ` : `
                         <li><a class="dropdown-item text-style-dark" href="/sources/signIn/signIn.html">Ingresar</a></li>
                         <li><a class="dropdown-item text-style-dark" href="/sources/createAccount/createAccount.html">Crear cuenta</a></li>
-                        <li><a class="dropdown-item text-style-dark" href="/sources/footer/items-form/newItemForm.html">Administración</a></li>
+                        
+                        `}
                     </ul>
                 </div>
                 <!-- shop bag button-->
@@ -71,4 +78,19 @@ document.addEventListener("DOMContentLoaded", function(){
             link.style.fontWeight = "bold"; // Aplicar estilo de negritas
         }
     });
+
+    // Evento para "Cerrar sesión"
+    if (document.getElementById("logout")) {
+        document.getElementById("logout").addEventListener("click", function () {
+            localStorage.removeItem("currentUser");
+            if (currentPath.includes("administracion")) {
+                window.location.href = "/sources/items/items.html";
+            } else {
+                window.location.href = "/sources/items/items.html";
+            }
+        });
+    }
 });
+
+
+

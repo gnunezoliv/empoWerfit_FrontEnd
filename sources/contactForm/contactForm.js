@@ -1,3 +1,4 @@
+// contactForm.js (Modificado para añadir la misma validación de Bootstrap que el formulario de crear cuenta)
 document.addEventListener('DOMContentLoaded', () => {
     // Obtener el formulario
     const form = document.getElementById('contactForm');
@@ -41,8 +42,16 @@ async function sendEmail(form) {
     try {
         const response = await emailjs.send('contact_form', 'template_contact_form', templateParams);
         console.log('Correo enviado con éxito', response.status, response.text);
-        alert('Mensaje enviado con éxito.');
+
+        // Mostrar mensaje de éxito usando Bootstrap alert
+        let alertSuccess = document.createElement("div");
+        alertSuccess.className = "alert alert-success mt-3";
+        alertSuccess.role = "alert";
+        alertSuccess.innerText = "Mensaje enviado con éxito.";
+        form.appendChild(alertSuccess);
+
         form.reset(); // Reinicia el formulario después de enviarlo
+        form.classList.remove("was-validated");
     } catch (error) {
         console.error('Error al enviar el correo', error);
         alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
