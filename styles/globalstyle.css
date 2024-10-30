@@ -2,6 +2,7 @@
     --magenta:#AA3378;
     --pastel-pink: #FFC2CF;
     --pastel-purple: #EBB8DB;
+    --purple: #763682;
     --dark-purple: #2A003A;
     --light-purple: #EFE9F1;
     --white: #fefefe;
@@ -54,3 +55,42 @@ h3 { font-size: 32px; }
     color: var(--magenta);
 }
 
+
+.form-control, .form-check-input {
+    border: none;
+}
+
+.form-control:focus, .form-check-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+}
+
+.form-control:focus {
+    border-bottom: 4px solid var(--pastel-purple) !important;
+    transition: none !important;
+}
+
+
+#form-btn {
+    color: var(--white);
+    background-color: var(--magenta);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins';
+    width: 200px;
+}
+
+
+#form-btn:hover {
+    background-color: var(--purple);
+    transform: scale(1.1); 
+    transition: all .1s ease;
+}
+    
+
+#form-btn:active, .form-btn:focus {
+    font-weight: 600;
+}
