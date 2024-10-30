@@ -6,6 +6,8 @@
     --dark-purple: #2A003A;
     --light-purple: #EFE9F1;
     --white: #fefefe;
+
+    --bs-form-valid-color: #AA3378;
  }
  
 /********** Globales **********/
@@ -91,6 +93,12 @@ h3 { font-size: 32px; }
 }
     
 
-#form-btn:active, .form-btn:focus {
-    font-weight: 600;
+
+.form-check-label, .form-check-input:valid, .form-check-input:checked  {
+    color: var(--magenta);
+}
+
+.form-check-input:checked  {
+    background-color: var(--magenta);
+    border: none;
 }
