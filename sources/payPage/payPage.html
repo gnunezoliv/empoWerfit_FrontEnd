@@ -68,26 +68,68 @@
 
 <section id="compra-section" class=" container container-compra mt-3 pt-3">
     <div class="row col-12">
-        
+
 
         <div class="form-group col-6">
             <h3 class="mt-3">Información de la compra</h3>
             <label for="name" class="label-contact-form">Nombre<span class="span-label-contact-form">*</span></label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
+            <input type="text" class="form-control p-3" id="name" name="name" placeholder="Nombre completo" required>
             <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
 
-            <label for="email" class="label-contact-form">Correo electrónico<span class="span-label-contact-form">*</span></label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            <label for="email" class="label-contact-form mt-2 mb-2">Correo electrónico<span
+                    class="span-label-contact-form">*</span></label>
+            <input type="email" class="form-control p-3" id="email" name="email" placeholder="correo@ejemplo.com"
+                required>
             <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
         </div>
 
         <div class="form-group col-6">
             <h3 class="mt-3">Método de pago</h3>
+            <!--metodo de pago-->
+            <div>
+                <br>
+                <section class="card p-3">
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Pago con tarjeta
+                                </label>
+                            </div>
+                        </section>
+                        <section class=" col-2"> <img src="/public/imgs/visa.png" alt="tar1"></section>
+                        <section class=" col-2"> <img src="/public/imgs/mastercard.png" alt="tar2"></section>
+                        <section class=" col-2"> <img src="/public/imgs/americanExpress.png" alt="tar3"></section>
+
+                    </section>
+                </section>
+
+                <section class="card mt-4 p-3">
+                    <section class="row">
+                        <section class="col-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Pago con depósito
+                                </label>
+                            </div>
+                        </section>
+                        <section class=" col-2"> <img src="/public/imgs/oxxo.png" alt="logo"></section>
+
+                    </section>
+                </section>
+
+
+            </div>
             
-        
         </div>
 
-    </div>
+</section>
+
+</div>
+
+</div>
 
 </section>
 
