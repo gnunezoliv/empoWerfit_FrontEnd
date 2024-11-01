@@ -1,3 +1,20 @@
+:root {
+    --empwf-magenta: #AA3378;
+    --empwf-purple: #2A003A;
+    --empwf-background-web: #EFE9F1;
+    --empwf--pale-pink: #EBB8DB;
+    --empwf-pastel-pink: #FFC2CF;
+    --teachers-title-font-family: "Teachers", system-ui;
+    --boddy-poppins-font-family: "Poppins", sans-serif;
+}
+
+/* Span Label Contact Form */
+.span-label-contact-form {
+    color: var(--empwf-magenta);
+    font-size: 16px;
+}
+
+
 h1{
     color: #AA3378;
 }
@@ -15,7 +32,7 @@ h1{
     color:#2A003A;
 }
 
-#titleInformacionEnvio,#subTitleCarrito {
+#titleInformacionEnvio,#subTitleCarrito, #subTotal, #IVA, #total {
     color: #AA3378;
 
 }
@@ -27,4 +44,14 @@ h1{
 .span-label-contact-form {
     color: var(--empwf-magenta);
     font-size: 16px;
+}
+
+#buttonComprar{
+    font-size: 16px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease;
 }
