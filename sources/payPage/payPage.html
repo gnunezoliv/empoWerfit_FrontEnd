@@ -30,31 +30,29 @@
     <h1 class="mt-3"> ¡Ya estamos más cerca de la meta! </h1>
 </section>
 
-
-
-<!--Grid-->
-<!--Carrito-->
+<!--Carrito de compra-->
 <section id="payPage-section" class="container container-payPage mt-5 text-justify">
+    <h2 class="card-text title-card">CARRITO</h2>
 
-    <section id ="payPage" class="row" >
-      <section id ="Columncarrito" class="col-7" >
-        <section class="p-3" style="background-color: aliceblue;">
-            <h3 id ="titleCarrito"> CARRITO </h3>
-        
+    <div class="card">
+
         <section id="Carrito" class="row">
             <section class="col-8">
                 <label> Tus productos</label>
-            
-            <section id="imagenDescripcion" class="row">
-                <section class="col-4">
-                    <img src="" alt="Imagen del producto">
-                </section>
-                <section class="col-8">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime cum ipsam reprehenderit natus nam nostrum eos iure necessitatibus vel soluta quisquam sed, dignissimos itaque, possimus repellendus a ipsa ad?</p>
-                </section>
-        </section>
-            </section>
 
+                <section id="imagenDescripcion" class="row">
+                    <section class="col-4">
+                        <img src="" alt="Imagen del producto">
+                    </section>
+                    <section class="col-8">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime cum ipsam
+                            reprehenderit
+                            natus nam nostrum eos iure necessitatibus vel soluta quisquam sed, dignissimos itaque,
+                            possimus
+                            repellendus a ipsa ad?</p>
+                    </section>
+                </section>
+            </section>
 
             <section class="col-2">
                 <label> Cantidad</label>
@@ -62,127 +60,39 @@
             <section class="col-2">
                 <label> Precio unitario</label>
             </section>
-
         </section>
-        </section>
+    </div>
+</section>
 
+<!--informacion de compra-->
 
-      </section>
+<section id="compra-section" class=" container container-compra mt-3 pt-3">
+    <div class="row col-12">
+        
 
-      <!--Resumen de compra, información de compra, metodo de pago -->
-      <div class="col-5">
-        <div class="card">
-            <section id ="payPage" class="row p-3" >
-                <h3 id ="titleResumenDeCompra"> RESUMEN DE COMPRA </h3>
-                <section class="col-4" >
-                  <section class="mr-5" style="background-color: aliceblue;">
-                      
-                      <br>
-                      <h4 id ="subTotal"> Subtotal: </h4>
-                      <h4 id ="IVA"> IVA: </h4>
-                      <h4 id ="total"> Total: </h4>
-                  
-                    </section>
-               </section>
+        <div class="form-group col-6">
+            <h3 class="mt-3">Información de la compra</h3>
+            <label for="name" class="label-contact-form">Nombre<span class="span-label-contact-form">*</span></label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre completo" required>
+            <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
 
+            <label for="email" class="label-contact-form">Correo electrónico<span class="span-label-contact-form">*</span></label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
+        </div>
 
-               <section id ="Precio" class="col-4" >
-                <section class="mr-5" style="background-color: aliceblue;">
-                    
-                    <br>
-                    <h4 id ="subTitleCarrito"> $ </h4>
-                    <h4 id ="subTitleCarrito"> $ </h4>
-                    <h4 id ="subTitleCarrito"> $ </h4>
-                
-                  </section>
-             </section>
-
-
-             <section id ="Columncarrito" class="col-4" >
-                <section class="mr-5" style="background-color: aliceblue;">
-                    
-
-                   <img src="/public/imgs/trofeo.png" alt="">
-                    
-                
-                  </section>
-             </section>
-            </section>
-            
+        <div class="form-group col-6">
+            <h3 class="mt-3">Método de pago</h3>
             
         
         </div>
 
-        <!--informacion de compra-->
-        <section class="mt-3">
-            <h3>INFORMACIÓN DE LA COMPRA</h3>
-        </section>
-           
-        <label>Nombre<span>*</span></label>
-        <input type="text" class="form-control p-3" id="nombre" name="nombre" placeholder="Nombre completo " required>
-        <div></div>
-
-        <label>Correo electronico<span>*</span></label>
-        <input type="text" class="form-control p-3" id="correElectronico" name="correoElectronico" placeholder="correo@ejemplo.com" required>
-        <div></div>
-
-    <!--metodo de pago-->
-    <section class="mt-3">
-        <h3> MÉTODO DE PAGO </h3>
-    </section>
-
-    <div>
-        <section class="card p-3">
-            <section class="row">
-                <section class = "col-6">
-                    <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                    Pago con tarjeta
-                    </label>
-                    </div>
-            </section>
-            <section class=" col-2"> <img src="/public/imgs/visa.png" alt="tar1"></section>
-            <section class=" col-2"> <img src="/public/imgs/mastercard.png" alt="tar2"></section>
-            <section class=" col-2"> <img src="/public/imgs/americanExpress.png" alt="tar3"></section>
-        
-            </section>
-        </section>
-
-        <section class="card mt-4 p-3">
-            <section class="row">
-                <section class = "col-10">
-                    <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                    Pago con depósito
-                    </label>
-                    </div>
-            </section>
-            <section class=" col-2"> <img src="/public/imgs/oxxo.png" alt="logo"></section>
-        
-            </section>
-        </section>
-          
-
     </div>
 
-
-
-      </div>
-      
-
-
-
-    </section>
-
-
-
-
-
+</section>
 
     <!--Información de envío-->
-    <section id="envio-section" class="container container-envio mt-5 pt-5">
+    <section id="envio-section" class="container container-envio mt-3 pt-3">
         <div class="row col-12">
     
             <h2 class="mt-3">Información de envío</h2>
