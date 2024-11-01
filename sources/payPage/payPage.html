@@ -32,26 +32,13 @@
 
 <!--Carrito de compra-->
 <section id="payPage-section" class="container container-payPage mt-5 text-justify">
-    <h2 class="card-text title-card">CARRITO</h2>
+    <h3 class="card-text title-card">Carrito</h3>
 
     <div class="card">
 
         <section id="Carrito" class="row">
             <section class="col-8">
                 <label> Tus productos</label>
-
-                <section id="imagenDescripcion" class="row">
-                    <section class="col-4">
-                        <img src="" alt="Imagen del producto">
-                    </section>
-                    <section class="col-8">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime cum ipsam
-                            reprehenderit
-                            natus nam nostrum eos iure necessitatibus vel soluta quisquam sed, dignissimos itaque,
-                            possimus
-                            repellendus a ipsa ad?</p>
-                    </section>
-                </section>
             </section>
 
             <section class="col-2">
@@ -62,76 +49,85 @@
             </section>
         </section>
     </div>
+
+    <div class="card">
+        <section class ="row">
+            <section class="col-3">
+                <img id="imgProduct" src="/public/imgs/set-negro.png" alt="productos" class="container-fluid">
+            </section>
+            <section class="col-5">
+                <p>Conjunto deportivo Black Panter de dos piezas para correr.</p>
+            </section>
+            <section class="col-2"> 
+                hghgb
+            </section>
+            <section class="col-2"> 
+                $
+            </section>
+        </section>
+    </div>
+
+    <div class="card">
+        <section class ="row">
+            <section class="col-3">
+                <img id="imgProduct" src="/public/imgs/mancuernas-tapete.png" alt="productos" class="container-fluid">
+            </section>
+            <section class="col-5">
+                <p>Incluye un set Mancuernas Dynamic color rosa de peso fijo y Tapete Deportivo (61 x 173 x 0.5 cm) color aqua elaborado en material sintético.</p>
+            </section>
+            <section class="col-2"> 
+                hghgb
+            </section>
+            <section class="col-2"> 
+                $
+            </section>
+        </section>
+    </div>
+
 </section>
 
 <!--informacion de compra-->
 
-<section id="compra-section" class=" container container-compra mt-3 pt-3">
-    <div class="row col-12">
+<section id="shop-section" class="container container-info-pago mt-3">
+    <div class="row">
 
-
-        <div class="form-group col-6">
+        <!-- Columna para la infromación de personal-->
+        <div class="col-md-6 mt-3">
             <h3 class="mt-3">Información de la compra</h3>
-            <label for="name" class="label-contact-form">Nombre<span class="span-label-contact-form">*</span></label>
-            <input type="text" class="form-control p-3" id="name" name="name" placeholder="Nombre completo" required>
-            <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
-
-            <label for="email" class="label-contact-form mt-2 mb-2">Correo electrónico<span
-                    class="span-label-contact-form">*</span></label>
-            <input type="email" class="form-control p-3" id="email" name="email" placeholder="correo@ejemplo.com"
-                required>
-            <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
-        </div>
-
-        <div class="form-group col-6">
-            <h3 class="mt-3">Método de pago</h3>
-            <!--metodo de pago-->
-            <div>
-                <br>
-                <section class="card p-3">
-                    <section class="row">
-                        <section class="col-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">
-                                    Pago con tarjeta
-                                </label>
-                            </div>
-                        </section>
-                        <section class=" col-2"> <img src="/public/imgs/visa.png" alt="tar1"></section>
-                        <section class=" col-2"> <img src="/public/imgs/mastercard.png" alt="tar2"></section>
-                        <section class=" col-2"> <img src="/public/imgs/americanExpress.png" alt="tar3"></section>
-
-                    </section>
-                </section>
-
-                <section class="card mt-4 p-3">
-                    <section class="row">
-                        <section class="col-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">
-                                    Pago con depósito
-                                </label>
-                            </div>
-                        </section>
-                        <section class=" col-2"> <img src="/public/imgs/oxxo.png" alt="logo"></section>
-
-                    </section>
-                </section>
-
-
-            </div>
+            <form id="shopInfoForm" class="needs-validation w-100" novalidate>
             
+                <!-- Contenido del formulario -->
+                <div class="form-group">
+                    <label for="name" class="label-contact-form">Nombre<span class="span-label-contact-form">*</span></label>
+                    <input type="text" class="form-control p-2 mt-1" id="name" name="name" placeholder="Nombre completo" required>
+                    <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="label-contact-form mt-2">Correo electrónico<span class="span-label-contact-form">*</span></label>
+                    <input type="email" class="form-control p-2 mt-1" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    <div class="invalid-feedback">Por favor, introduce un correo válido.</div>
+                </div>
+
+            </form>
         </div>
 
-</section>
+        <!-- Línea vertical de separación -->
+        <div class="col-md-1">
+            <div class="separator"></div>
+        </div>
 
-</div>
-
-</div>
-
-</section>
+        <!-- Columna para el método de pago -->
+        <div class="col-md-5">
+            <h3 class="mt-3 text-center">Método de pago</h3>
+            <!-- Contenedor para el pago con tarjeta-->
+            <div class="text-contact">
+                
+            </div> 
+            <!-- Contenedor para depósito-->
+            <div class="mt-3">
+                
+        </div>
+    </section>
 
     <!--Información de envío-->
     <section id="envio-section" class="container container-envio mt-3 pt-3">
