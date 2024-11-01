@@ -1,0 +1,30 @@
+h1{
+    color: #AA3378;
+}
+
+#payPage-section{
+    background-color:  #fefefe;
+}
+
+#titleCarrito{
+    color: #2A003A;
+}
+
+#titleResumenDeCompra, #titleMetodoPago, #titleInformacionCompra
+{
+    color:#2A003A;
+}
+
+#titleInformacionEnvio,#subTitleCarrito {
+    color: #AA3378;
+
+}
+
+.label-contact-form {
+    font-size: 16px;
+}
+/* Span Label Contact Form */
+.span-label-contact-form {
+    color: var(--empwf-magenta);
+    font-size: 16px;
+}
