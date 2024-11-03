@@ -37,6 +37,9 @@ h1{
 
 }
 
+.form-group, .form-check-label{
+    font-family: var(--boddy-poppins-font-family);
+}
 
 .label-contact-form {
     font-size: 16px;
@@ -47,7 +50,7 @@ h1{
     font-size: 16px;
 }
 
-#buttonComprar{
+.buttonComprar{
     font-size: 16px;
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
@@ -55,4 +58,10 @@ h1{
     width: 200px;
     cursor: pointer;
     transition: all .4s ease;
+}
+
+.payPage-btn:hover{
+    color: var(--empwf-background-web);
+    background-color: #763682;
+    transform: scale(1.1); /* Hace que el botón se expanda */
 }
