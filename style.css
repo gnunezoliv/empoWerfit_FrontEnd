@@ -1,0 +1,26 @@
+.category-title {
+    margin-top: 35px;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+.category-img {
+    margin-top: 25px;
+    transition: all .1s ease;
+}
+
+.category-img:hover {
+    transform: scale(1.1); 
+}
+
+.underline {
+    width: 150px;
+    height: 3px;
+    background: var(--magenta);
+    margin: 0 auto 30px auto;
+}
