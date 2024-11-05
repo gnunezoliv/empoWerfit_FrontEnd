@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     currentUser = currentUser && currentUser !== "undefined" ? JSON.parse(currentUser) : null;
     const navbar = `
         <nav class="navbar fixed-top navbar-expand-lg ">
-            <div class="container">
+            <div class="container-fluid container-lg ">
                 <!-- mobile menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
