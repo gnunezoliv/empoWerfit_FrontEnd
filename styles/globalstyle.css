@@ -102,3 +102,18 @@ h3 { font-size: 32px; }
     background-color: var(--magenta);
     border: none;
 }
+
+.btn-primary {
+    background-color: var(--magenta);
+    border: var(--magenta);
+    font-family: 'Poppins';
+    padding: 1rem 3rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--purple);
+}
+
+.btn-primary:active  {
+    background-color: var(--dark-purple) !important;
+}

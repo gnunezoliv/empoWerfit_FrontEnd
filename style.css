@@ -24,3 +24,55 @@
     background: var(--magenta);
     margin: 0 auto 30px auto;
 }
+
+/* ------------------------------ */
+
+.hero__text {
+    color: var(--gris);
+    text-align: center;
+    font-size: 32px;
+    line-height: 150%;
+    margin: 110px auto;
+}
+
+/* BANNER */
+.banner{
+    position: relative;
+    background-image: url(/public/imgs/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 25% bottom 45%;
+    height: 740px;
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    color: white;
+}
+.banner__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.banner__info {
+    width: 500px;
+    position: relative;
+    margin-left: calc(10%);
+    margin-right: calc(5%);
+}
+.banner__title {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@media (max-width: 768px) {
+    .banner__title {
+        font-size: 36px;
+    }
+    .banner__info {
+        width: 350px;
+    }
+}
+
