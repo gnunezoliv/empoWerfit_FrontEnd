@@ -11,16 +11,14 @@
 /* Span Label Contact Form */
 .span-label-contact-form {
     color: var(--empwf-magenta);
-    font-size: 16px;
-}
-
+    font-size: 16px;}
 
 h1{
     color: #AA3378;
 }
 
 #payPage-section{
-    background-color:  #fefefe;
+    background-color:#EFE9F1;
 }
 
 #titleCarrito{
@@ -35,6 +33,32 @@ h1{
 #titleInformacionEnvio,#subTitleCarrito, #subTotal, #IVA, #total {
     color: #AA3378;
 
+}
+
+p, span{
+  font-size: 25px;
+  font-family: var(--boddy-poppins-font-family);  
+}
+
+#elementbutton{
+    font-size: 20px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    border-radius: 15px;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease;
+    border: none;
+
+}
+
+#cardProduct{
+    border: #2A003A;
+    border-radius: 3%;
+}
+
+#imgProduct{
+    border-radius: 5%;
 }
 
 .form-group, .form-check-label{

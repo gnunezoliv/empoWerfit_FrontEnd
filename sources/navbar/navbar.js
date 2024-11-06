@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 <!-- logo -->
                 <a class="logo me-auto" href="#">empo<span>w</span>erfit</a>
                 <!-- pages-->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <p class="logo" id="offcanvasNavbarLabel">empo<span>w</span>erfit</p>
