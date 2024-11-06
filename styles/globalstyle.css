@@ -6,8 +6,9 @@
     --dark-purple: #2A003A;
     --light-purple: #EFE9F1;
     --white: #fefefe;
-
+    
     --bs-form-valid-color: #AA3378;
+    --swiper-theme-color: #EBB8DB;
  }
  
 /********** Globales **********/
@@ -107,6 +108,7 @@ h3 { font-size: 32px; }
     background-color: var(--magenta);
     border: var(--magenta);
     font-family: 'Poppins';
+    font-size: 18px;
     padding: 1rem 3rem;
 }
 
