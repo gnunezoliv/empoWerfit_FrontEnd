@@ -1,7 +1,7 @@
 const swiper = new Swiper(".slide-container ", {
     slidesPerView: 4,
     centeredSlides: false,
-    spaceBetween: 20,
+    spaceBetween: 25,
     grabCursor: "true",
     fade: "true",
     pagination: {
@@ -17,7 +17,7 @@ const swiper = new Swiper(".slide-container ", {
     breakpoints: {
         0: { slidesPerView: 1 },
         520: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
         1000: { slidesPerView: 4 },
     },
   });
