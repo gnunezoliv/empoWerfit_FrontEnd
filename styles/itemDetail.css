@@ -1,0 +1,227 @@
+body {
+    padding-top: 100px;
+}
+/*Image*/
+.product-image{
+    border-radius: 20px;
+ }
+/*Name*/
+ h1, .product-title {
+    color: #AA3378;
+    font-size: 50px;
+    padding-top: 12px;
+    text-align: center;
+}
+/*Price*/
+.product-price {
+    font-size: 24px;
+    font-weight: 700;
+    display: inline;
+    color: var(--dark-purple);
+}
+/*Buttons Section */
+.btn-outline-primary {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    border: 1.5px solid var(--magenta);
+    color: var(--magenta);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+    cursor: pointer;
+    background-color: #763682 !important;
+    border: none;
+}
+
+.btn-primary:active,
+.btn-outline-primary:active {
+    color: var(--white) !important;
+    font-weight: 500;
+    transform: scale(.9);
+}
+.btn-primary {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    background-color: var(--magenta);
+    padding: 10px 15px;
+    border: 1.5px solid var(--magenta);
+    color: white;
+    width: 300px;
+    height: 64px;
+}
+/*Buttons Section end */
+
+/*Color selection circles*/
+.color-list{
+    list-style: none;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    column-gap: 20px;
+ 
+}
+.color-list .color-item{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.color-list, .color-item{
+    transform: scale(.9);
+}
+
+#black{
+    background-color: black;
+}
+#gray{
+    background-color: gray;
+}
+
+#red{
+    background-color: #763682;
+}
+
+
+
+
+
+
+
+
+
+
+.product-description-text{
+    color: var(--dark-purple);
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.product-category {
+    border: 1px solid var(--magenta);
+    border-radius: 20px;
+    display: inline;
+    font-size: 12px;
+    padding: 6px 10px;
+    text-transform: lowercase;
+}
+
+.product-details-section {
+    text-align: center;
+}
+
+
+
+.card-footer {
+    background-color: white;
+    border: none;
+}
+
+
+
+
+
+
+
+h2,h3 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+        padding-top: 20px;
+    }
+}
+
+
+
+
+
+/*Rating Stars in Product Opinions*/
+.rating {
+    float: left;
+    border: none;
+}
+
+.rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+.rating:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rating>input:checked~label {
+    color: #f70;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: gold;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: #ea0;
+}
+
+.rating>label:active {
+    position: relative;
+}
+
+
+
+element.style {
+    background-color: #fbd1ff;
+}
+
+.variations .product-form__input--color input[type=radio]+label,
+.variations .product-form__input--color a.product-form__color-item {
+    width: 23px !important;
+    height: 23px !important;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.variations .product-form__input--color a.product-form__color-item {
+    display: inline-block;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    text-indent: -9999em;
+    position: relative;
+    margin-left: -1px;
+    color: transparent;
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0 0 0 1px var(--color-border) inset;
+}
