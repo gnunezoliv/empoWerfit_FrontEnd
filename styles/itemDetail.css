@@ -54,6 +54,14 @@ body {
 }
 /*Buttons Section end */
 
+
+
+/*Contenedor Imagen y Caracteristicas del producto*/
+.container-left, .container-right {
+    text-align: center;
+    align-items: center;
+}
+
 /*Color selection circles*/
 .color-list{
     list-style: none;
@@ -62,18 +70,17 @@ body {
     grid-template-columns: repeat(3, auto);
     justify-items: center;
     column-gap: 20px;
+    align-content: space-evenly;
  
 }
+
 .color-list .color-item{
     width: 45px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
-
-}
-
-.color-list, .color-item{
     transform: scale(.9);
+
 }
 
 #black{
@@ -88,19 +95,13 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-.product-description-text{
+.product-description-section {
     color: var(--dark-purple);
     font-family: "Poppins", sans-serif;
     font-size: 27px;
     margin: 10px 0;
+    text-align: left;
+    margin: 50px 10px 50px 70px;
 }
 
 .product-category {
@@ -112,11 +113,6 @@ body {
     text-transform: lowercase;
 }
 
-.product-details-section {
-    text-align: center;
-}
-
-
 
 .card-footer {
     background-color: white;
@@ -125,11 +121,7 @@ body {
 
 
 
-
-
-
-
-h2,h3 {
+h2 {
     text-align: center;
 }
 

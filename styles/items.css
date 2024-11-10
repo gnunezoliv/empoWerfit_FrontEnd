@@ -83,3 +83,9 @@ h1 {
         padding-top: 20px;
     }
 }
+
+/*Elimina el subrayado en precio y botones de la lista de producto, que aparecieron con el <anchor> para acceder a los detalles del elemento*/
+a {
+    text-decoration: none;
+    color: #AA3378;
+}

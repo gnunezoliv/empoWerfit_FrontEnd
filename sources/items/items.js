@@ -30,11 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // Verificar si hay productos almacenados
         if (productos.length > 0) {
           // Recorrer cada producto y crear una tarjeta para mostrarlo
+          
+          //Agrega <a> anchor para abrir la pagina individual de producto al dar click en la tarjeta del mismo
           productos.forEach((producto) => {
             const productCard = document.createElement('div');
             productCard.classList.add('col-md-6', 'col-lg-4', 'mb-4');
             productCard.innerHTML = `
               <div class="card">
+                <a class="image-link" href="/sources/items/itemDetail/itemDetail.html">              
                 <img src="${producto.imagen || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${producto.nombre}" style="height: 349px; width: 100%; object-fit: cover;">
                 <div class="card-body product-info text-center pb-2">
                   <p class="card-text product-category">${producto.categoria}</p>
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
                   </div>
                 </div>
+                <a>
               </div>
             `;
             productsContainer.appendChild(productCard);
