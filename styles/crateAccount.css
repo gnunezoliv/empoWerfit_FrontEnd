@@ -1,31 +1,11 @@
-
-/************* CONTACT FORM **************/
-
-/* Variables de estilo */
-:root {
-    --empwf-magenta: #AA3378;
-    --empwf-purple: #2A003A;
-    --empwf-background-web: #EFE9F1;
-    --empwf--pale-pink: #EBB8DB;
-    --empwf-pastel-pink: #FFC2CF;
-    --teachers-title-font-family: "Teachers", system-ui;
-    --boddy-poppins-font-family: "Poppins", sans-serif;
-}
-
-/* Fondo del HTML */
-html body {
-    background-color: var(--empwf-background-web);
-}
-
 body {
     padding-top: 65px;
 }
 
 /* Contact section */
 #contact-section {
-    background-color: var(--empwf-background-web);
-    font-family: var(--boddy-poppins-font-family);
-    color: var(--empwf-purple);
+    font-family: 'Poppins';
+    color: var(--dark-purple);
 }
 
 /* Contact section p */
@@ -39,41 +19,19 @@ body {
 
 /* Span Label Contact Form */
 .span-label-contact-form {
-    color: var(--empwf-magenta);
+    color: var(--magenta);
     font-size: 16px;
-}
-
-/* Style contact btn */
-.contact-btn {
-    font-size: 16px;
-    color: var(--empwf-background-web);
-    background-color: var(--empwf-magenta);
-    border-radius: 15px;
-    width: 200px;
-    cursor: pointer;
-    transition: all .4s ease;
-}
-
-/* Style contact btn hover */
-.contact-btn:hover {
-    color: var(--empwf-background-web);
-    background-color: #763682;
-    transform: scale(1.1); /* Hace que el botón se expanda */
 }
 
 .h1-magenta {
-    color: var(--empwf-magenta);
+    color: var(--dark-purple);
     font-size: 45px;
 }
 
 a {
-    color:var(--empwf-magenta);
+    color:var(--magent);
 }
 
-.form-check-input:checked {
-    background-color: var(--empwf-magenta);
-    border-color: var(--empwf-magenta);
-}
 
 /* Ajustar el tamaño de la fuente del h2 en text-contact solo en pantallas pequeñas */
 @media (max-width: 768px) {

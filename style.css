@@ -1,0 +1,146 @@
+/* --------------- BANNER ---------------- */
+.banner{
+    position: relative;
+    background-image: url(/public/imgs/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 25% bottom 45%;
+    height: 740px;
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    color: white;
+}
+.banner__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.banner__info {
+    width: 500px;
+    position: relative;
+    margin-left: calc(10%);
+    margin-right: calc(5%);
+}
+.banner__title {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.banner__title span {
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .banner__title {
+        font-size: 36px;
+    }
+    .banner__info {
+        width: 350px;
+    }
+}
+
+
+/* ************************** CARRUSEL ************************ */
+.text-description {
+    color: var(--dark-purple);
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin-left: calc(18%);
+    margin-right: calc(18%);
+}
+
+@media (max-width: 560px) {
+    .text-description {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+}
+
+.card-product {
+    background: var(--white);
+    border-radius: 6px;
+}
+
+.card-product .image-box {
+    height: 240px;
+}
+
+.card-product .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    padding: 15px;
+}
+
+.product-details .name {
+    color: var(--magenta);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-details .btn-product {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.swiper-navBtn {
+    color: var(--white);
+    height: 40px;
+    width: 40px;
+    background-color: var(--magenta);
+    border-radius: 50%;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 22px;
+}
+
+@media (max-width: 768px) {
+    .swiper-navBtn {
+        display: none;
+    }
+}
+
+/* --------------- CATEGORIAS ---------------- */
+.category-title {
+    margin-top: 35px;
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+.category-img {
+    margin-top: 25px;
+    transition: all .1s ease;
+}
+
+.category-img:hover {
+    transform: scale(1.1); 
+}
+
+.underline {
+    width: 150px;
+    height: 3px;
+    background: var(--magenta);
+    margin: 0 auto 30px auto;
+}
