@@ -2,7 +2,7 @@ body {
     padding-top: 100px;
 }
 /*Image*/
-.product-image{
+.card-img-top {
     border-radius: 20px;
  }
 /*Name*/
@@ -112,14 +112,6 @@ body {
     padding: 6px 10px;
     text-transform: lowercase;
 }
-
-
-.card-footer {
-    background-color: white;
-    border: none;
-}
-
-
 
 h2 {
     text-align: center;

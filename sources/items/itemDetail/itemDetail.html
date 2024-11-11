@@ -29,98 +29,10 @@
     <nav id="navbar-container"></nav>
 
 
+    <div id="producto-detail"></div>
 
 
-    <!-- Product Details-->
-    <section id="products-container" class="section--padding"><!--agregar padding arriba-->
-
-        <div class="row"> <!-- Crear una fila (row) para las columnas -->
-
-            <div class="container-left col-md-6"> <!--Top Left-->
-                <!--Image-->
-                <div class="col">
-                    <div class="product-media-preview">
-                        <div class="product-image-item">
-                            <section>
-                                <a class="images" href="/public/imgs/set-negro.png">
-                                    <img class="product-image" src="/public/imgs/set-negro.png" alt="product-img"
-                                        width="500" height="500">
-                                </a>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-6"> <!--Top Right column-->
-                <div class="container-right col-md-6">
-                    <!--Name-->
-                    <h1 class="product-title mb-15">Conjunto Running Black Panter</h1>
-
-                    <!--Price-->
-                    <div class="product-price mb-10">
-                        <h2>$ 250.00 MXN</h2>
-                    </div>
-                    <!--Buttons Buy & Favorite-->
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-primary">COMPRAR</button>
-                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
-                    </div>
-                </div>
-
-                <!--Product Details-->
-                <div class="product-details">
-                    <!--Color-->
-                    <div class="product-color mb-10">
-                        <ul class="color-list">
-                            <li class="color-item" id="red"></li>
-                            <li class="color-item" id="gray"></li>
-                            <li class="color-item" id="black"></li>
-                        </ul>
-                    </div>
-                    <!--
-                        Weight
-                            <div class="product-weight mb-10">
-                                <ul class="weight-list">
-                                    <li class="weight-item" id="1kg"></li>
-                                    <li class="weight-item" id="2kg"></li>
-                                    <li class="weight-item" id="3kg"></li>
-                                </ul>
-                            </div>
-                        Size
-                    
-                            <div class="product-size mb-10">
-                                <ul class="size-list">
-                                    <li class="size-item" id="ch"></li>
-                                    <li class="size-item" id="m"></li>
-                                    <li class="size-item" id="g"></li>
-                                </ul>
-                            </div>-->
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <!--Product Description-->
-        <section id="products-review" class="section--padding"><!--agregar padding arriba-->
-
-            <div class="row"> <!-- Crear una fila (row) para las columnas -->
-
-                <div class="product-description-section col-md-8"> <!--Bottom -->
-                    <h3 class="product-description-title">Descripción del producto</h3>
-                    <p class="product-description-text">Conjunto deportivo Black Panter de
-                        dos piezas para correr. Top negro con tirantes anchos cruzados
-                        y leggins con detalle lateral. Pretina de elastico ancho para mayor ajuste y comodidad.
-                        Materiales: Technolycra y Elastano.
-                    </p>
-                </div>
-
-
-
-        </section>
+   
 
         <!--Reviews-->
         <section class="product-reviews-section">
@@ -275,9 +187,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+        <!---Navbar-->    
         <script src="/sources/navbar/navbar.js"></script>
-        <!--<script src="/sources/items/itemsIndividual/itemsIndividual.js"></script>-->
+
+       
+        <!---Individual Item-->
+        <script src="/sources/items/itemDetail/itemDetail.js"></script>
+        <!--Footer-->
         <script src="/sources/footer/footer.js"></script>
 
 
+
 </body>
+</html>
