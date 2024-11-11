@@ -26,33 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const price = producto.price || "Precio no disponible";
         const category = producto.category || "Categoria no disponible";
         const description = producto.description || "Descripcion no disponible";
+        const color = producto.color || "Color no disponible";
+        const size = producto.size || "Talla no disponible";
+        const weight = producto.weight || "Peso no disponible"
 
         const detailContainer = document.getElementById("producto-detail");
-        detailContainer.innerHTML = /*`
-              <div class="card">         
-                <img src="${image}" class="card-img-top" alt="${name}" style="height: 500px; width: 500px; object-fit: cover;">
-                <div class="card-body product-info text-center pb-2">
-                 
-                  <h1 class="card-title product-name mt-3 mb-1"><span class="d-inline-block" style="max-width: 250px;">${name}</span></h1>
-                  <h2 class="card-text product-price">$${price} MXN</h2>
-
-                  ${description ? `<h3 class="card-text mb-2"><small class="d-inline-block" style="max-width: 270px;">${description}</small></h3>` : ''}
-                  
-                   <p class="card-text product-category">${category}</p>
-                </div>
-                <div class="card-footer d-flex justify-content-evenly mb-3">
-                  
-                
-                  <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
-                  </div>
-
-                </div>
-              </div>
-            `;*/
-
-          `
+        detailContainer.innerHTML = `
             <div class="container mt-5">
               <div class="row">
                 <div class="col-md-6">
@@ -63,38 +42,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="col-md-6">
                   <div class="card-body product-info text-center pb-2">
                     <h1 class="card-title product-name mt-3 mb-1">
-                      <span class="d-inline-block" style="max-width: 250px;">${name}</span>
+                      <span class="text-align: center" style="max-width: 250px;">${name}</span>
                     </h1>
                     <h2 class="card-text product-price">$${price} MXN</h2></br>
-                    <p class="card-text product-category">${category}</p></br>
+                   
                     
                     <div class="btn-group" role="group">
                       <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
                       <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
                     </div>
                   </div>
+                      <p class="card-text mt-3 mb-1 product-category"> Categoría: <strong>${category}</strong></p>
+                      <p class="card-text mt-3 mb-1 product-size"> Tallas: <strong>${size}</strong></p>
+                      <p class="card-text mt-3 mb-1 product-weight"> Peso: <strong> ${weight}</strong></p>  
                 </div>  
               </div>
               
               <div class="row">
-                <div class="card-footer d-flex justify-content-start mb-3">
+                <div class="card-footer d-flex mb-3">
                    ${description ? `<h3 class="card-text mb-2"><small style="max-width: 270px;">Descripción del Producto: </br> ${description}</small></h3>` : ''}
-
-
-                   
                 </div>
               </div>
               
             </div>
           `;
-
-        /*
-        `<h1>${name}</h1>
-                  <img src="${image}" alt="${name}" style="max-width: 100%; height: auto;">
-                  <p><strong>Price: </strong>$${price} MXN</p>
-                  <p><strong>Category: </strong>${category}</p>
-                  <p>${description}</p>
-              `;*/
       } else {
         document.getElementById("producto-detail").innerHTML = "<p>Producto no encontrado.</p>";
       }
