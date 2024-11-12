@@ -1,0 +1,118 @@
+
+
+/* Estilo general */
+.bg-light-purple {
+    background-color:  #EFE9F1;
+}
+
+.comunidad-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color:#2A003A; /* Usa tu color preferido */
+    font-weight: 800;
+    margin: 20px 0; /* Espacio superior e inferior */;
+}
+
+/* Carrusel */
+.carrusel {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.carrusel-imagenes img {
+    width: 200%;
+    max-width: 200px;
+    margin: 0 10px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.izquierda {
+    left: 10px;
+}
+
+.derecha {
+    right: 10px;
+}
+
+/* Publicaciones */
+.publicaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.publicacion {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.publicacion img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenido-publicacion {
+    padding: 15px;
+}
+
+.contenido-publicacion h3 {
+    font-size: 1.2rem;
+    color:#2A003A;
+    margin-bottom: 10px;
+}
+
+.contenido-publicacion p {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color:#AA3378;
+}
+
+.usuario img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.acciones i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
