@@ -3,10 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Obtener el contenedor de productos
   const productsContainer = document.getElementById('products-container');
 
-  // Obtener los productos almacenados en localStorage
+   // Obtener los productos del archivo JSON y combinar con los productos de localStorage
   let productosLocalStorage = JSON.parse(localStorage.getItem('productos')) || [];
 
-  // Obtener los productos del archivo JSON y combinar con los productos de localStorage
+  const url = new URL(window.location.href);
+  const nombreCategoria = url.searchParams.get("categoria");
+  console.log(nombreCategoria);
+ 
   function cargarProductos(rutaJSON, contenedor, productosLocalStorage = [], filtroCategoria = "todos", filtroBusqueda = "") {
   fetch(rutaJSON)
     .then(response => response.json())
