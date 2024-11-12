@@ -1,0 +1,95 @@
+
+.btn-outline-info{
+    background-color: var(--pastel-purple);
+    border: var(--magenta);
+    font-family: 'Poppins';
+    font-size: 18px;
+    align-self: center;
+}
+
+
+/*Rating Stars in Product Opinions*/
+
+
+.rating {
+    float: left;
+    border: none;
+}
+
+.rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: var(--pastel-pink); /*COLOR  ESTRELLA VACIA */
+}
+
+.rating:not(:checked)>label:before { /*FORMA ESTRELLA*/
+    content: '★ ';
+}
+
+.rating>input:checked~label {
+    color: var(--magenta); /*COLOR FIJO SELECCIONADO*/
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: var(--pastel-purple);/*COLOR AL PASAR CURSOR SOBRE LAS ESTRELLAS*/
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: var(--magenta); /*COLOR AL DAR CLICK A LAS ESTRELLAS*/
+}
+
+
+.rating>label:active {
+    position: relative;
+}
+
+
+
+element.style {
+    background-color: #fbd1ff;
+}
+
+.variations .product-form__input--color input[type=radio]+label,
+.variations .product-form__input--color a.product-form__color-item {
+    width: 23px !important;
+    height: 23px !important;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.variations .product-form__input--color a.product-form__color-item {
+    display: inline-block;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    text-indent: -9999em;
+    position: relative;
+    margin-left: -1px;
+    color: transparent;
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0 0 0 1px var(--color-border) inset;
+}
+
