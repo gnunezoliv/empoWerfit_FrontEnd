@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtener el contenedor de productos
-    const productsContainer = document.getElementById('products-container');
-  
-    // Obtener los productos almacenados en localStorage
-    let productosLocalStorage = JSON.parse(localStorage.getItem('productos')) || [];
-  
+  // Variables iniciales
+  const rutaJSON = '/sources/items/items.json';
+  const productsContainer = document.getElementById('products-container');
+  let productosLocalStorage = JSON.parse(localStorage.getItem('productos')) || [] ;
+
+  function cargarProductos(rutaJSON, contenedor, productosLocalStorage = [], filtroCategoria = "todos", filtroBusqueda = "") {
     // Obtener los productos del archivo JSON y combinar con los productos de localStorage
-    fetch('/sources/items/items.json')
+    fetch(rutaJSON)
       .then(response => response.json())
       .then(productosJSON => {
         // Mapear las propiedades del JSON a las propiedades esperadas
@@ -23,16 +23,28 @@ document.addEventListener('DOMContentLoaded', function () {
             imagen: producto.image
           };
         });
-  
+
         // Unir los productos del JSON con los del localStorage
-        const productos = productosMapeados.concat(productosLocalStorage);
-  
+        let productos = productosMapeados.concat(productosLocalStorage);
+
+        // Filtrar los productos por la categoría seleccionada
+        if (filtroCategoria !== "todos") {
+          productos = productos.filter(producto => producto.categoria.toLowerCase() == filtroCategoria.toLowerCase());
+        }
+
+        if (filtroBusqueda) {
+          productos = productos.filter(producto => producto.nombre.toLowerCase().includes(filtroBusqueda.toLowerCase()));
+        }
+
+        // Limpiar el contenedor antes de añadir los productos filtrados
+        contenedor.innerHTML = "";
+
         // Verificar si hay productos almacenados
         if (productos.length > 0) {
           // Recorrer cada producto y crear una tarjeta para mostrarlo
           productos.forEach((producto) => {
             const productCard = document.createElement('div');
-            productCard.classList.add('col-md-6', 'col-lg-4', 'mb-4');
+            productCard.classList.add('col-md-6', 'col-lg-4', 'mb-4', 'hide');
             productCard.innerHTML = `
               <div class="card">
                 <img src="${producto.imagen || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${producto.nombre}" style="height: 349px; width: 100%; object-fit: cover;">
@@ -62,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Mostrar un mensaje si ocurre un error al cargar los productos
         productsContainer.innerHTML = '<p class="text-center">Error cargando los productos.</p>';
       });
-  
+    }
+    
     // Manejar la creación de un nuevo producto
     const itemForm = document.getElementById('itemForm');
     const imagenInput = document.getElementById('imagen');
@@ -135,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  
+
     function showAlert(message, type) {
       const alertContainer = document.createElement('div');
       alertContainer.className = `alert alert-${type} alert-dismissible fade show`;
@@ -146,5 +159,36 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       document.body.prepend(alertContainer);
     }
-  });
+
+     function filterStyleProduct(value) {
+       let buttons = document.querySelectorAll(".button-value");
+       buttons.forEach((button) => {
+         if (value.toLowerCase() == button.innerText.toLowerCase()) {
+           button.classList.add("active-filter");
+         } else {
+           button.classList.remove("active-filter");
+         }
+       });
+     }
+    filterStyleProduct("todos");
+
+    // Función de búsqueda por nombre
+    document.getElementById("search").addEventListener("click", () => {
+      const searchInput = document.getElementById('search-input').value.trim();
+      cargarProductos(rutaJSON, productsContainer, productosLocalStorage, "todos", searchInput);
+    });
+
+    // Inicializar con todos los productos
+    cargarProductos(rutaJSON, productsContainer, productosLocalStorage, "todos");
+
+    document.querySelectorAll('.button-value').forEach(button => {
+      button.addEventListener('click', () => {
+        filterStyleProduct(button.innerText);
+        const categoria = button.innerText;
+        cargarProductos(rutaJSON, productsContainer, productosLocalStorage, categoria);
+      });
+    });
+
+   
+});
 

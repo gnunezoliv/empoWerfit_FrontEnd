@@ -73,13 +73,85 @@ body {
 }
 
 h1 {
-    color:#AA3378;
+    color:var(--dark-purple);
     padding-top: 12px;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 35px;
-        padding-top: 20px;
-    }
+
+.wrapper {
+   width: 95%; 
+   margin: 0 auto;
 }
+
+#search-container {
+    margin: 1em 0;
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+}
+
+#search-input {
+    background-color: transparent;
+    width: 59%;
+    border: none;
+    border-bottom: 2px solid var(--magenta);
+    padding: 1em 0.3em;
+}
+
+#search-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 2px solid var(--magenta);
+}
+
+.btn-primary-magenta {
+    background-color: var(--magenta);
+    border: var(--magenta);
+    color: var(--white);
+    font-family: 'Poppins';
+    font-size: 18px;
+    padding: 1rem 2rem;
+}
+
+.btn-primary-magenta:hover {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.btn-primary-magenta:active  {
+    background-color: var(--dark-purple) !important;
+    color: var(--white) !important;
+}
+
+
+ #filters {
+    margin: 1em 0;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-outline-magenta {
+    border: 1.5px solid var(--magenta);
+    color: var(--dark-purple);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.btn-outline-magenta:hover,
+.active-filter {
+    background-color: var(--purple) !important;
+    border:1.5px solid var(--purple);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.btn-outline-magenta:active {
+   background-color: var(--dark-purple) !important;
+   border:1.5px solid var(--dark-purple) !important;
+   color: var(--white) !important;
+   font-weight: 500;
+}
+
