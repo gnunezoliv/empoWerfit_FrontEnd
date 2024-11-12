@@ -153,3 +153,11 @@
     background: var(--magenta);
     margin: 0 auto 30px auto;
 }
+
+.card-title {
+    color: var(--magenta);
+}
+
+.card-text {
+    font-family: "Poppins";
+}
