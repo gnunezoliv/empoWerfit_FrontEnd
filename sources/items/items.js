@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+  const rutaJSON = '/sources/items/items.json';
   // Obtener el contenedor de productos
   const productsContainer = document.getElementById('products-container');
 
@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
   let productosLocalStorage = JSON.parse(localStorage.getItem('productos')) || [];
 
   // Obtener los productos del archivo JSON y combinar con los productos de localStorage
-  fetch('/sources/items/items.json')
+  function cargarProductos(rutaJSON, contenedor, productosLocalStorage = [], filtroCategoria = "todos", filtroBusqueda = "") {
+  fetch(rutaJSON)
     .then(response => response.json())
     .then(productosJSON => {
       // Mapear las propiedades del JSON a las propiedades esperadas
@@ -28,7 +29,19 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       // Unir los productos del JSON con los del localStorage
-      const productos = productosMapeados.concat(productosLocalStorage);
+      let productos = productosMapeados.concat(productosLocalStorage);
+
+      // Filtrar los productos por la categoría seleccionada
+      if (filtroCategoria !== "todos") {
+        productos = productos.filter(producto => producto.categoria.toLowerCase() == filtroCategoria.toLowerCase());
+      }
+
+      if (filtroBusqueda) {
+        productos = productos.filter(producto => producto.nombre.toLowerCase().includes(filtroBusqueda.toLowerCase()));
+      }
+
+      // Limpiar el contenedor antes de añadir los productos filtrados
+      contenedor.innerHTML = "";
 
       // Verificar si hay productos almacenados
       if (productos.length > 0) {
@@ -73,7 +86,42 @@ document.addEventListener('DOMContentLoaded', function () {
       // Mostrar un mensaje si ocurre un error al cargar los productos
       productsContainer.innerHTML = '<p class="text-center">Error cargando los productos.</p>';
     });
+  
+  }
 
+  function filterStyleProduct(value) {
+    let buttons = document.querySelectorAll(".button-value");
+    buttons.forEach((button) => {
+      if (value.toLowerCase() == button.innerText.toLowerCase()) {
+        button.classList.add("active-filter");
+      } else {
+        button.classList.remove("active-filter");
+      }
+    });
+  }
+ filterStyleProduct("todos");
+
+  // Búsqueda por nombre
+  document.getElementById("search").addEventListener("click", () => {
+    const searchInput = document.getElementById('search-input').value.trim();
+    cargarProductos(rutaJSON, productsContainer, productosLocalStorage, "todos", searchInput);
+    
+     // Limpieza del campo de búsqueda
+     document.getElementById('search-input').value = '';
+  });
+
+  // Inicializar con todos los productos
+  cargarProductos(rutaJSON, productsContainer, productosLocalStorage, "todos");
+
+  // Filtro por categoría
+  document.querySelectorAll('.button-value').forEach(button => {
+    button.addEventListener('click', () => {
+      filterStyleProduct(button.innerText);
+      const categoria = button.innerText;
+      cargarProductos(rutaJSON, productsContainer, productosLocalStorage, categoria);
+    });
+  });
+  
   // Manejar la creación de un nuevo producto
   const itemForm = document.getElementById('itemForm');
   const imagenInput = document.getElementById('imagen');
