@@ -1,3 +1,15 @@
+// Usamos fetch() para cargar el archivo reviews.html en el contenedor
+fetch('/sources/reviews/reviews.html')
+.then(response => response.text())
+.then(html => {
+    // Inyectamos el contenido de reviews.html en el contenedor
+    document.getElementById('review-container').innerHTML = html;
+})
+.catch(error => {
+    console.error('Error al cargar el archivo de reseñas:', error);
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Obtener el ID del producto desde la URL
   const urlParams = new URLSearchParams(window.location.search);
