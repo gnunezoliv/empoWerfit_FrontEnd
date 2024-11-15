@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <div class="card">
                 <a class="image-link" href="${itemDetailUrl}">              
                 <img src="${producto.imagen || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${producto.nombre}" style="height: 349px; width: 100%; object-fit: cover;">
+                <a>
                 <div class="card-body product-info text-center pb-2">
                   <p class="card-text product-category">${producto.categoria}</p>
                   <h4 class="card-title product-name mt-3 mb-1"><span class="d-inline-block text-truncate" style="max-width: 250px;">${producto.nombre}</span></h4>
@@ -55,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="card-footer d-flex justify-content-evenly mb-3">
                   <div class="btn-group" role="group">
                     <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
+                     <a class="image-link" href="${itemDetailUrl}">   
+                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-search"></i></button>
+                    <a>
                   </div>
                 </div>
-                <a>
               </div>
             `;
           productsContainer.appendChild(productCard);

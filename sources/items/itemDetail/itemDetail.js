@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     
                     <div class="btn-group" role="group">
                       <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                      <button type="button" class="btn btn-outline-primary"><i class="bi bi-heart-fill"></i></button>
                     </div>
                   </div>
                       <p class="card-text mt-3 mb-1 product-category"> Categoría: <strong>${category}</strong></p>
