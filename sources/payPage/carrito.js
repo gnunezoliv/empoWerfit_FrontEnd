@@ -15,12 +15,12 @@ document.addEventListener("click", (e) => {
     }
 
     // console.log(e.target.matches(".list-group-item .btn-success"));
-    if (e.target.matches(".list-group-item .btn-success")) {
+    if (e.target.matches(".list-group-item .btn-add")) {
         btnAumentar(e);
     }
 
     // console.log(e.target.matches(".list-group-item .btn-danger"));
-    if (e.target.matches(".list-group-item .btn-danger")) {
+    if (e.target.matches(".list-group-item .btn-deleted")) {
         btnDisminuir(e);
     }
 });
@@ -59,8 +59,8 @@ const pintarCarrito = () => {
         clone.querySelector(".rounded-pill").textContent = item.cantidad;
         clone.querySelector("div .lead span").textContent =
             item.precio * item.cantidad;
-        clone.querySelector(".btn-success").dataset.id = item.id;
-        clone.querySelector(".btn-danger").dataset.id = item.id;
+        clone.querySelector(".btn-add").dataset.id = item.id;
+        clone.querySelector(".btn-deleted").dataset.id = item.id;
         fragment.appendChild(clone);
     });
     carrito.appendChild(fragment);

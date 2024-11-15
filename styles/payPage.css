@@ -74,6 +74,13 @@ p, span{
     font-size: 16px;
 }
 
+.btn-sm{
+    font-size: 16px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+    
+}
+
 .buttonComprar{
     font-size: 16px;
     color: var(--empwf-background-web);
