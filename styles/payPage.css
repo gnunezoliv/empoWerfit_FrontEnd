@@ -35,9 +35,9 @@ h1{
 
 }
 
-span{
+span, .lead{
   font-size: 25px;
-  font-family: var(--boddy-poppins-font-family);  
+  font-family: var(--boddy-poppins-font-family); 
 }
 
 #elementbutton{
@@ -86,6 +86,10 @@ span{
 }
 
 .rounded-pill{
+    background-color: #2A003A;
+}
+
+.btn-deleted{
     background-color: #2A003A;
 }
 
