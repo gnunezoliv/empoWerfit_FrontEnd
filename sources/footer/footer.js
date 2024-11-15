@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
                     <p>©Todos los derechos reservados.</p>
                   </div>
                   <div class="footer-links col-md-4">
-                <p class="mb-md-0"><a class="link-item" href="#" target="_blank">Términos y condiciones</a></p> 
-                <p class="mb-md-0"><a class="link-item" href="#" target="_blank">Aviso de Privacidad</a></p>  
+                <p class="mb-md-0"><a class="link-item" href="/sources/terms&conditions/terms&conditions.html" target="_blank">Términos y condiciones</a></p> 
+                <p class="mb-md-0"><a class="link-item" href="/sources/privacy/privacy.html" target="_blank">Aviso de Privacidad</a></p>  
               </div>
               <div class="footer-redes col-md-4">
                 <a class="btn" type="button" href="#" target="_blank">
