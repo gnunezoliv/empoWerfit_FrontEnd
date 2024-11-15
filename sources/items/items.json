@@ -12,8 +12,8 @@
     {
         "id":2,
         "category": "Ropa deportiva",
-        "name": "Conjunto Running Black Panter",
-        "description": "Conjunto deportivo Black Panter de dos piezas para correr",
+        "name": "Conjunto Running Black",
+        "description": "Conjunto deportivo Black de dos piezas para correr",
         "price": "449.00",
         "size": ["XS", "S", "M", "L", "XL", "XXL"],
         "stock": 70,

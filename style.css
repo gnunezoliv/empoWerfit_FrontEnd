@@ -91,11 +91,20 @@
     color: var(--magenta);
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
-.product-details .btn-product {
+.product-details {
     font-size: 12px;
     font-weight: 400;
+}
+
+
+
+.btn-product {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: var(--dark-purple);
 }
 
 .swiper-navBtn {
@@ -143,4 +152,12 @@
     height: 3px;
     background: var(--magenta);
     margin: 0 auto 30px auto;
+}
+
+.card-title {
+    color: var(--magenta);
+}
+
+.card-text {
+    font-family: "Poppins";
 }
