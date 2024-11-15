@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
           // Crea una referencia dinamica para que cada tarjeta lleve a una pagina html diferente
           //Agrega <a> anchor para abrir la pagina individual de producto al dar click en la tarjeta del mismo
           const itemDetailUrl = `/sources/items/itemDetail/itemDetail.html?id=${producto.id}`;
+          const shopingBag = `/public/imgs/banner-descuento.png`;
+          
+     //modificar shopingbag para que el boton agregar a mi bolsa envie a la pagina de compras
 
           productCard.innerHTML = `
               <div class="card">
@@ -72,8 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="card-footer d-flex justify-content-evenly mb-3">
                   <div class="btn-group" role="group">
+                   <a class="image-link" href="${shopingBag}">  
                     <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                     <a class="image-link" href="${itemDetailUrl}">   
+                    <a>
+                     <a class="item-link" href="${itemDetailUrl}">   
                     <button type="button" class="btn btn-outline-primary"><i class="bi bi-search"></i></button>
                     <a>
                   </div>

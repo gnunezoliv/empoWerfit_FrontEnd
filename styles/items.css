@@ -47,6 +47,7 @@ body {
     font-size: 16px;
     border: 1.5px solid var(--magenta);
     color: var(--magenta);
+    padding: 10px 15px; /*padding button-icon view porduct details*/
 }
 
 .btn-primary:hover,
