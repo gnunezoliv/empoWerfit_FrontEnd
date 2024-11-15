@@ -81,6 +81,14 @@ p, span{
     
 }
 
+.total-for-item{
+    background-color: var(--empwf-magenta);
+}
+
+.rounded-pill{
+    background-color: #2A003A;
+}
+
 .buttonComprar{
     font-size: 16px;
     color: var(--empwf-background-web);
