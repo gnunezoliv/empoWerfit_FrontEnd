@@ -35,9 +35,9 @@ h1{
 
 }
 
-p, span{
+.lead{
   font-size: 25px;
-  font-family: var(--boddy-poppins-font-family);  
+  font-family: var(--boddy-poppins-font-family); 
 }
 
 #elementbutton{
@@ -72,6 +72,30 @@ p, span{
 .span-label-contact-form {
     color: var(--empwf-magenta);
     font-size: 16px;
+}
+
+.btn-sm{
+    font-size: 16px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+}
+
+.btn:hover{
+    color: var(--empwf-background-web);
+    background-color: #763682;
+    transform: scale(1.1); /* Hace que el botón se expanda */ 
+}
+
+.total-for-item{
+    background-color: var(--empwf-magenta);
+}
+
+.rounded-pill{
+    background-color: #2A003A;
+}
+
+.btn-deleted{
+    background-color: #2A003A;
 }
 
 .buttonComprar{
