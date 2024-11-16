@@ -1,7 +1,7 @@
 const carrito = document.querySelector("#carrito");
 const template = document.querySelector("#template");
 const footer = document.querySelector("#resumenCompra");
-const templateFooter = document.querySelector("#templateresumenCompra");
+const templateFooter = document.querySelector("#templateResumenCompra");
 const fragment = document.createDocumentFragment();
 let carritoArray = [];
 
