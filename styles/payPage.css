@@ -65,9 +65,7 @@ h1{
     font-family: var(--boddy-poppins-font-family);
 }
 
-.label-contact-form {
-    font-size: 16px;
-}
+
 /* Span Label Contact Form */
 .span-label-contact-form {
     color: var(--empwf-magenta);
@@ -87,16 +85,22 @@ h1{
 }
 
 .total-for-item{
-    background-color: var(--empwf-magenta);
+    background-color: var(--light-purple);
+    border-top: #2A003A, solid;
+    margin-top: 5%;
+}
+
+.lead{
+    color: #2A003A;
 }
 
 .rounded-pill{
-    background-color: #2A003A;
+    background-color:#AA3378;
+    color:#EFE9F1;
+    font-size: 15px;
 }
 
-.btn-deleted{
-    background-color: #2A003A;
-}
+
 
 .buttonComprar{
     font-size: 16px;
@@ -106,6 +110,12 @@ h1{
     width: 200px;
     cursor: pointer;
     transition: all .4s ease;
+}
+
+#resumenCompra, #templateResumenCompra, #total{
+    background-color: #AA3378;
+    color: #EFE9F1;
+    text-align: center;
 }
 
 .payPage-btn:hover{
