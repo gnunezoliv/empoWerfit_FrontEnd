@@ -35,7 +35,7 @@ h1{
 
 }
 
-span, .lead{
+.lead{
   font-size: 25px;
   font-family: var(--boddy-poppins-font-family); 
 }
@@ -78,7 +78,12 @@ span, .lead{
     font-size: 16px;
     color: var(--empwf-background-web);
     background-color: var(--empwf-magenta);
-    
+}
+
+.btn:hover{
+    color: var(--empwf-background-web);
+    background-color: #763682;
+    transform: scale(1.1); /* Hace que el botón se expanda */ 
 }
 
 .total-for-item{
