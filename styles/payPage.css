@@ -35,9 +35,9 @@ h1{
 
 }
 
-.productosText, span{
+.lead{
   font-size: 25px;
-  font-family: var(--boddy-poppins-font-family);  
+  font-family: var(--boddy-poppins-font-family); 
 }
 
 #elementbutton{
@@ -65,14 +65,42 @@ h1{
     font-family: var(--boddy-poppins-font-family);
 }
 
-.label-contact-form {
-    font-size: 16px;
-}
+
 /* Span Label Contact Form */
 .span-label-contact-form {
     color: var(--empwf-magenta);
     font-size: 16px;
 }
+
+.btn-sm{
+    font-size: 16px;
+    color: var(--empwf-background-web);
+    background-color: var(--empwf-magenta);
+}
+
+.btn:hover{
+    color: var(--empwf-background-web);
+    background-color: #763682;
+    transform: scale(1.1); /* Hace que el botón se expanda */ 
+}
+
+.total-for-item{
+    background-color: var(--light-purple);
+    border-top: #2A003A, solid;
+    margin-top: 5%;
+}
+
+.lead{
+    color: #2A003A;
+}
+
+.rounded-pill{
+    background-color:#AA3378;
+    color:#EFE9F1;
+    font-size: 15px;
+}
+
+
 
 .buttonComprar{
     font-size: 16px;
@@ -82,6 +110,12 @@ h1{
     width: 200px;
     cursor: pointer;
     transition: all .4s ease;
+}
+
+#resumenCompra, #templateResumenCompra, #total{
+    background-color: #AA3378;
+    color: #EFE9F1;
+    text-align: center;
 }
 
 .payPage-btn:hover{
