@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const weight = producto.weight || "Peso no disponible"
 
 
-        const shopingBag = `/public/imgs/banner-descuento.png`;
+        const shopingBag = `../../payPage/payPage.html `;
           
      //modificar shopingbag para que el boton agregar a mi bolsa envie a la pagina de compras
 
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                    
                     
                     <div class="btn-group" role="group">
-                      <a class="image-link" href="${shopingBag}"> 
+                      <a class="bag-link" href="${shopingBag}"> 
                       <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                      <a>
+                      </a>
                     </div>
                   </div>
                       <p class="card-text mt-3 mb-1 product-category"> Categoría: <strong>${category}</strong></p>
