@@ -52,15 +52,6 @@ h1{
 
 }
 
-#cardProduct{
-    border: #2A003A;
-    border-radius: 3%;
-}
-
-#imgProduct{
-    border-radius: 5%;
-}
-
 .form-group, .form-check-label{
     font-family: var(--boddy-poppins-font-family);
 }
@@ -100,7 +91,6 @@ h1{
     color:#EFE9F1;
     font-size: 15px;
 }
-
 
 .buttonComprar{
     font-size: 16px;
