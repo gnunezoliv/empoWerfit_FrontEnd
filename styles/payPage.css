@@ -85,7 +85,7 @@ h1{
 }
 
 .total-for-item{
-    background-color: var(--light-purple);
+    background-color: #AA3378;
     border-top: #2A003A, solid;
     margin-top: 5%;
 }
@@ -94,12 +94,12 @@ h1{
     color: #2A003A;
 }
 
+
 .rounded-pill{
-    background-color:#AA3378;
+    background-color:#2A003A;
     color:#EFE9F1;
     font-size: 15px;
 }
-
 
 
 .buttonComprar{
@@ -113,9 +113,11 @@ h1{
 }
 
 #resumenCompra, #templateResumenCompra, #total{
-    background-color: #EFE9F1;
     border-top: #2A003A, solid;
-    color: #2A003A;
+    border-width: 7px;
+    border-color: #2A003A;
+    color: #AA3378;
+    font-size: 30px;
     text-align: center;
 }
 
