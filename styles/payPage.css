@@ -78,7 +78,7 @@ h1{
     background-color: var(--empwf-magenta);
 }
 
-.btn:hover{
+.btn-sm:hover{
     color: var(--empwf-background-web);
     background-color: #763682;
     transform: scale(1.1); /* Hace que el botón se expanda */ 
@@ -113,8 +113,9 @@ h1{
 }
 
 #resumenCompra, #templateResumenCompra, #total{
-    background-color: #AA3378;
-    color: #EFE9F1;
+    background-color: #EFE9F1;
+    border-top: #2A003A, solid;
+    color: #2A003A;
     text-align: center;
 }
 
