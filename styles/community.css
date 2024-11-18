@@ -13,9 +13,52 @@
 .titulo {
     text-align: center;
     font-size: 2.5rem;
-    color:#2A003A; /* Usa tu color preferido */
+    color:#2A003A; 
     font-weight: 800;
     margin: 20px 0; /* Espacio superior e inferior */;
+}
+
+.banner{
+    position: relative;
+    background-image: url(/sources/community/imgs/banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 25% bottom 45%;
+    height: 340px;
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    color: white;
+}
+.banner__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.banner__info {
+    width: 500px;
+    position: relative;
+    margin-left: calc(10%);
+    margin-right: calc(5%);
+}
+.banner__title {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.banner__title span {
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .banner__title {
+        font-size: 36px;
+    }
+    .banner__info {
+        width: 350px;
+    }
 }
 
 /* Carrusel */
@@ -24,38 +67,86 @@
     margin-bottom: 30px;
 }
 
+
 .carrusel-imagenes {
     display: flex;
     overflow: hidden;
     justify-content: center;
 }
 
-.carrusel-imagenes img {
-    width: 200%;
-    max-width: 200px;
+
+.carrusel-item {
+    position: relative;
+    width: 80%;
+    height: 450px; /* Ajusta la altura según las imágenes */
+    overflow: hidden;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+
+.imagen-carrusel {
+    width: 90%;
+    height: 90%;
     margin: 0 10px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza el efecto de transición */
 }
+
+
+.imagen-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Inicialmente, la imagen de hover está oculta */
+    transition: opacity 0.5s ease; /* Transición suave cuando cambia */
+    border-radius: 8px; /* Bordes redondeados para la imagen de hover */
+}
+
+
+.carrusel-item:hover .imagen-carrusel {
+    opacity: 0; /* Al pasar el cursor, la imagen normal se oculta */
+    transform: scale(1.05); /* Agrega un pequeño zoom a la imagen original */
+}
+
+
+.carrusel-item:hover .imagen-hover {
+    opacity: 1; /* Muestra la imagen de hover */
+}
+
 
 .carrusel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+    background: var(--magenta);
+    color: var(--white);
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
+    border: none;
+    z-index: 1; /* Asegura que los botones estén por encima del carrusel */
 }
+
 
 .izquierda {
     left: 10px;
 }
 
+
 .derecha {
     right: 10px;
 }
+
+
+.carrusel-btn:hover {
+    background: var(--dark-magenta); /* Cambia de color al pasar el cursor */
+}
+
+
 
 /* Publicaciones */
 .publicaciones {

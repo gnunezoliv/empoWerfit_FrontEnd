@@ -1,12 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const leftButton = document.querySelector('.carrusel-btn.izquierda');
-    const rightButton = document.querySelector('.carrusel-btn.derecha');
-    const carruselImages = document.querySelector('.carrusel-imagenes');
-    const images = Array.from(carruselImages.children);
-    let currentIndex = 0;
 
-    // Mostrar la primera imagen
-    updateCarousel();
+document.addEventListener('DOMContentLoaded', function () {
+    const carruselImages = document.querySelector('.carrusel-imagenes');
+    const images = document.querySelectorAll('.carrusel-imagenes .carrusel-item');
+    const leftButton = document.querySelector('.izquierda');
+    const rightButton = document.querySelector('.derecha');
+    let currentIndex = 0;
 
     // Función para actualizar el carrusel
     function updateCarousel() {
