@@ -1,0 +1,62 @@
+:root {
+    --magenta:#AA3378;
+    --pastel-pink: #FFC2CF;
+    --pastel-purple: #EBB8DB;
+    --purple: #763682;
+    --dark-purple: #2A003A;
+    --light-purple: #EFE9F1;
+    --white: #fefefe;
+    
+    --bs-form-valid-color: #AA3378;
+    --swiper-theme-color: #EBB8DB;
+ }
+
+#terms-section {
+    padding-top: 100px;
+}
+
+h1, p {
+    color: var(--dark-purple);
+    margin: 0px;
+}
+
+h2.h4 {
+    color:var(--dark-purple);
+}
+
+.a-terms {
+    color:#2A003A;
+    text-decoration: none;
+}
+
+.list-color {
+    color: #2A003A;
+}
+
+.span-color {
+    font-weight: bold;
+}
+
+ul {
+    padding: 10px;
+    color: #2A003A;
+}
+
+p.text-center {
+    padding-bottom: 22px;
+}
+
+.p-terms{
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    #terms-section {
+        padding-top: 80px; /* Padding reducido para pantallas pequeñas */
+    }
+
+    .terms {
+        font-size: 40px; 
+    }
+}
+

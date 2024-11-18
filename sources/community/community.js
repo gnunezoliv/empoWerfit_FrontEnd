@@ -6,28 +6,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightButton = document.querySelector('.derecha');
     let currentIndex = 0;
 
-    // Función para actualizar el carrusel
-    function updateCarousel() {
-        carruselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // Función para mostrar imagen en el índice actual
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.transform = `translateX(-${index * 100}%)`;
+        });
     }
 
-    // Botón izquierdo
-    leftButton.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = images.length - 1;
-        }
-        updateCarousel();
+    // Funciones de navegación del carrusel
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // Eliminar la navegación automática
+    // setInterval(nextImage, 3000);  // Esta línea ha sido eliminada para desactivar la navegación automática
+
+    // Event listeners para botones de navegación
+    rightButton.addEventListener("click", nextImage);
+    leftButton.addEventListener("click", prevImage);
+
+    // Agrega interactividad a los iconos de "me gusta" y "comentarios"
+    const actions = document.querySelectorAll(".acciones i");
+    actions.forEach(action => {
+        action.addEventListener("click", (e) => {
+            if (e.target.classList.contains("bi-heart")) {
+                e.target.classList.toggle("text-danger");
+                e.target.style.color = "#AA3378";  // Cambia el color del corazón a magenta
+            } else if (e.target.classList.contains("bi-chat")) {
+                alert("¡Deja tu comentario!");
+            }
+        });
     });
 
-    // Botón derecho
-    rightButton.addEventListener('click', function () {
-        if (currentIndex < images.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateCarousel();
+    // Añadir efecto de subrayado a los títulos y nombres de usuario al pasar el cursor
+    const publicaciones = document.querySelectorAll(".publicacion h3, .usuario span");
+    publicaciones.forEach(element => {
+        element.addEventListener("mouseenter", () => {
+            element.style.textDecoration = "underline";
+            element.style.textDecorationColor = "#AA3378";  // Subrayado en magenta
+        });
+        element.addEventListener("mouseleave", () => {
+            element.style.textDecoration = "none";
+        });
     });
+
+    // Mostrar primera imagen del carrusel al cargar la página
+    showImage(currentIndex);
 });

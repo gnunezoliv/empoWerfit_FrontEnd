@@ -58,12 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
           // Crea una referencia dinamica para que cada tarjeta lleve a una pagina html diferente
           //Agrega <a> anchor para abrir la pagina individual de producto al dar click en la tarjeta del mismo
           const itemDetailUrl = `/sources/items/itemDetail/itemDetail.html?id=${producto.id}`;
+          const shopingBag = '../payPage/payPage.html';
+          
+     //modificar shopingbag para que el boton agregar a mi bolsa envie a la pagina de compras
 
           productCard.innerHTML = `
               <div class="card">
                 <a class="image-link" href="${itemDetailUrl}">              
                 <img src="${producto.imagen || 'https://via.placeholder.com/150'}" class="card-img-top" alt="${producto.nombre}" style="height: 349px; width: 100%; object-fit: cover;">
-                <a>
+                </a>
                 <div class="card-body product-info text-center pb-2">
                   <p class="card-text product-category">${producto.categoria}</p>
                   <h4 class="card-title product-name mt-3 mb-1"><span class="d-inline-block text-truncate" style="max-width: 250px;">${producto.nombre}</span></h4>
@@ -72,10 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="card-footer d-flex justify-content-evenly mb-3">
                   <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
-                     <a class="image-link" href="${itemDetailUrl}">   
-                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-search"></i></button>
-                    <a>
+                    <a href="${shopingBag}" class="btn btn-primary">Agregar a mi bolsa</a>
+                    <a href="${itemDetailUrl}" class="btn btn-outline-primary"><i class="bi bi-search"></i></a>
                   </div>
                 </div>
               </div>

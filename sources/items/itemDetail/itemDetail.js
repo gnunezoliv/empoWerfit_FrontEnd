@@ -1,13 +1,4 @@
-// Usamos fetch() para cargar el archivo reviews.html en el contenedor
-fetch('/sources/reviews/reviews.html')
-.then(response => response.text())
-.then(html => {
-    // Inyectamos el contenido de reviews.html en el contenedor
-    document.getElementById('review-container').innerHTML = html;
-})
-.catch(error => {
-    console.error('Error al cargar el archivo de reseñas:', error);
-});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -42,6 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const size = producto.size || "Talla no disponible";
         const weight = producto.weight || "Peso no disponible"
 
+
+        const shopingBag = `../../payPage/payPage.html `;
+          
+     //modificar shopingbag para que el boton agregar a mi bolsa envie a la pagina de compras
+
         const detailContainer = document.getElementById("producto-detail");
         detailContainer.innerHTML = `
             <div class="container mt-5">
@@ -60,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
                    
                     
                     <div class="btn-group" role="group">
+                      <a class="bag-link" href="${shopingBag}"> 
                       <button type="button" class="btn btn-primary">Agregar a mi bolsa</button>
+                      </a>
                     </div>
                   </div>
                       <p class="card-text mt-3 mb-1 product-category"> Categoría: <strong>${category}</strong></p>
