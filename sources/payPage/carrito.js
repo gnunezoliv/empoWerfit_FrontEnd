@@ -8,7 +8,6 @@ let carritoArray = [];
 // Delegación de eventos:
 document.addEventListener("click", (e) => {
     // console.log(e);
-    // console.log(e.target.dataset.fruta);
     // console.log(e.target.matches(".card button"));
     if (e.target.matches(".card button")) {
         agregarCarrito(e);
