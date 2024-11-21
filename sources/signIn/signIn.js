@@ -23,7 +23,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             // Almacenar al usuario actual en localStorage
             localStorage.setItem("currentUser", JSON.stringify(user));
             // Redirigir al usuario a la página de inicio si la autenticación es exitosa
-            window.location.href = "../items/items.html";
+            window.location.href = "../profile/profile.html";
         } else {
             // Mostrar mensaje de error si la contraseña no es correcta
             showErrorMessage(form, "Contraseña incorrecta.");

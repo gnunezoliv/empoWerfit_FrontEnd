@@ -161,3 +161,7 @@
 .card-text {
     font-family: "Poppins";
 }
+
+.hidden {
+    display: none;
+}

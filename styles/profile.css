@@ -1,0 +1,317 @@
+:root {
+    --magenta:#AA3378;
+    --pastel-pink: #FFC2CF;
+    --pastel-purple: #EBB8DB;
+    --purple: #763682;
+    --dark-purple: #2A003A;
+    --light-purple: #EFE9F1;
+    --white: #fefefe;
+    
+    --bs-form-valid-color: #AA3378;
+    --swiper-theme-color: #EBB8DB;
+ }
+ 
+/********** Globales **********/
+h1,h2,h3,h4,h5,h6{
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 32px; }
+
+h5{
+    color:#EFE9F1;
+}
+
+.text-body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color:#AA3378; /* moradito Empowerfit */
+    padding: 20px;
+    box-shadow: 4px 0 15px #2A003A;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #bb7acb; /* Borde morado claro */
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    color: #2A003A; /* Rosa morado vibrante */
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    color: #fefefe; /* Rosa claro cuando pasa el mouse */
+}
+
+.nav-link {
+    color: #fefefe; /* Rosa morado para los links */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #e083c6; /* Rosa muy suave al pasar el mouse */
+    color: rgb(77, 11, 60);
+    border-radius: 5px;
+}
+
+.profile-content {
+    margin-left: 270px;
+    padding: 40px;
+}
+
+/* Perfil */
+.profile-pic-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #bb7acb; /* Borde morado claro */
+}
+
+/* Estilo de las tarjetas */
+.card {
+    background-color:  #EFE9F1; /* Rosa suave para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #2A003A;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de las tarjetas de datos */
+.user-data-card h5 {
+    font-weight: bold;
+    color: #AA3378; /* Morado oscuro */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.orders-card h5 {
+    font-weight: bold;
+    color: #AA3378; /* Morado oscuro */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.order {
+    margin-bottom: 15px;
+    color: #2A003A; /* Morado medio */
+    font-size: 1rem;
+}
+
+.saved-address-card h5 {
+    font-weight: bold;
+    color: #AA3378; /* Morado oscuro */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.saved-address {
+    margin-bottom: 15px;
+    color: #2A003A; /* Morado medio */
+}
+
+.btn-delete {
+    background-color: #AA3378; /* Rosa suave para el botón de eliminar */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #d36a98; /* Rosa más oscuro */
+}
+
+/* Botón de editar perfil */
+.edit-btn:hover {
+    color: #f5a1c0; /* Rosa claro cuando pasa el mouse */
+}
+
+/* Estilo para enlaces y texto en el perfil */
+h2 {
+    font-size: 2rem;
+    color: #810e7a; /* Rosa morado para el título */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón de agregar o editar */
+.btn-add {
+    background-color: #e9c1e6; /* Rosa morado vibrante */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #9c2a6d; /* Rosa claro cuando pasa el mouse */
+    transform: scale(1.05);
+}
+
+/* Sombra en las tarjetas y botones */
+.card, .btn-add, .btn-delete {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover, .btn-add:hover, .btn-delete:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries - Responsivo */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .profile-content {
+        margin-left: 220px;
+    }
+
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile-pic-large {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Barra lateral para pantallas más pequeñas */
+    .sidebar {
+        position: absolute;
+        left: -250px;
+        transition: left 0.3s;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .profile-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+
+/* Estilo para la tarjeta de Actividad Reciente */
+.activity-card {
+    background-color: #f3d4e1;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(143, 13, 110, 0.1);
+    margin-top: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-card h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+    color: #666;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-time {
+    font-size: 0.9rem;
+    color: #d121c2;
+}
+
+.activity-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.activity-item strong {
+    color: #bf008f;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .activity-card {
+        margin-top: 10px;
+        padding: 15px;
+    }
+
+    .activity-card h5 {
+        font-size: 1.1rem;
+    }
+
+    .activity-item p {
+        font-size: 0.95rem;
+    }
+
+    .activity-time {
+        font-size: 0.85rem;
+    }
+}
+}

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
                         ${currentUser ? `
-                        <li><a class="dropdown-item text-style-dark" href="/sources/footer/items-form/newItemForm.html">Mi perfil</a></li>
+                        <li><a class="dropdown-item text-style-dark" href="/sources/profile/profile.html">Mi perfil</a></li>
                         <li><a class="dropdown-item text-style-dark" id="logout" href="#">Cerrar sesión</a></li>
                         ` : `
                         <li><a class="dropdown-item text-style-dark" href="/sources/signIn/signIn.html">Ingresar</a></li>

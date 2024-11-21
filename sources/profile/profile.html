@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario | EmpowerFit</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- Iconos de Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+ <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="./styles/swiper-bundle.min.css"/>
+
+
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/globalstyle.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+
+
+
+<body>
+  
+   
+    <nav id="navbar-container"></nav>
+
+
+    <section class="m-5 p-5">
+    <div class="container">
+        
+         <!-- Botón de hamburguesa para abrir/cerrar barra lateral -->
+        <div class="hamburger" onclick="toggleSidebar()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <!-- Barra lateral -->
+        <nav class="sidebar mt-4">
+            <div class="text-center mt-5">
+                <img src="/public/imgs/imgperfil.png" alt="Foto de perfil" class="profile-pic">
+                <button class="edit-btn">Editar Perfil</button>
+                <h5 class="mt-3">América Sánchez</h5>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Lista de deseos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Direcciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sources/footer/items-form/newItemForm.html">Administrador</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="profile-content">
+            <h2>¡Hola, América!</h2>
+            <div class="profile-section">
+                <img src="/public/imgs/imgperfil.png" alt="Foto de perfil" class="profile-pic-large">
+            </div>
+
+            <div class="row mt-4">
+                <!-- Tarjeta de datos del usuario -->
+                <div class="col-md-4">
+                    <div class="card user-data-card">
+                        <h5>Mis datos</h5>
+                        <p><strong>Nombre:</strong> América Sánchez</p>
+                        <p><strong>Correo:</strong> america@ejemplo.com</p>
+                        <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Mis Pedidos -->
+                <div class="col-md-4">
+                    <div class="card orders-card">
+                        <h5>Mis Pedidos</h5>
+                        <div class="order">
+                            <p><strong>Pedido #12345</strong></p>
+                            <p><strong>Fecha:</strong> 01/11/2024</p>
+                            <p><strong>Productos:</strong> Zapatillas deportivas, camiseta</p>
+                            <p><strong>Status:</strong> Enviado</p>
+                        </div>
+                        <div class="order">
+                            <p><strong>Pedido #12346</strong></p>
+                            <p><strong>Fecha:</strong> 03/11/2024</p>
+                            <p><strong>Productos:</strong> Leggings, top deportivo</p>
+                            <p><strong>Status:</strong> Pendiente</p>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Direcciones -->
+                <div class="col-md-4">
+                    <div class="card saved-address-card">
+                        <h5>Direcciones</h5>
+                        <div class="saved-address">
+                            <p><strong>Dirección:</strong> Calle Ficticia 123, Ciudad, Estado, CP</p>
+                            <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+                            <button class="btn-delete">Eliminar</button>
+                        </div>
+                        <div class="saved-address">
+                            <p><strong>Dirección:</strong> Avenida Real 456, Colonia, Ciudad, CP</p>
+                            <p><strong>Teléfono:</strong> +52 987 654 3210</p>
+                            <button class="btn-delete">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta de Actividad Reciente -->
+<div class="col-md-12">
+    <div class="card activity-card">
+        <h5>Actividad Reciente</h5>
+        <ul class="activity-list">
+            <li class="activity-item">
+                <span class="activity-time">Hace 1 hora</span>
+                <p>Completaste tu pedido de <strong>Zapatillas deportivas</strong></p>
+            </li>
+            <li class="activity-item">
+                <span class="activity-time">Hace 3 horas</span>
+                <p>Agregaste <strong>Top Deportivo</strong> a tu lista de deseos</p>
+            </li>
+            <li class="activity-item">
+                <span class="activity-time">Hace 5 horas</span>
+                <p>Actualizaste tu dirección de envío a <strong>Avenida Real 456</strong></p>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+        </main>
+        
+    </div>
+
+</section>
+<section>
+    <!---Footer-->
+    <footer id="footer-container"></footer>
+</section>
+    <script src="script.js"></script>
+    <script src="/sources/navbar/navbar.js"></script>
+    <script src ="/sources/footer/footer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
